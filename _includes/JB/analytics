@@ -5,6 +5,11 @@
   {% include JB/analytics-providers/google %}
 {% when "getclicky" %}
   {% include JB/analytics-providers/getclicky %}
+<<<<<<< HEAD
+=======
+{% when "mixpanel" %}
+  {% include JB/analytics-providers/mixpanel %}
+>>>>>>> 848769877abfb0d47ae783b693964adc43ccadf6
 {% when "custom" %}
   {% include custom/analytics %}
 {% endcase %}

@@ -1,7 +1,16 @@
 ---
 # Remember to set production_url in your _config.yml file!
+<<<<<<< HEAD
 ---
 {% for page in site.pages %}
 {{ site.production_url }}{{ page.url }}{% endfor %}
 {% for post in site.posts %}
 {{ site.production_url }}{{ post.url }}{% endfor %}
+=======
+title : Sitemap
+---
+{% for page in site.pages %}
+{{site.production_url}}{{ page.url }}{% endfor %}
+{% for post in site.posts %}
+{{site.production_url}}{{ post.url }}{% endfor %}
+>>>>>>> 848769877abfb0d47ae783b693964adc43ccadf6

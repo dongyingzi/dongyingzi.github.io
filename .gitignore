@@ -1,6 +1,16 @@
 _site/*
+<<<<<<< HEAD
+=======
+_theme_packages/*
+>>>>>>> 848769877abfb0d47ae783b693964adc43ccadf6
 
 Thumbs.db
 .DS_Store
 
 !.gitkeep
+<<<<<<< HEAD
+=======
+
+.rbenv-version
+.rvmrc
+>>>>>>> 848769877abfb0d47ae783b693964adc43ccadf6
