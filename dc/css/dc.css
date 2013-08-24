@@ -1,0 +1,33 @@
+body,div,p,ul,li,textarea,form,input,h1,h2,h3,h4,h5,dl,dt,dd,img,section,article,aside,header,footer,nav,dialog,figure,hgroup{margin:0;padding:0;font-size:14px;color:#666}
+html{height:100%}
+body{background-color:white;font-family:"\5FAE\8F6F\96C5\9ED1",Helvetica;-webkit-user-select:none;-webkit-text-size-adjust:none;min-width:320px}
+ul,ol,li{list-style:none}
+a{text-decoration:none;color:#1064b2;-webkit-tap-highlight-color:rgba(0,0,0,.5);-webkit-user-select:none}
+*{-webkit-tap-highlight-color:rgba(0,0,0,.5)}
+img{border:0}
+section,article,aside,header,footer,nav,dialog,figure,hgroup{display:block}
+i,cite,em,var,address{font-style:normal}
+textarea{-webkit-appearance:caret;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+
+/* 清除浮动 */
+.clear:after {content:'.';clear:both;display:block;height:0;visibility:hidden; font-size:0;line-height:0}
+
+.dcHeader{ width:100%; position: relative; background: url(../img/dcTopBg.png); height:44px; -webkit-background-size: 320px 44px;}
+.dcHeader h1{ background:url(../img/dcTitBg.png) no-repeat center center;-webkit-background-size: 66px 22px; width:133px; height:44px; margin: 0 auto; line-height: 200px; overflow: hidden;}
+
+.dcIcn1,
+.dcIcn2{ width:50px; height: 44px; background: url(../img/dcIcn1.png) no-repeat center center; -webkit-background-size:auto 24px; position: absolute; top:0; left: 10px}
+
+.dcIcn2{ background-image: url(../img/dcIcn2.png); left: auto; right: 10px;-webkit-background-size:auto 30px; }
+
+.dcTags{ margin-top:10px; padding-left: 10px}
+.dcTags li{ float: left; text-align: center; height: 20px; line-height: 20px; padding:0 8px; border-radius:3px; background: #f0f0f0; color: #666; margin-right: 10px;}
+.dcTags .select{ background: #ca491d; color: #fff}
+.dcTags .dcA{ width: 20px; padding:0; margin-right: 0; background: url(../img/dcArrow.png) center center;-webkit-background-size:auto 20px;}
+
+.dcArea{ margin-top:10px; border-top:1px solid #d2d2d2; padding-top: 10px}
+.dcArea li{ float: left; width: 140px; overflow: hidden; margin: 0 5px 12px 12px; -webkit-box-shadow:0 0 3px #ccc; border:1px solid #e0e0e0;}
+.dcArea img{ width:100%}
+.dcAreaBot{ height: 23px; position: relative; padding-left: 5px}
+.dcAreaBot .dcA{ position: absolute; top: 0; right:5px;}
+.dcIcn3{ display: inline-block; width:15px; height: 15px; margin-right: 3px; background: url(../img/dcCtPos.png) center center no-repeat; -webkit-background-size:auto 15px; vertical-align: -2px}
