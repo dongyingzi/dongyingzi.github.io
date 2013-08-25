@@ -81,12 +81,12 @@ textarea{-webkit-appearance:caret;-webkit-tap-highlight-color:rgba(0,0,0,0)}
 .dcCdList .select .dcCdMod{ border: 3px solid #d3795b;  margin:0; }
 .dcCdList i{ display: none;}
 .dcCdList .select i{ display: block; width:15px; height: 15px; border-radius: 50%; background: #d3795b; position: absolute; top: -5px; right: -5px; z-index: 2; font-size: 12px; line-height: 15px; color: #fff}
-.dcCdList img{ width:100%; display: block; border-radius: 5%}
+.dcCdList img{ width:100%; display: block; border-radius: 10%}
 .dcCdList .dcCdMod  p{ position:absolute; bottom: 0; left: 0; width: 100%; text-align: center; color: #fff; background: rgba(0,0,0,.5);height: 20%; line-height: 1em}
 .dcCdLarFrm{ float: left; width: 50%;}
 
 .dcCdLar{ border: 1px solid #eac4b7; border-radius:10%; width: 95%; overflow: hidden; position: relative; margin-left: 5%; margin-top:0.5em}
-.dcCdLar img{ width: 100%; display: block;border-radius: 5%}
+.dcCdLar img{ width: 100%; display: block;border-radius: 10%}
 .dcCdName{ text-align: center; margin-top: 0.5em;}
 .dcCdLar  .bot{ position:absolute; bottom: 0; left: 0; width: 100%; text-align: center; color: #fff; background: rgba(0,0,0,.5);height: 20%;}
 .dcCdRep .dcCdLar{ margin-left: 0; margin-right: 5%}
