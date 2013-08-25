@@ -1,5 +1,5 @@
 body,div,p,ul,li,textarea,form,input,h1,h2,h3,h4,h5,dl,dt,dd,img,section,article,aside,header,footer,nav,dialog,figure,hgroup{margin:0;padding:0;font-size:14px;color:#666}
-html{height:100%}
+html,body{height:100%}
 body{background-color:white;font-family:"\5FAE\8F6F\96C5\9ED1",Helvetica;-webkit-user-select:none;-webkit-text-size-adjust:none;min-width:320px}
 ul,ol,li{list-style:none}
 a{text-decoration:none;color:#1064b2;-webkit-tap-highlight-color:rgba(0,0,0,.5);-webkit-user-select:none}
@@ -9,16 +9,25 @@ section,article,aside,header,footer,nav,dialog,figure,hgroup{display:block}
 i,cite,em,var,address{font-style:normal}
 textarea{-webkit-appearance:caret;-webkit-tap-highlight-color:rgba(0,0,0,0)}
 
+@font-face{
+  font-family:t;
+  /*src: url('http://mat1.gtimg.com/www/mb/actimg/img/t_120522.eot');  IE9 Compat Modes */
+  src:url('../img/FZY1JW.TTF')  format('truetype'); /* Safari, Android, iOS */
+     /* url('http://mat1.gtimg.com/www/mb/actimg/img/t_120522.eot?#iefix') format('embedded-opentype'),  IE6-IE8 */
+  } 
+
 /* 清除浮动 */
 .clear:after {content:'.';clear:both;display:block;height:0;visibility:hidden; font-size:0;line-height:0}
 
-.dcHeader{ width:100%; position: relative; background: url(../img/dcTopBg.png); height:44px; -webkit-background-size: 320px 44px;}
-.dcHeader h1{ background:url(../img/dcTitBg.png) no-repeat center center;-webkit-background-size: 66px 22px; width:133px; height:44px; margin: 0 auto; line-height: 200px; overflow: hidden;}
+.dcHeader{ width:100%; position: relative; background: url(../img/dcTopBg.png); height:44px; -webkit-background-size: 320px 44px; text-align: center;}
+.dcHeader h1{font-family:t; height:44px; line-height: 44px; font-size:20px; overflow: hidden; color: #fff}
 
 .dcIcn1,
-.dcIcn2{ width:50px; height: 44px; background: url(../img/dcIcn1.png) no-repeat center center; -webkit-background-size:auto 24px; position: absolute; top:0; left: 10px}
+.dcIcn2,.dcIcn4{ width:50px; height: 44px; background: url(../img/dcIcn1.png) no-repeat center center; -webkit-background-size:auto 24px; position: absolute; top:0; left: 10px}
 
 .dcIcn2{ background-image: url(../img/dcIcn2.png); left: auto; right: 10px;-webkit-background-size:auto 30px; }
+.dcIcn4{ background-image: url(../img/dcback.png); -webkit-background-size:auto 30px; }
+
 
 .dcTags{ margin-top:10px; padding-left: 10px}
 .dcTags li{ float: left; text-align: center; height: 20px; line-height: 20px; padding:0 8px; border-radius:3px; background: #f0f0f0; color: #666; margin-right: 10px;}
@@ -32,3 +41,22 @@ textarea{-webkit-appearance:caret;-webkit-tap-highlight-color:rgba(0,0,0,0)}
 .dcAreaBot{ height: 23px; position: relative; padding-left: 5px}
 .dcAreaBot .dcA{ position: absolute; top: 0; right:5px;}
 .dcIcn3{ display: inline-block; width:15px; height: 15px; margin-right: 3px; background: url(../img/dcCtPos.png) center center no-repeat; -webkit-background-size:auto 15px; vertical-align: -2px}
+
+.dcBgLogin .clear{ height: 100%}
+.dcLogin{width:62%; float: left; height: 100%;background: url(../img/dcMainBg.png); position: relative;}
+.dcIframe{ width: 38%; float: left; height: 100%; border: none; overflow: hidden; scroll:none;}
+.dcLogin .dcLoginRig{ position: absolute; top:0; bottom: 0; height: 100%; right: 0; width:10px;
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,1))}
+.dcTopHeadPic{padding:25px 0 30px; text-align: center;/*-webkit-box-shadow:-8px 0px 10px #1c1c1c inset;*/}
+.dcTopHeadPic img{ border:5px solid rgba(0,0,0,0.2); border-radius: 50%}
+.dcTopHeadPic p{ color: #fff; font-size: 16px; margin-top: 10px}
+
+.dcNav li{ height: 42px; color: #999999; line-height:42px;text-shadow: 1px 1px 0 #000;border-top:1px solid rgba(255,255,255,0.2); border-bottom:2px solid rgba(0,0,0,0.4); padding-left: 35px;
+	/*-webkit-box-shadow:-8px 0px 10px #1c1c1c inset;*/
+}
+.dcNav .select{ color: #fff; background-color: #3d3d3d;}
+.dcNav i{ display: inline-block;width:18px; height:18px;background: url(../img/dcNavListBg.png) no-repeat; margin-right: 3px; vertical-align: -3px;-webkit-background-size:auto 190px;}
+.dcNav .dcNavIcn2{ background-position: 0 -43px }
+.dcNav .dcNavIcn3{ background-position: 0 -87px }
+.dcNav .dcNavIcn4{ background-position: 0 -128px }
+.dcNav .dcNavIcn5{ background-position: 0 -173px }
