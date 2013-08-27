@@ -298,7 +298,8 @@
 		$(".dcArea > ul").swipeLeft(function(){//鼠标点击也可以切换 
 			//alert($(this).attr("tabid"));h
 			var len = $('.dcArea > ul').index(this);
-			if(len !=5){
+			$('fadeInLeft').removeClass('fadeInLeft').addClass('fadeInRight')
+			if(len !=4){
 			$(".dcArea ul").eq(len+1).show().siblings().hide();
 			$('.select').removeClass();
 			$(".dcTags li").eq(len+1).addClass('select');
@@ -307,10 +308,12 @@
 		$(".dcArea > ul").swipeRight(function(){//鼠标点击也可以切换 
 			//alert($(this).attr("tabid"));h
 			var len = $('.dcArea > ul').index(this);
+			$('fadeInRight').removeClass('fadeInRight').addClass('fadeInLeft')
+			var len = $('.dcArea > ul').index(this);
 			if(len !=0){
-			$(".dcArea ul").eq(len+1).show().siblings().hide();
+			$(".dcArea ul").eq(len-1).show().siblings().hide();
 			$('.select').removeClass();
-			$(".dcTags li").eq(len+1).addClass('select');
+			$(".dcTags li").eq(len-1).addClass('select');
 			}
 		});
 
