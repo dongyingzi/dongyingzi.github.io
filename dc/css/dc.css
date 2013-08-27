@@ -82,7 +82,7 @@ textarea{-webkit-appearance:caret;-webkit-tap-highlight-color:rgba(0,0,0,0)}
 .dcCdList i{ display: none;}
 .dcCdList .select i{ display: block; width:15px; height: 15px; border-radius: 50%; background: #d3795b; position: absolute; top: -5px; right: -5px; z-index: 2; font-size: 12px; line-height: 15px; color: #fff}
 .dcCdList img{ width:100%; display: block; border-radius: 10%}
-.dcCdList .dcCdMod  p{ position:absolute; bottom: 0; left: 0; width: 100%; text-align: center; color: #fff; background: rgba(0,0,0,.5);height: 20%; line-height: 1em}
+.dcCdList .dcCdMod  p{ position:absolute; bottom: 0; left: 0; width: 100%; text-align: center; color: #fff; background: rgba(0,0,0,.5);height: 20%; line-height: 1em; border-radius: 0 0 8px 8px}
 .dcCdLarFrm{ float: left; width: 50%;}
 
 .dcCdLar{ border: 1px solid #eac4b7; border-radius:10%; width: 95%; overflow: hidden; position: relative; margin-left: 5%; margin-top:0.5em}
@@ -99,3 +99,17 @@ textarea{-webkit-appearance:caret;-webkit-tap-highlight-color:rgba(0,0,0,0)}
 .dcCdBot dd{ width:6px; height: 6px; border-radius: 2px; background: #333; margin:17px 6px 0 0;}
 .dcCdBot .select{ background: #d54d1f;}
 .dcCdBot div{ position: absolute; right: 0; top: 0; background: #d54d1f; color: #fff; height: 34px; padding: 0 5px; line-height: 34px;}
+.dcDd{ background: url(../img/dcDd.jpg); padding: 10px; border-top:1px solid #000;}
+.dcDdTit{ text-align: center; color: #999; position: relative;}
+.dcDdTit i{ border-top:1px solid rgba(67,67,67,0.6);border-bottom:1px solid rgba(67,67,67,0.6); background: rgba(67,67,67,0.7); height: 1px; line-height: 1px; overflow: hidden; display: block; width: 100%; position: absolute; top:50%; left: 0; }
+.dcDdTit span{ display: inline-block; padding:0 10px; position: relative; z-index: 2;background: url(../img/dcDd.jpg);}
+.dcDdUl{ padding-top: 10px;}
+.dcDdUl li{ position: relative;}
+.dcDdUl .dcDdImg{ width:60px; height: 60px; overflow: hidden; border-radius:8px; float: left;}
+.dcDdUl .dcDdImg img{ width: 100%; border-radius:8px;}
+.dcDdUl .dcDdInfo{ color: #fff; padding-left: 10px; float: left; padding-top: 5px;}
+.dcDdUl .dcDdOpt{ position: absolute; background: #fff; top: 5px; right: 0; border-radius: 8px; color: #333;}
+.dcDdUl .dcDdOpt i{ display: inline-block; width:23px; text-align: center; background: url(../img/dcTopBg.png); border-radius: 8px 0 0 8px; color: #fff}
+.dcDdUl .dcDdOpt .rig{  border-radius: 0 8px 8px 0 ;}
+.dcDdUl .dcDdOpt em{ display: inline-block; width: 20px; text-align: center;}
+
