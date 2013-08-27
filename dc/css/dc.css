@@ -3,7 +3,7 @@ html,body{height:100%}
 body{background-color:white;font-family:"\5FAE\8F6F\96C5\9ED1",Helvetica;-webkit-user-select:none;-webkit-text-size-adjust:none;min-width:320px}
 ul,ol,li{list-style:none}
 a{text-decoration:none;color:#1064b2;-webkit-tap-highlight-color:rgba(0,0,0,.5);-webkit-user-select:none}
-*{-webkit-tap-highlight-color:rgba(0,0,0,.5)}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0)}
 img{border:0}
 section,article,aside,header,footer,nav,dialog,figure,hgroup{display:block}
 i,cite,em,var,address{font-style:normal}
