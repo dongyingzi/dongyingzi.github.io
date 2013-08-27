@@ -47,7 +47,8 @@ textarea{-webkit-appearance:caret;-webkit-tap-highlight-color:rgba(0,0,0,0)}
 
 .dcBgLogin .clear{ height: 100%}
 .dcLogin{width:62%; float: left; height: 100%;background: url(../img/dcMainBg.png); position: relative;}
-.dcIframe{ width: 38%; float: left; height: 100%; border: none; overflow: hidden; scroll:none;}
+.dcIframe{ width: 38%; float: left; height: 100%; border: none; overflow: hidden;}
+.dcIframe iframe{ height: 100%; width: 640px}
 .dcLogin .dcLoginRig{ position: absolute; top:0; bottom: 0; height: 100%; right: 0; width:10px;
 	background: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,1))}
 .dcTopHeadPic{padding:25px 0 30px; text-align: center;/*-webkit-box-shadow:-8px 0px 10px #1c1c1c inset;*/}

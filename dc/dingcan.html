@@ -22,7 +22,7 @@
 		<h1>下馆子</h1>
 		<i class="dcIcn2"></i>
 	</div><!-- /dcHeader -->
-	<ul class="dcTags clear">
+	<ul class="dcTags clear" id="">
 		<li class="select">海淀</li>
 		<li>东城</li>
 		<li>西城</li>
@@ -30,9 +30,9 @@
 		<li>宣武</li>
 		<li class="dcA"></li>
 	</ul><!-- /dcTags -->
-	<div class="dcArea">
+	<div class="dcArea" >
 		
-		<ul class="clear onArea animated fadeInLeft ">
+		<ul class="clear onArea animated fadeInLeft " tabid="1">
 			<li>
 				<div class="dcAreaItem">
 					<a href="canting.html"><img src="img/dcCtPic.jpg" /></a>
@@ -82,7 +82,7 @@
 				</div>
 			</li>
 		</ul>
-		<ul class="clear animated fadeInLeft">
+		<ul class="clear animated fadeInLeft" tabid="2">
 			<li>
 				<div class="dcAreaItem">
 					<a href="canting.html"><img src="img/dcCtPic.jpg" /></a>
@@ -132,7 +132,7 @@
 				</div>
 			</li>
 		</ul>
-		<ul class="clear animated fadeInLeft">
+		<ul class="clear animated fadeInLeft" tabid="3">
 			<li>
 				<div class="dcAreaItem">
 					<a href="canting.html"><img src="img/dcCtPic.jpg" /></a>
@@ -182,7 +182,7 @@
 				</div>
 			</li>
 		</ul>
-		<ul class="clear animated fadeInLeft">
+		<ul class="clear animated fadeInLeft" tabid="4">
 			<li>
 				<div class="dcAreaItem">
 					<a href="canting.html"><img src="img/dcCtPic.jpg" /></a>
@@ -232,7 +232,7 @@
 				</div>
 			</li>
 		</ul>
-		<ul class="clear animated fadeInLeft">
+		<ul class="clear animated fadeInLeft" tabid="5">
 			<li>
 				<div class="dcAreaItem">
 					<a href="canting.html"><img src="img/dcCtPic.jpg" /></a>
@@ -285,15 +285,35 @@
 		
 	</div>
 	<script>
-		var curLi; 
+		//alert($(".dcArea > ul").length)
 	 
 		$(".dcTags li").click(function(){//鼠标点击也可以切换 
 			// if(!($(this).attr("class")=="dcA")){
 			$(this).addClass("select").siblings().removeClass();
 			$(".dcArea > ul").eq($('.dcTags li').index(this)).show(100).siblings().hide(100);
+
 			
 
 		});
+		$(".dcArea > ul").swipeLeft(function(){//鼠标点击也可以切换 
+			//alert($(this).attr("tabid"));h
+			var len = $('.dcArea > ul').index(this);
+			if(len !=5){
+			$(".dcArea ul").eq(len+1).show().siblings().hide();
+			$('.select').removeClass();
+			$(".dcTags li").eq(len+1).addClass('select');
+			}
+		});
+		$(".dcArea > ul").swipeRight(function(){//鼠标点击也可以切换 
+			//alert($(this).attr("tabid"));h
+			var len = $('.dcArea > ul').index(this);
+			if(len !=0){
+			$(".dcArea ul").eq(len+1).show().siblings().hide();
+			$('.select').removeClass();
+			$(".dcTags li").eq(len+1).addClass('select');
+			}
+		});
+
 		
 
 	</script>
