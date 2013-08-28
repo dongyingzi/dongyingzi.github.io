@@ -6,19 +6,35 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" type="text/css" href="css/dc.css">
-	<link rel="stylesheet" type="text/css" href="css/gmu.css">
 	<link rel="stylesheet" type="text/css" href="css/a.css">
 	<script type="text/javascript" src="js/zepto.js"></script>
 	<script type="text/javascript" src="js/gmu.js"></script>
 	<style>
 	.dcArea ul{ display: none;}
 	.dcArea .onArea{ display: block;}
-
 	</style>
 </head>
 <body class="animated fadeInLeft">
+	
+	<div class="dcLogin animated fadeInLeft" style=" display:none; width:200px; float:none; position:fixed; top:0; left:0; z-index:100">
+		<div class="dcLoginRig"></div>
+		<div class="dcTopHeadPic">
+			<p class="dcTopImg">
+				<img src="img/yzd100.jpg" alt="" />
+			</p>
+			<p>影子洞</p>
+		</div>
+		<ul class="dcNav">
+			<li class="select"><i class="dcNavIcn1"></i>挑饭馆</li>
+			<li><i class="dcNavIcn2"></i>吃过的饭馆</li>
+			<li><i class="dcNavIcn3"></i>消费历史</li>
+			<li><i class="dcNavIcn4"></i>定位[北京]</li>
+			<li><i class="dcNavIcn5"></i>退出登录</li>
+		</ul>
+	</div>
+
 	<div class="dcHeader">
-		<a href="login.html"><i class="dcIcn1"></i></a>
+		<a href="javascript:void(0);"><i class="dcIcn1"></i></a>
 		<h1>下馆子</h1>
 		<i class="dcIcn2"></i>
 	</div><!-- /dcHeader -->
@@ -315,7 +331,20 @@
 			$('.select').removeClass();
 			$(".dcTags li").eq(len-1).addClass('select');
 			}
+			if(len ==0){
+				$(".dcLogin").show();
+			}
 		});
+		$(".dcIcn1").click(function(event) {
+			$(".dcLogin").show();
+		});
+		$(".dcLogin").swipe(function(event) {
+			$(".dcLogin").hide();
+		});
+		$(".dcLogin").click(function(event) {
+			$(".dcLogin").hide();
+		});
+
 
 		
 

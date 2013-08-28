@@ -94,7 +94,7 @@ textarea{-webkit-appearance:caret;-webkit-tap-highlight-color:rgba(0,0,0,0)}
 .dcCdRep .dcCdLar{ margin-left: 0; margin-right: 5%}
 .dcCdRep .dcCdList li{ margin-right: 0; margin-left: 5%}
 
-.dcCdBot{ position: absolute; bottom: 0; left: 0; width: 100%; height: 34px; background: #e8e8e8;}
+.dcCdBot{ position: fixed; bottom: 0; left: 0; width: 100%; height: 34px; background: #e8e8e8;}
 .dcCdBot span{ float: left; padding-left: 10px; color: #333; margin-top: 9px}
 .dcCdBot dl,.dcCdBot dt,.dcCdBot dd{ float: left;}
 .dcCdBot dt{ float: left; height: 15px; padding: 0 2px; line-height: 15px; font-size: 12px; border-radius:5px; background: #333; color: #fff;margin-top: 12px; margin-right: 6px;}
@@ -114,4 +114,6 @@ textarea{-webkit-appearance:caret;-webkit-tap-highlight-color:rgba(0,0,0,0)}
 .dcDdUl .dcDdOpt i{ display: inline-block; width:23px; text-align: center; background: url(../img/dcTopBg.png); border-radius: 8px 0 0 8px; color: #fff}
 .dcDdUl .dcDdOpt .rig{  border-radius: 0 8px 8px 0 ;}
 .dcDdUl .dcDdOpt em{ display: inline-block; width: 20px; text-align: center;}
+.dcPhone{ position:fixed; bottom: 0; left: 0; width:100%; height:190px; background: url(../img/dcPhone.png) no-repeat; background-size: auto 190px;}
+.dcAlt{ width: 263px; height: 322px; position: absolute; top: 50%; margin-top: -161px; left:50%; margin-left: -131px; background: url(../img/dcCp.png); background-size: 263px 322px; }
 

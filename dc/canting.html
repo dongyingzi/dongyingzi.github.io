@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" type="text/css" href="css/dc.css">
+	<link rel="stylesheet" type="text/css" href="css/a.css">
+	<script type="text/javascript" src="js/zepto.js"></script>
 </head>
 <body class="animated fadeInLeft">
 	<div class="dcHeader">
@@ -24,7 +26,7 @@
 		10:00 am--22:00pm  午餐、晚餐等需提前订位<br />
 		</p>
 		<div class="dcCtBtn">
-			<button>电话定位</button>
+			<button class="dcDh">电话定位</button>
 			<a href="caidan.html"><button>点菜</button></a>
 		</div>
 
@@ -42,7 +44,18 @@
 		</p>
 	</div>
 	
-	
+	<div class="dcPhone animated fadeInUp" style="display:none">
+		
+	</div>
+	<script type="text/javascript">
+		$('.dcDh').click(function(event) {
+			$('.dcPhone').show();
+		});
+		$('.dcPhone').click(function(event) {
+			$('.dcPhone').hide();
+		});
+
+	</script>
 
 </body>
 </html>
