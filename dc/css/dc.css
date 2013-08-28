@@ -114,6 +114,6 @@ textarea{-webkit-appearance:caret;-webkit-tap-highlight-color:rgba(0,0,0,0)}
 .dcDdUl .dcDdOpt i{ display: inline-block; width:23px; text-align: center; background: url(../img/dcTopBg.png); border-radius: 8px 0 0 8px; color: #fff}
 .dcDdUl .dcDdOpt .rig{  border-radius: 0 8px 8px 0 ;}
 .dcDdUl .dcDdOpt em{ display: inline-block; width: 20px; text-align: center;}
-.dcPhone{ position:fixed; bottom: 0; left: 0; width:100%; height:190px; background: url(../img/dcPhone.png) no-repeat; background-size: auto 190px;}
+.dcPhone{ position:fixed; bottom: 0; left: 0; width:100%; height:190px; background: url(../img/dcPhone.png) no-repeat; background-size: 320px 190px;}
 .dcAlt{ width: 263px; height: 322px; position: absolute; top: 50%; margin-top: -161px; left:50%; margin-left: -131px; background: url(../img/dcCp.png); background-size: 263px 322px; }
 
