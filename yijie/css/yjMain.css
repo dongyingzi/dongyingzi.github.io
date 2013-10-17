@@ -1,6 +1,6 @@
 /*公用样式*/
 .mr3{ margin-right: 3px;} .mb10{ margin-bottom: 10px} .mb5{margin-bottom: 5px} .mb15{ margin-bottom: 15px;}.mb20{ margin-bottom: 20px}
-.pl10{ padding-left: 10px}
+.pl10{ padding-left: 10px} .yjBlock{ display: block;} .mr10{ margin-right: 10px}
 .yjCgreen{ color: #690} .yjCgray6{ color:#666 } .yjCgray9{color: #999} .yjFs12{ font-size: 12px} .pt30{ padding-top: 30px}
 .yjTxB{ font-weight: bold;} .yjCgrayLink{color: #ccc} .mt10{ margin-top: 10px} .mt5{ margin-top: 5px}
 .topPt{ padding-top: 80px }
@@ -16,6 +16,8 @@
   text-decoration: underline;
 }
 .yjMtNone{ margin: 0!important} .yjPlNone{ padding-left: 0!important;}.yjPrNone{ padding-right: 0!important;}
+.form-control{ display: inline-block; width: auto; height: 22px; padding:0;}
+.checkbox{ font-weight: normal; font-size: 12px; display: inline-block; margin: 0}
 /*导航部分*/
 .navbar-header h1{width:70px; height: 20px; margin: 16px 20px 14px; background-repeat: no-repeat;}
 .yjIcn{ background: url(../img/sprites.png)}
@@ -29,6 +31,7 @@
 .yjModeLarPicFb .img-circle{border:1px solid #7ea741;}
 /*图片列表*/
 .yjModPicPn .yjPicItem{ float: left;display: inline; margin: 0 10px 20px}
+.yjPicItem .yjPicFont{ margin-top:10px}
 
 .yjModPicPn2 .yjPicItem2{ margin:0 0 10px 10px; float: left; display: inline;}
 .yjModPicPn2 .yjPicIn2{ display:block; margin-bottom: 10px; width: 140px; height: 135px;}
