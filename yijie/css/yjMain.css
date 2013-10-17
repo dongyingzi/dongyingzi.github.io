@@ -1,11 +1,18 @@
 /*公用样式*/
 .mr3{ margin-right: 3px;} .mb10{ margin-bottom: 10px} .mb5{margin-bottom: 5px} .mb15{ margin-bottom: 15px;}.mb20{ margin-bottom: 20px}
+.pl10{ padding-left: 10px}
 .yjCgreen{ color: #690} .yjCgray6{ color:#666 } .yjCgray9{color: #999} .yjFs12{ font-size: 12px} .pt30{ padding-top: 30px}
 .yjTxB{ font-weight: bold;} .yjCgrayLink{color: #ccc} .mt10{ margin-top: 10px} .mt5{ margin-top: 5px}
 .topPt{ padding-top: 80px }
 .yjCgrayLink:hover,
 .yjCgrayLink:focus {
   color: #fff;
+  text-decoration: underline;
+}
+.yjCgray2Link{ color: #666}
+.yjCgray2Link:hover,
+.yjCgray2Link:focus {
+  color: #666;
   text-decoration: underline;
 }
 .yjMtNone{ margin: 0!important} .yjPlNone{ padding-left: 0!important;}.yjPrNone{ padding-right: 0!important;}
@@ -35,6 +42,10 @@
 .yjSidePicPn{ padding-right: 0}
 .yjSidePicPn h3{color: #690; margin-bottom: 0}
 .yjSidePicPn img{ float: left; margin:10px 0 0 10px; display: inline;}
+.yjPicMore{ position: relative; zoom:1; color: #fff; background: #690; display: inline-block;}
+.yjPicMore:hover{ color: #fff;}
+.yjPicMore span{ position: absolute; bottom: 10px; right: 10px; display: block;}
+.yjPicMore strong{ font-size: 20px}
 /*评论部分*/
 .yjCommB,
 .yjCommI,

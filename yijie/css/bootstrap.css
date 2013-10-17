@@ -4000,8 +4000,8 @@ border-color: #080808;
 .pagination > .active > span:focus {
   z-index: 2;
   color: #ffffff;
-  background-color: #428bca;
-  border-color: #428bca;
+  background-color: #690;
+  border-color: #690;
   cursor: default;
 }
 .pagination > .disabled > span,
