@@ -3526,6 +3526,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
   .navbar-collapse .navbar-text:last-child {
     margin-right: 0;
   }
+  .navSearch {
+width: 128px;}
 }
 .container > .navbar-header,
 .container > .navbar-collapse {
@@ -5560,6 +5562,8 @@ td.visible-xs {
   td.visible-xs.visible-md {
     display: table-cell !important;
   }
+   .navSearch {
+width: 240px}
 }
 @media (min-width: 1200px) {
   .visible-xs.visible-lg {
@@ -5572,6 +5576,8 @@ td.visible-xs {
   td.visible-xs.visible-lg {
     display: table-cell !important;
   }
+  .navSearch {
+width: 240px}
 }
 .visible-sm,
 tr.visible-sm,
