@@ -3992,8 +3992,7 @@ border-color: #080808;
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  background-color: #8cb948;
-}
+  background-color: #eee; color: #690}
 .pagination > .active > a,
 .pagination > .active > span,
 .pagination > .active > a:hover,

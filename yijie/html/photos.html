@@ -101,7 +101,7 @@
                 </p>
             </div>
             <div class="yjSlideR">
-                <h4 class="yjCgreen">婚礼日鲜花摆拍，各种鲜花各种颜色各种情况</h4>
+                <h4 class="yjCgreen yjYh">婚礼日鲜花摆拍，各种鲜花各种颜色各种情况</h4>
                 <p><span class="yjCgray6">主题:</span>  勿忘初心</p>
                 <p><span class="yjCgray6">地点:</span>  湖北省宜昌市美丽区</p>
                 <p><span class="yjCgray6">时间:</span>  2013年8月24日</p>
@@ -227,7 +227,7 @@
 
                     <a href="#" class="yjCgrayLink">
                         <span class="glyphicon glyphicon-user"></span>
-                        登陆
+                        登录
                         /
                         注册
                     </a>
@@ -848,6 +848,20 @@
                 "overflow":"auto"
             });
         });
+        $('#myModal').on('hidden.bs.modal', function () {
+            
+            $("html").css({
+                "overflow": 'auto'
+            });
+        })
+        $('#myModal').on('shown.bs.modal', function () {
+            $("html").css({
+                "overflow": 'hidden'
+            });
+            $(".modal").css({
+                "overflow": 'hidden'
+            });
+        })
     </script>
 </body>
 </html>

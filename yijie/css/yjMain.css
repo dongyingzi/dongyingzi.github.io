@@ -68,11 +68,11 @@
 .yjPicInfo strong{ color:#666;}
 /*边栏图片列表*/
 
-.yjPicMore{ position: relative; zoom:1; color: #fff; background: #8cb948; display: inline-block;}
+.yjPicMore{ position: relative; zoom:1; color: #fff; background: #690; display: inline-block;}
 .yjPicMore img{ margin-bottom: 0!important}
 .yjPicMore:hover{ color: #fff;}
 .yjPicMore span{ position: absolute; bottom: 10px; right: 10px; display: block;}
-.yjPicMore strong{ font-size: 30px}
+.yjPicMore strong{ font-size: 30px; font-weight: normal;}
 /*评论部分*/
 .yjCommB,
 .yjCommI,
@@ -149,7 +149,7 @@ filter: alpha(opacity=100); background: transparent;}
 .yjPicItem3 .col-md-2{ padding-left: 0}
 .yjPicItem3 .col-md-2 img,.yjPicItem3 .col-md-3 img{ width: 140px; height: 135px}
 .yjPicItem3 .col-md-3{ padding-left: 0}
-.fixSub{ top: 0; background: #fff; z-index: 333; border-bottom: 1px solid #ccc; position: fixed;}
+.fixSub{ top: 0; background: #fff; z-index: 333; border-bottom: 1px solid #ccc; position: fixed; padding-bottom: 15px}
 }
 @media (max-width: 768px) {
 	.text-right{ text-align: left;}

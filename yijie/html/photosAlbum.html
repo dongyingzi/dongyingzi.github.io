@@ -67,7 +67,7 @@
 
                     <a href="#" class="yjCgrayLink">
                         <span class="glyphicon glyphicon-user"></span>
-                        登陆
+                        登录
                         /
                         注册
                     </a>
@@ -85,6 +85,111 @@
     </div>
     <!-- container
       ================================================== -->
+      <div class="container">
+            <div class=" yjSubTit2Pn">
+                <div class="row">
+                <div class="col-md-9 col-sm-9 clearfix yjSelectPn">
+                    <div class="pull-left mr10 mb10">
+                        拍摄地点:
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-xs" data-toggle="dropdown">湖北省</button>
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="#">湖北省</a>
+                                </li>
+                                <li>
+                                    <a href="#">湖北省</a>
+                                </li>
+                                <li>
+                                    <a href="#">湖北省</a>
+                                </li>
+                                <li>
+                                    <a href="#">湖北省</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pull-left mr10 mb10">
+                        摄影师所在地:
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-xs" data-toggle="dropdown">湖北省</button>
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="#">湖北省</a>
+                                </li>
+                                <li>
+                                    <a href="#">湖南省</a>
+                                </li>
+                                <li>
+                                    <a href="#">湖北省</a>
+                                </li>
+                                <li>
+                                    <a href="#">湖北省</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pull-left mb10">
+                        价格区间:
+                         <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-xs" data-toggle="dropdown">5000 - 7999元</button>
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="#">5000 - 7999元</a>
+                                </li>
+                                <li>
+                                    <a href="#">5000 - 7999元</a>
+                                </li>
+                                <li>
+                                    <a href="#">5000 - 7999元</a>
+                                </li>
+                                <li>
+                                    <a href="#">5000 - 7999元</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 col-sm-3 text-right ">
+
+                    <label class="checkbox">
+                        <input type="checkbox">合并影集</label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+    $(document).ready(function(){
+        var sTop = $(".yjSubTit2Pn").offset().top;
+        
+        $(window).scroll(function(event) {
+            var mTop = $(document).scrollTop();
+            if(mTop > sTop){
+                $(".yjSubTit2Pn").addClass('fixSub');
+                var fixWidth = $(".yjSubTit2Pn").parents('.container').width();
+                $(".yjSubTit2Pn").width(fixWidth);
+            }else{
+                $(".yjSubTit2Pn").removeClass('fixSub')
+            }
+            /* Act on the event */
+        });     
+    });
+    </script>
     <div class="container">
         <div class="yjSubTit mt20">
             <div class="row">
