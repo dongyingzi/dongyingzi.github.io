@@ -410,7 +410,7 @@ h6,
 .h5,
 .h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: normal;
   line-height: 1.1;
   color: inherit;
 }
@@ -3868,6 +3868,7 @@ border-color: #080808;
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
   color: #ffffff;
+  font-weight: bold;
 }
 .navbar-inverse .navbar-nav > .disabled > a,
 .navbar-inverse .navbar-nav > .disabled > a:hover,
