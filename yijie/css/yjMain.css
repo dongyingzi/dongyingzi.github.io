@@ -23,7 +23,7 @@
 .picLink:hover{ background-color: transparent;}
 .yjMtNone{ margin: 0!important} .yjPrNone{ padding-right: 0!important;}
 .yjSelectPn .form-control{ display: inline-block; width: auto; height: 22px; padding:0;}
-.checkbox{font-size: 12px; display: inline-block; margin: 0}
+.checkbox{font-size: 14px; display: inline-block; margin: 0}
 /*导航部分*/
 .navbar-header h1{width:70px; height: 20px; margin: 16px 20px 14px 0; background-repeat: no-repeat;}
 .yjIcn{ background: url(../img/sprites.png); _background: url(../img/sprites.ie6.png);}
@@ -50,7 +50,7 @@
  	border-top:none; left:-1px; right:-1px; padding: 10px 10px 0}
 .yjPicItem .yjPicFont{ margin-top:10px}
 .yjSubTit{ border-top:1px solid #ddd; padding:20px 0 10px; margin-top: 10px}
-.yjSubTit h3{ margin: 0 10px 0 0;}
+.yjSubTit h3{ margin: 0 10px 0 0; font-weight: normal;}
 
 .yjPicItem2 img{ margin-bottom: 10px}
 .yjModPicPn2 .yjPicIn2{ display:block; margin-bottom: 10px; width: 140px; height: 130px;}
