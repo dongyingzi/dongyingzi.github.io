@@ -33,68 +33,76 @@
 <body>
     <!-- navbar
       ================================================== -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inverse">
         <div class="container">
-            <div class="row">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a  href="/">
-                        <h1 class="text-hide yjIcn">易结</h1>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/">
+                    <h1 class="text-hide yjIcn">易结</h1>
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">婚纱照</a>
+                    </li>
+                    <li>
+                        <a href="#">真实案例</a>
+                    </li>
+                    <li>
+                        <a href="#">创意夹</a>
+                    </li>
+                    <li>
+                        <a href="#">达人</a>
+                    </li>
+                </ul>
+                <div class="navLogin">
+
+                    <a href="#" class="yjCgrayLink">
+                        <span class="glyphicon glyphicon-user"></span>
+                        登陆
+                        /
+                        注册
                     </a>
                 </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="/">首页</a>
-                        </li>
-                        <li class="active">
-                            <a href="#">婚纱照</a>
-                        </li>
-                        <li>
-                            <a href="#">真实案例</a>
-                        </li>
-                        <li>
-                            <a href="#">创意夹</a>
-                        </li>
-                        <li>
-                            <a href="#">达人</a>
-                        </li>
-                    </ul>
-                    <div class="navLogin">
-                        <span class="glyphicon glyphicon-user"></span>
-                        <a href="#" class="yjCgrayLink">登陆</a>
-                        /
-                        <a href="#" class="yjCgrayLink">注册</a>
-                    </div>
-                    <div class="navSearch">
-                        <form role="form">
-                            <input type="text" class="form-control input-sm" placeholder="搜索关键词">
-                            <button type="submit">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </button>
-                        </form>
-                    </div>
-
+                <div class="navSearch">
+                    <form role="form">
+                        <input type="text" class="form-control input-sm" placeholder="搜索关键词">    
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
     <!-- container
       ================================================== -->
-    <div class="container topPt">
-        <div class="clearfix"><p class="pull-left"><a href="#">婚纱照</a>  <span class="yjCgray6">/  婚礼日鲜花摆拍，各种鲜花各种颜色各种情况</span></p></div>
+    <div class="container">
+        <div class="row yjSubTit2Pn">
+            <div class="col-md-9 col-sm-9">
+                <p>
+
+                    <a href="#">婚纱照</a>
+                    <span class="yjCgray6">/  婚礼日鲜花摆拍，各种鲜花各种颜色各种情况</span>
+                </p>
+            </div>
+        </div>
         <div class="row yjModPicPn">
             <div class="col-md-3 col-xs-6 col-sm-3">
                 <div class="yjPicItem">
                     <a href="#" data-toggle="modal" data-target="#myModal">
-                        <img alt="100%x180" src="../img/280.jpg" class="img-responsive" ></a>
-                    <p class="yjPicFont">婚礼日鲜花摆拍，各种鲜花各种颜色各种情.</p>
-                    <a class="yjCgray2Link" href="#">
-                        <img src="../img/20.jpg" alt=""  class="img-circle mr3">老刘好声音</a>
+                        <img alt="100%x180" src="../img/280.jpg" class="img-responsive"></a>
+                    <p class="yjPicFont"><a href="#" class="yjCgray3Link">婚礼日鲜花摆拍，各种鲜花各种颜色各种情.</a></p>
+                    <a href="#" class="picLink">
+                        <img src="../img/20.jpg" alt="" class="img-circle mr3"></a><a class="yjCgray2Link yjFs12" href="#">老刘好声音</a>
                         <div class="yjPicItemHoverCnt">
                             <p>
                                 <a href="#">创意夹 (13)</a>
@@ -104,9 +112,9 @@
                             <p class="yjBorderMod">
                                 <a href="#">婚礼现场随拍</a>
                             </p>
-                            <p>
+                            <p class="yjCgray6 yjFs12">
                                 <span class="glyphicon glyphicon-map-marker"></span>
-                                湖北省武汉市武昌区
+                                <a href="#" class="yjCgray2Link">湖北省武汉市武昌区</a>
                             </p>
                         </div>
                 </div>
@@ -114,10 +122,10 @@
             <div class="col-md-3 col-xs-6 col-sm-3">
                 <div class="yjPicItem">
                     <a href="#" data-toggle="modal" data-target="#myModal">
-                        <img alt="100%x180" src="../img/280.jpg" class="img-responsive" ></a>
-                    <p class="yjPicFont">婚礼日鲜花摆拍，各种鲜花各种颜色各种情.</p>
-                    <a class="yjCgray2Link" href="#">
-                        <img src="../img/20.jpg" alt=""  class="img-circle mr3">老刘好声音</a>
+                        <img alt="100%x180" src="../img/280.jpg" class="img-responsive"></a>
+                    <p class="yjPicFont"><a href="#" class="yjCgray3Link">婚礼日鲜花摆拍，各种鲜花各种颜色各种情.</a></p>
+                    <a href="#" class="picLink">
+                        <img src="../img/20.jpg" alt="" class="img-circle mr3"></a><a class="yjCgray2Link yjFs12" href="#">老刘好声音</a>
                         <div class="yjPicItemHoverCnt">
                             <p>
                                 <a href="#">创意夹 (13)</a>
@@ -127,9 +135,9 @@
                             <p class="yjBorderMod">
                                 <a href="#">婚礼现场随拍</a>
                             </p>
-                            <p>
+                            <p class="yjCgray6 yjFs12">
                                 <span class="glyphicon glyphicon-map-marker"></span>
-                                湖北省武汉市武昌区
+                                <a href="#" class="yjCgray2Link">湖北省武汉市武昌区</a>
                             </p>
                         </div>
                 </div>
@@ -137,10 +145,10 @@
             <div class="col-md-3 col-xs-6 col-sm-3">
                 <div class="yjPicItem">
                     <a href="#" data-toggle="modal" data-target="#myModal">
-                        <img alt="100%x180" src="../img/280.jpg" class="img-responsive" ></a>
-                    <p class="yjPicFont">婚礼日鲜花摆拍，各种鲜花各种颜色各种情.</p>
-                    <a class="yjCgray2Link" href="#">
-                        <img src="../img/20.jpg" alt=""  class="img-circle mr3">老刘好声音</a>
+                        <img alt="100%x180" src="../img/280.jpg" class="img-responsive"></a>
+                    <p class="yjPicFont"><a href="#" class="yjCgray3Link">婚礼日鲜花摆拍，各种鲜花各种颜色各种情.</a></p>
+                    <a href="#" class="picLink">
+                        <img src="../img/20.jpg" alt="" class="img-circle mr3"></a><a class="yjCgray2Link yjFs12" href="#">老刘好声音</a>
                         <div class="yjPicItemHoverCnt">
                             <p>
                                 <a href="#">创意夹 (13)</a>
@@ -150,9 +158,9 @@
                             <p class="yjBorderMod">
                                 <a href="#">婚礼现场随拍</a>
                             </p>
-                            <p>
+                            <p class="yjCgray6 yjFs12">
                                 <span class="glyphicon glyphicon-map-marker"></span>
-                                湖北省武汉市武昌区
+                                <a href="#" class="yjCgray2Link">湖北省武汉市武昌区</a>
                             </p>
                         </div>
                 </div>
@@ -160,10 +168,10 @@
             <div class="col-md-3 col-xs-6 col-sm-3">
                 <div class="yjPicItem">
                     <a href="#" data-toggle="modal" data-target="#myModal">
-                        <img alt="100%x180" src="../img/280.jpg" class="img-responsive" ></a>
-                    <p class="yjPicFont">婚礼日鲜花摆拍，各种鲜花各种颜色各种情.</p>
-                    <a class="yjCgray2Link" href="#">
-                        <img src="../img/20.jpg" alt=""  class="img-circle mr3">老刘好声音</a>
+                        <img alt="100%x180" src="../img/280.jpg" class="img-responsive"></a>
+                    <p class="yjPicFont"><a href="#" class="yjCgray3Link">婚礼日鲜花摆拍，各种鲜花各种颜色各种情.</a></p>
+                    <a href="#" class="picLink">
+                        <img src="../img/20.jpg" alt="" class="img-circle mr3"></a><a class="yjCgray2Link yjFs12" href="#">老刘好声音</a>
                         <div class="yjPicItemHoverCnt">
                             <p>
                                 <a href="#">创意夹 (13)</a>
@@ -173,9 +181,9 @@
                             <p class="yjBorderMod">
                                 <a href="#">婚礼现场随拍</a>
                             </p>
-                            <p>
+                            <p class="yjCgray6 yjFs12">
                                 <span class="glyphicon glyphicon-map-marker"></span>
-                                湖北省武汉市武昌区
+                                <a href="#" class="yjCgray2Link">湖北省武汉市武昌区</a>
                             </p>
                         </div>
                 </div>
@@ -185,10 +193,10 @@
             <div class="col-md-3 col-xs-6 col-sm-3">
                 <div class="yjPicItem">
                     <a href="#" data-toggle="modal" data-target="#myModal">
-                        <img alt="100%x180" src="../img/280.jpg" class="img-responsive" ></a>
-                    <p class="yjPicFont">婚礼日鲜花摆拍，各种鲜花各种颜色各种情.</p>
-                    <a class="yjCgray2Link" href="#">
-                        <img src="../img/20.jpg" alt=""  class="img-circle mr3">老刘好声音</a>
+                        <img alt="100%x180" src="../img/280.jpg" class="img-responsive"></a>
+                    <p class="yjPicFont"><a href="#" class="yjCgray3Link">婚礼日鲜花摆拍，各种鲜花各种颜色各种情.</a></p>
+                    <a href="#" class="picLink">
+                        <img src="../img/20.jpg" alt="" class="img-circle mr3"></a><a class="yjCgray2Link yjFs12" href="#">老刘好声音</a>
                         <div class="yjPicItemHoverCnt">
                             <p>
                                 <a href="#">创意夹 (13)</a>
@@ -198,9 +206,9 @@
                             <p class="yjBorderMod">
                                 <a href="#">婚礼现场随拍</a>
                             </p>
-                            <p>
+                            <p class="yjCgray6 yjFs12">
                                 <span class="glyphicon glyphicon-map-marker"></span>
-                                湖北省武汉市武昌区
+                                <a href="#" class="yjCgray2Link">湖北省武汉市武昌区</a>
                             </p>
                         </div>
                 </div>
@@ -208,10 +216,10 @@
             <div class="col-md-3 col-xs-6 col-sm-3">
                 <div class="yjPicItem">
                     <a href="#" data-toggle="modal" data-target="#myModal">
-                        <img alt="100%x180" src="../img/280.jpg" class="img-responsive" ></a>
-                    <p class="yjPicFont">婚礼日鲜花摆拍，各种鲜花各种颜色各种情.</p>
-                    <a class="yjCgray2Link" href="#">
-                        <img src="../img/20.jpg" alt=""  class="img-circle mr3">老刘好声音</a>
+                        <img alt="100%x180" src="../img/280.jpg" class="img-responsive"></a>
+                    <p class="yjPicFont"><a href="#" class="yjCgray3Link">婚礼日鲜花摆拍，各种鲜花各种颜色各种情.</a></p>
+                    <a href="#" class="picLink">
+                        <img src="../img/20.jpg" alt="" class="img-circle mr3"></a><a class="yjCgray2Link yjFs12" href="#">老刘好声音</a>
                         <div class="yjPicItemHoverCnt">
                             <p>
                                 <a href="#">创意夹 (13)</a>
@@ -221,9 +229,9 @@
                             <p class="yjBorderMod">
                                 <a href="#">婚礼现场随拍</a>
                             </p>
-                            <p>
+                            <p class="yjCgray6 yjFs12">
                                 <span class="glyphicon glyphicon-map-marker"></span>
-                                湖北省武汉市武昌区
+                                <a href="#" class="yjCgray2Link">湖北省武汉市武昌区</a>
                             </p>
                         </div>
                 </div>
@@ -231,10 +239,10 @@
             <div class="col-md-3 col-xs-6 col-sm-3">
                 <div class="yjPicItem">
                     <a href="#" data-toggle="modal" data-target="#myModal">
-                        <img alt="100%x180" src="../img/280.jpg" class="img-responsive" ></a>
-                    <p class="yjPicFont">婚礼日鲜花摆拍，各种鲜花各种颜色各种情.</p>
-                    <a class="yjCgray2Link" href="#">
-                        <img src="../img/20.jpg" alt=""  class="img-circle mr3">老刘好声音</a>
+                        <img alt="100%x180" src="../img/280.jpg" class="img-responsive"></a>
+                    <p class="yjPicFont"><a href="#" class="yjCgray3Link">婚礼日鲜花摆拍，各种鲜花各种颜色各种情.</a></p>
+                    <a href="#" class="picLink">
+                        <img src="../img/20.jpg" alt="" class="img-circle mr3"></a><a class="yjCgray2Link yjFs12" href="#">老刘好声音</a>
                         <div class="yjPicItemHoverCnt">
                             <p>
                                 <a href="#">创意夹 (13)</a>
@@ -244,9 +252,9 @@
                             <p class="yjBorderMod">
                                 <a href="#">婚礼现场随拍</a>
                             </p>
-                            <p>
+                            <p class="yjCgray6 yjFs12">
                                 <span class="glyphicon glyphicon-map-marker"></span>
-                                湖北省武汉市武昌区
+                                <a href="#" class="yjCgray2Link">湖北省武汉市武昌区</a>
                             </p>
                         </div>
                 </div>
@@ -254,10 +262,10 @@
             <div class="col-md-3 col-xs-6 col-sm-3">
                 <div class="yjPicItem">
                     <a href="#" data-toggle="modal" data-target="#myModal">
-                        <img alt="100%x180" src="../img/280.jpg" class="img-responsive" ></a>
-                    <p class="yjPicFont">婚礼日鲜花摆拍，各种鲜花各种颜色各种情.</p>
-                    <a class="yjCgray2Link" href="#">
-                        <img src="../img/20.jpg" alt=""  class="img-circle mr3">老刘好声音</a>
+                        <img alt="100%x180" src="../img/280.jpg" class="img-responsive"></a>
+                    <p class="yjPicFont"><a href="#" class="yjCgray3Link">婚礼日鲜花摆拍，各种鲜花各种颜色各种情.</a></p>
+                    <a href="#" class="picLink">
+                        <img src="../img/20.jpg" alt="" class="img-circle mr3"></a><a class="yjCgray2Link yjFs12" href="#">老刘好声音</a>
                         <div class="yjPicItemHoverCnt">
                             <p>
                                 <a href="#">创意夹 (13)</a>
@@ -267,9 +275,9 @@
                             <p class="yjBorderMod">
                                 <a href="#">婚礼现场随拍</a>
                             </p>
-                            <p>
+                            <p class="yjCgray6 yjFs12">
                                 <span class="glyphicon glyphicon-map-marker"></span>
-                                湖北省武汉市武昌区
+                                <a href="#" class="yjCgray2Link">湖北省武汉市武昌区</a>
                             </p>
                         </div>
                 </div>
@@ -395,7 +403,10 @@
                                     <a href="#" title="图片" class="text-hide yjIcn yjCommP">图片</a>
                                 </div>
                                 <div class="pull-right">
-                                    <span>还能输入133个字</span>
+                                    <span id="commetFont">
+                                        还能输入 <strong class="commetFontNum">133</strong>
+                                        个字
+                                    </span>
                                     <button type="button" class="btn btn-success">发 布</button>
                                 </div>
                             </div>
@@ -405,21 +416,23 @@
                     <div class="media">
                         <a class="pull-left" href="#">
                             <img class="media-object img-circle" src="../img/55.jpg" alt="headPic"></a>
-                        <div class="media-body yjFs12">
+                        <div class="media-body">
                             <h5 class="media-heading">
                                 <a href="#" class="yjCgreenL yjTxB">斯皮尔博格我有十二个字呀:</a>
                             </h5>
                             <div class="mb5">这些花真漂亮，哪儿买的多少银子啊?  另外拍完后修片子要花不少时间吧?</div>
                             <p>
                                 2013-08-25 18:20
-                                <a href="#" class="yjCgreenL">回复</a>
-                                </p><div class="input-group">
-                                    <input type="text" class="form-control">                                
+                                <a href="#" class="yjCgreenL ml10 relay">回复</a>
+                            </p>
+                            <div class="relayCnt">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Message">                
                                     <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button">发布</button>
+                                        <button class="btn relayBtn btn-default" type="button">发布</button>
                                     </span>
                                 </div>
-                            <p></p>
+                            </div>
                             <div class="media yjReMedia">
                                 <a class="pull-left" href="#">
                                     <img class="media-object img-circle" src="../img/55.jpg" alt="headPic"></a>
@@ -430,8 +443,16 @@
                                     <div class="mb5">这些花真漂亮，哪儿买的多少银子啊?  另外拍完后修片子要花不少时间吧?</div>
                                     <p>
                                         2013-08-25 18:20
-                                        <a href="#" class="yjCgreenL">回复</a>
+                                        <a href="#" class="yjCgreenL ml10 relay">回复</a>
                                     </p>
+                                    <div class="relayCnt">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Message">                
+                                            <span class="input-group-btn">
+                                                <button class="btn relayBtn btn-default" type="button">发布</button>
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="media yjReMedia">
@@ -444,8 +465,16 @@
                                     <div class="mb5">这些花真漂亮，哪儿买的多少银子啊?  另外拍完后修片子要花不少时间吧?</div>
                                     <p>
                                         2013-08-25 18:20
-                                        <a href="#" class="yjCgreenL">回复</a>
+                                        <a href="#" class="yjCgreenL ml10 relay">回复</a>
                                     </p>
+                                    <div class="relayCnt">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Message">                
+                                            <span class="input-group-btn">
+                                                <button class="btn relayBtn btn-default" type="button">发布</button>
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -460,8 +489,16 @@
                             <div class="mb5">这些花真漂亮，哪儿买的多少银子啊?  另外拍完后修片子要花不少时间吧?</div>
                             <p>
                                 2013-08-25 18:20
-                                <a href="#" class="yjCgreenL">回复</a>
+                                <a href="#" class="yjCgreenL ml10 relay">回复</a>
                             </p>
+                            <div class="relayCnt">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Message">                
+                                    <span class="input-group-btn">
+                                        <button class="btn relayBtn btn-default" type="button">发布</button>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="media">
@@ -474,8 +511,16 @@
                             <div class="mb5">这些花真漂亮，哪儿买的多少银子啊?  另外拍完后修片子要花不少时间吧?</div>
                             <p>
                                 2013-08-25 18:20
-                                <a href="#" class="yjCgreenL">回复</a>
+                                <a href="#" class="yjCgreenL ml10 relay">回复</a>
                             </p>
+                            <div class="relayCnt">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Message">                
+                                    <span class="input-group-btn">
+                                        <button class="btn relayBtn btn-default" type="button">发布</button>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -607,6 +652,47 @@
 
         </div>
     </footer>
+    <script>
+$('.relay').click(function(event) {
+    this.href = 'javascript://';
+     $(this).parent().next().toggle();
+    
+});
+$('.relayBtn').click(function(event) {
+     $(this).parents('.relayCnt').hide();
+    
+});
+
+$(function(){
+        function maxLimit(){
+                var strlen=0; //初始定义长度为0
+                var num = $('#comment').val();
+                var maxNum = 133;
+                function isChinese(str){  //判断是不是中文
+                    var reCh=/[u00-uff]/;
+                    return !reCh.test(str);
+                }
+                for(var i=0;i<num.length;i++){
+                    if(isChinese(num.charAt(i))==true){
+                        strlen=strlen+2;//中文为2个字符
+                    }else{
+                        strlen=strlen+2;//英文一个字符
+                    }
+                }
+                strlen=Math.ceil(strlen/2);//中英文相加除2取整数
+                if(maxNum-strlen<0){
+                    $('#commetFont').html("已超出 <strong style='color:red' class='commetFontNum'>"+Math.abs(maxNum-strlen)+"</strong> 字"); //超出的样式
+                }
+                else{
+                    $('#commetFont').html("还可以输入 <strong class='commetFontNum'>"+(maxNum-strlen)+"</strong> 字"); //正常时候
+                }
+                
+        };
+        $("#comment").keyup(maxLimit);
+        
+});
+
+</script>
 
 </body>
 </html>
