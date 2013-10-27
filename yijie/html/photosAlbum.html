@@ -173,25 +173,9 @@
         </div>
 
     </div>
-    <script>
-    $(document).ready(function(){
-        var sTop = $(".yjSubTit2Pn").offset().top;
-        
-        $(window).scroll(function(event) {
-            var mTop = $(document).scrollTop();
-            if(mTop > sTop){
-                $(".yjSubTit2Pn").addClass('fixSub');
-                var fixWidth = $(".yjSubTit2Pn").parents('.container').width();
-                $(".yjSubTit2Pn").width(fixWidth);
-            }else{
-                $(".yjSubTit2Pn").removeClass('fixSub')
-            }
-            /* Act on the event */
-        });     
-    });
-    </script>
+
     <div class="container">
-        <div class="yjSubTit mt20">
+        <div class="yjSubTit">
             <div class="row">
                 <div class="col-md-9 col-sm-9 clearfix">
                     <h3 class=" pull-left yjYh"><a href="#" class="yjCgreen">早春的东湖印象系列</span></a><span class="yjFs18">(10)</span></h3>
@@ -501,6 +485,51 @@
 
         </div>
     </footer>
-
+  <script>
+        
+        $(document).ready(function() {
+            //是否为移动端设备
+            var isMobile = {  
+                Android: function() {  
+                    return navigator.userAgent.match(/Android/i) ? true : false;  
+                },  
+                BlackBerry: function() {  
+                    return navigator.userAgent.match(/BlackBerry/i) ? true : false;  
+                },  
+                iOS: function() {  
+                    return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;  
+                },  
+                Windows: function() {  
+                    return navigator.userAgent.match(/IEMobile/i) ? true : false;  
+                },  
+                any: function() {  
+                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());  
+                }  
+            }
+           
+            //吸顶效果
+            if(!isMobile.any()){
+                var sTop = $(".yjSubTit2Pn").offset().top;
+                $(window).scroll(function(event) {
+                    var mTop = $(document).scrollTop();
+                    if(mTop > sTop){
+                        $(".yjSubTit2Pn").addClass('fixSub');
+                        var fixWidth = $(".yjSubTit2Pn").parents('.container').width()+20;
+                        $(".yjSubTit2Pn").find('.row').css({
+                            "width": fixWidth,
+                            "margin": '0 auto'
+                        });
+                    }else{
+                        $(".yjSubTit2Pn").removeClass('fixSub');
+                        $(".yjSubTit2Pn").find('.row').css({
+                            "width": "auto",
+                            "margin": '0 -10px'
+                        });
+                    }
+                });
+            }  
+        });
+    
+    </script>
 </body>
 </html>

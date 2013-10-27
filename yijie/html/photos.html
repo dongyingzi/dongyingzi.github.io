@@ -81,7 +81,7 @@
                     </a>
                 </div>
                 
-                <p class="text-right mt10">
+                <p class="yjBt mt10">
                     <a href="#" class="yjIcn yjAddIcn"></a>
                     <a href="#" class="mr10"> 
                         加入创意夹
@@ -101,16 +101,15 @@
                 </p>
             </div>
             <div class="yjSlideR">
-                <h4 class="yjCgreen yjYh">婚礼日鲜花摆拍，各种鲜花各种颜色各种情况</h4>
-                <p><span class="yjCgray6">主题:</span>  勿忘初心</p>
-                <p><span class="yjCgray6">地点:</span>  湖北省宜昌市美丽区</p>
-                <p><span class="yjCgray6">时间:</span>  2013年8月24日</p>
-                <p><span class="yjCgray6">风格:</span> 韩式清新</p>
-                <p>
-                    <span class="yjCgray6">服饰:</span>  婚纱x2套、礼服x1套、首饰若干、老
-    爷车x1辆、马车x3辆
+                <h4 class="yjCgreen yjYh mNone">婚礼日鲜花摆拍，各种鲜花各种颜色各种情况</h4>
+                <p class="mt10 mb5"><span class="yjCgray6">主题:</span>  勿忘初心</p>
+                <p class="mb5"><span class="yjCgray6">地点:</span>  湖北省宜昌市美丽区</p>
+                <p class="mb5"><span class="yjCgray6">时间:</span>  2013年8月24日</p>
+                <p class="mb5"><span class="yjCgray6">风格:</span> 韩式清新</p>
+                <p class="mb5">
+                    <span class="yjCgray6">服饰:</span>  婚纱x2套、礼服x1套、首饰若干、老爷车x1辆、马车x3辆
                 </p>
-                <p>
+                <p class="mb5">
                   <span class="yjCgray6">  描述:  </span>这里有一些描述哦默认显示两行这里有一些描述哦默认显示两行这里有一些描述这里
                     <a href="#">[展开]</a>
                 </p>
@@ -118,7 +117,7 @@
                     <strong>已被 99+ 个创意夹收纳</strong>
                     <a href="#">查看全部》</a>
                 </p>
-                <p class="yjBorderMod">
+                <p class="yjBorderMod mb5">
                     <strong>摄影师</strong>
                 </p>
                 <div class="media">
@@ -152,7 +151,7 @@
                             <a href="#" class="yjCgreenL yjTxB">斯皮尔博格我有十二个字呀:</a>
                         </h5>
                         <div class="mb5">这些花真漂亮，哪儿买的多少银子啊?  另外拍完后修片子要花不少时间吧?</div>
-                        <p>
+                        <p class="yjCgray6">
                             2013-08-25 18:20
                             <a href="#" class="yjCgreenL ml10 relay">回复</a>
                         </p>
@@ -171,7 +170,7 @@
                                     <a href="#" class="yjCgreenL yjTxB">斯皮尔博格我有十二个字呀:</a>
                                 </h5>
                                 <div class="mb5">这些花真漂亮，哪儿买的多少银子啊?  另外拍完后修片子要花不少时间吧?</div>
-                                <p>
+                                <p class="yjCgray6">
                                     2013-08-25 18:20
                                     <a href="#" class="yjCgreenL ml10 relay">回复</a>
                                 </p>
@@ -187,10 +186,15 @@
                         </div>
                     </div>
                 </div>
-                <p class="mt10"><a href="#">发表评论</a>   <span class="yjCgray6">|</span>  <a href="#">查看全部评论》</a></p>
+                <p class="mt10">
+                    <a href="#">发表评论</a>
+                    <span class="yjCgray6">|</span>
+                    <a href="#">查看全部评论》</a>
+                </p>
             </div>
-            <!-- /.modal-content --> </div>
-        <!-- /.modal-dialog --> </div>
+            <!-- /.modal-content --> 
+        </div><!-- /.modal-dialog --> 
+    </div>
         <!-- navbar
       ================================================== -->
     <div class="navbar-inverse">
@@ -333,23 +337,6 @@
         </div>
 
     </div>
-    <script>
-    $(document).ready(function(){
-        var sTop = $(".yjSubTit2Pn").offset().top;
-        
-        $(window).scroll(function(event) {
-            var mTop = $(document).scrollTop();
-            if(mTop > sTop){
-                $(".yjSubTit2Pn").addClass('fixSub');
-                var fixWidth = $(".yjSubTit2Pn").parents('.container').width();
-                $(".yjSubTit2Pn").width(fixWidth);
-            }else{
-                $(".yjSubTit2Pn").removeClass('fixSub')
-            }
-            /* Act on the event */
-        });     
-    });
-            </script>
     <div class="container">
         <div class="row yjModPicPn">
             <div class="col-md-3 col-xs-6 col-sm-3">
@@ -832,36 +819,78 @@
         </div>
     </footer>
     <script>
-    $('.relay').click(function(event) {
-    this.href = 'javascript://';
-     $(this).parent().next().toggle();
-    
-        });
-        $('.relayBtn').click(function(event) {
-             $(this).parents('.relayCnt').hide();
-            
-        });
+        
         $(document).ready(function() {
-            var bodyH = $(window).height() - 20;
-            $(".yjSlideR").css({
-                "height": bodyH,
-                "overflow":"auto"
+            //是否为移动端设备
+            var isMobile = {  
+                Android: function() {  
+                    return navigator.userAgent.match(/Android/i) ? true : false;  
+                },  
+                BlackBerry: function() {  
+                    return navigator.userAgent.match(/BlackBerry/i) ? true : false;  
+                },  
+                iOS: function() {  
+                    return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;  
+                },  
+                Windows: function() {  
+                    return navigator.userAgent.match(/IEMobile/i) ? true : false;  
+                },  
+                any: function() {  
+                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());  
+                }  
+            }
+            //回复部分
+            $('.relay').click(function(event) {
+                this.href = 'javascript://';
+                $(this).parent().next().toggle();
             });
+            $('.relayBtn').click(function(event) {
+                 $(this).parents('.relayCnt').hide();
+            });
+            //幻灯部分
+            if(!isMobile.any()){
+                var bodyH = $(window).height() - 20;
+                $(".yjSlideR").css({
+                    "height": bodyH,
+                    "overflow":"auto"
+                });
+                $('#myModal').on('hidden.bs.modal', function () {
+                    $("html").css({
+                        "overflow": 'auto'
+                    });
+                })
+                $('#myModal').on('shown.bs.modal', function () {
+                    $("html").css({
+                        "overflow": 'hidden'
+                    });
+                    $(".modal").css({
+                        "overflow": 'hidden'
+                    });
+                })
+            }
+            //吸顶效果
+            if(!isMobile.any()){
+                var sTop = $(".yjSubTit2Pn").offset().top;
+                $(window).scroll(function(event) {
+                    var mTop = $(document).scrollTop();
+                    if(mTop > sTop){
+                        $(".yjSubTit2Pn").addClass('fixSub');
+                        var fixWidth = $(".yjSubTit2Pn").parents('.container').width()+20;
+                        $(".yjSubTit2Pn").find('.row').css({
+                            "width": fixWidth,
+                            "margin": '0 auto'
+                        });
+                    }else{
+                        $(".yjSubTit2Pn").removeClass('fixSub');
+                        $(".yjSubTit2Pn").find('.row').css({
+                            "width": "auto",
+                            "margin": '0 -10px'
+                        });
+                    }
+                });
+            }  
         });
-        $('#myModal').on('hidden.bs.modal', function () {
-            
-            $("html").css({
-                "overflow": 'auto'
-            });
-        })
-        $('#myModal').on('shown.bs.modal', function () {
-            $("html").css({
-                "overflow": 'hidden'
-            });
-            $(".modal").css({
-                "overflow": 'hidden'
-            });
-        })
+    
     </script>
 </body>
 </html>
