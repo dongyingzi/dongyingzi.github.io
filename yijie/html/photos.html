@@ -12,7 +12,7 @@
     <meta name="robots" content="index,follow">
     <meta name="application-name" content="yijie.com">
     <!-- Bootstrap css -->
-    <link href="../css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="../css/yjMain.css" rel="stylesheet" media="screen">
     <!--[if lt IE 9]>
     <link href="../css/ie.css" rel="stylesheet" media="screen">
@@ -32,25 +32,63 @@
     <link rel="shortcut icon" href=""></head>
 <body>
 
-    <div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" >
+    <div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
         <div class="modal-dialog yjDialog clearfix">
             <div class="yjSlideL">
                 <div class="modal-header">
                     <a href="javascript:viod()" class="close" data-dismiss="modal" aria-hidden="true">×</a>
                 </div>
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li  data-target="#carousel-example-generic" data-slide-to="0" ><img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                        <li class="active" data-target="#carousel-example-generic" data-slide-to="1" ><img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"><img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="3"><img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="4"><img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="5" ><img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="6" ><img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="7"><img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="8"><img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="9"><img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                    </ol>
+                    <div class="carousel-indicators-pn clearfix">
+                        <table width="100%">
+                            <tr>
+                                <td width="8.333333333333332%">
+                                    <a href="#" class="carousel-opt">
+                                        <img alt="100%x180" src="../img/trp.png" width="170" class="img-responsive">                        
+                                        <span>
+                                            上一组
+                                            <br />                        
+                                            照片集
+                                        </span>
+                                    </a>
+                                </td>
+                                <td>
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel-example-generic" data-slide-to="0" >
+                                            <img src="../img/280.jpg" alt="" class="img-responsive"></li>
+                                        <li class="active" data-target="#carousel-example-generic" data-slide-to="1" >
+                                            <img src="../img/280.jpg" alt="" class="img-responsive"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="2">
+                                            <img src="../img/280.jpg" alt="" class="img-responsive"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="3">
+                                            <img src="../img/280.jpg" alt="" class="img-responsive"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="4">
+                                            <img src="../img/280.jpg" alt="" class="img-responsive"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="5" >
+                                            <img src="../img/280.jpg" alt="" class="img-responsive"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="6" >
+                                            <img src="../img/280.jpg" alt="" class="img-responsive"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="7">
+                                            <img src="../img/280.jpg" alt="" class="img-responsive"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="8">
+                                            <img src="../img/280.jpg" alt="" class="img-responsive"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="9">
+                                            <img src="../img/280.jpg" alt="" class="img-responsive"></li>
+                                    </ol>
+                                </td>
+                                <td width="8.333333333333332%">
+                                    <a href="#" class="carousel-opt">
+                                        <img alt="100%x180" src="../img/trp.png" width="170" class="img-responsive">                        
+                                        <span>
+                                            下一组
+                                            <br />                        
+                                            照片集
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                     <div class="carousel-inner">
                         <div class="item">
                             <img src="../img/960.jpg" data-src="holder.js/960x500/auto/#777:#555/text:First slide" alt="First slide"></div>
@@ -866,6 +904,7 @@
                     $(".modal").css({
                         "overflow": 'hidden'
                     });
+                    $('.carousel').carousel('pause');
                 })
             }
             //吸顶效果
