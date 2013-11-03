@@ -45,7 +45,7 @@ a:focus {
 .navSearch .input-sm{ border-radius: 15px; background: #d8d8d8; height: 25px}
 .navSearch button{ position: absolute;top: 0; right: 5px; line-height: 25px; font-size: 14px; background: transparent; border: 0; color: #333; }
 .navLogin{ float: right; padding:15px 0 15px 40px; line-height: 20px; color: #ccc;}
-.yjSubTitPn{  padding:27px 0 11px;}
+.yjSubTitPn{  padding:27px 0 0;}
 .yjSubTit2Pn{ padding:27px 0 0;}
 .affix{ top: 0; background: #fff; z-index: 333;}
 /*头部大图*/
@@ -118,6 +118,8 @@ border:1px solid #5c5c5c; background:#171717;color: #919191; display: block;}
 .yjSqzone{ background-position: 0 -119px}
 
 .yjReMedia{ background: #f8f8f8; margin-top: 5px!important; padding:10px;}
+.yjIntro{ position: relative; height: 40px; overflow: hidden;}
+.yjShow{ position: absolute; right: 2px; bottom:0; background-color: #fff; display: inline-block; padding-left: 5px;}
 /*页尾部分*/
 .footer{padding:25px 0;border-top:3px solid #83c237; background: #3d3d3d; color: #ccc;}
 .footer a{color: #ccc;}

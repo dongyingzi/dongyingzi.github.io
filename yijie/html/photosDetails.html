@@ -90,7 +90,7 @@
     <!-- container
       ================================================== -->
     <div class="container">
-        <div class="row yjSubTitPn">
+        <div class="row yjSubTitPn mb10">
             <div class="col-md-9 col-sm-9">
                 <p>
 
@@ -521,46 +521,6 @@
 
         </div>
     </footer>
- <script>
-$('.relay').click(function(event) {
-    this.href = 'javascript://';
-     $(this).parent().next().toggle();
-    
-});
-$('.relayBtn').click(function(event) {
-     $(this).parents('.relayCnt').hide();
-    
-});
-
-$(function(){
-        function maxLimit(){
-                var strlen=0; //初始定义长度为0
-                var num = $('#comment').val();
-                var maxNum = 140;
-                function isChinese(str){  //判断是不是中文
-                    var reCh=/[u00-uff]/;
-                    return !reCh.test(str);
-                }
-                for(var i=0;i<num.length;i++){
-                    if(isChinese(num.charAt(i))==true){
-                        strlen=strlen+2;//中文为2个字符
-                    }else{
-                        strlen=strlen+2;//英文一个字符
-                    }
-                }
-                strlen=Math.ceil(strlen/2);//中英文相加除2取整数
-                if(maxNum-strlen<0){
-                    $('#commetFont').html("已超出 <strong style='color:red' class='commetFontNum'>"+Math.abs(maxNum-strlen)+"</strong> 字"); //超出的样式
-                }
-                else{
-                    $('#commetFont').html("还可以输入 <strong class='commetFontNum'>"+(maxNum-strlen)+"</strong> 字"); //正常时候
-                }
-                
-        };
-        $("#comment").keyup(maxLimit);
-        
-});
-
-</script>
+    <script src="../js/yj.js"></script>
 </body>
 </html>

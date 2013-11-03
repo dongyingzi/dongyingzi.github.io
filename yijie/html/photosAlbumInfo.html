@@ -86,7 +86,7 @@
     <!-- container
       ================================================== -->
     <div class="container">
-        <div class="row yjSubTit2Pn">
+        <div class="row yjSubTitPn">
             <div class="col-md-9 col-sm-9">
                 <p>
 
@@ -652,122 +652,8 @@
 
         </div>
     </footer>
-<script>
-        
-        $(document).ready(function() {
-            //是否为移动端设备
-            var isMobile = {  
-                Android: function() {  
-                    return navigator.userAgent.match(/Android/i) ? true : false;  
-                },  
-                BlackBerry: function() {  
-                    return navigator.userAgent.match(/BlackBerry/i) ? true : false;  
-                },  
-                iOS: function() {  
-                    return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;  
-                },  
-                Windows: function() {  
-                    return navigator.userAgent.match(/IEMobile/i) ? true : false;  
-                },  
-                any: function() {  
-                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());  
-                }  
-            }
-            //回复部分
-            $('.relay').click(function(event) {
-                this.href = 'javascript://';
-                $(this).parent().next().toggle();
-            });
-            $('.relayBtn').click(function(event) {
-                 $(this).parents('.relayCnt').hide();
-            });
-            //幻灯部分
-            if(!isMobile.any()){
-                $('#myModal').on('hidden.bs.modal', function () {
-                    $("html").css({
-                        "overflow": 'auto',
-                        "padding-right":"0"
-                    });
-                })
-                $('#myModal').on('shown.bs.modal', function () {
-                    $("html").css({
-                        "overflow": 'hidden',
-                        "padding-right":"16px"
-                    });
-                    $(".modal").css({
-                        "overflow": 'hidden'
-                    });
-                    $('.carousel').carousel('pause');
-                     var bodyH = $(window).height() - 20;
-                    $(".yjSlideR").css({
-                        "height": bodyH,
-                        "overflow":"auto"
-                    });
-                    var tHeight = $('.carousel-inner').height();
-                    var tLen = $('.carousel-inner').find('img').length;
-                    
-                   for (var i = 0; i < tLen; i++) {
-                    $('.carousel-inner').find('img').eq(i).css({
-                        "margin-top": (tHeight - $('.carousel-inner').find('.item').eq(i).height())/2
-                    });
-                       
-                   };
-                })
-                
-            }else{
-                $('#myModal').on('shown.bs.modal', function () {
-                    
-                    var tHeight = $('.carousel-inner').height();
-                    var tLen = $('.carousel-inner').find('img').length;
-                    
-                   for (var i = 0; i < tLen; i++) {
-                    $('.carousel-inner').find('img').eq(i).css({
-                        "margin-top": (tHeight - $('.carousel-inner').find('.item').eq(i).height())/2
-                    });
-                       
-                   };
-                })
-            }
-            //发布框字数
-            $(function(){
-                function maxLimit(){
-                        var strlen=0; //初始定义长度为0
-                        var num = $('#comment').val();
-                        var maxNum = 140;
-                        function isChinese(str){  //判断是不是中文
-                            var reCh=/[u00-uff]/;
-                            return !reCh.test(str);
-                        }
-                        for(var i=0;i<num.length;i++){
-                            if(isChinese(num.charAt(i))==true){
-                                strlen=strlen+2;//中文为2个字符
-                            }else{
-                                strlen=strlen+2;//英文一个字符
-                            }
-                        }
-                        strlen=Math.ceil(strlen/2);//中英文相加除2取整数
-                        if(maxNum-strlen<0){
-                            $('#commetFont').html("已超出 <strong style='color:red' class='commetFontNum'>"+Math.abs(maxNum-strlen)+"</strong> 字"); //超出的样式
-                        }
-                        else{
-                            $('#commetFont').html("还可以输入 <strong class='commetFontNum'>"+(maxNum-strlen)+"</strong> 字"); //正常时候
-                        }
-                        
-                };
-                $("#comment").keyup(maxLimit);
-                
-            }); 
-        });
-    
-    </script>
-    <script>
-
-
-
-
-</script>
 <!-- 幻灯部分 -->
-<div id="myModal" class="modal " tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+<div id="myModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none; overflow: hidden;">
         <div class="modal-dialog yjDialog clearfix">
             <div class="yjSlideL">
                 <div class="modal-header">
@@ -776,32 +662,32 @@
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                     <div class="carousel-indicators-pn clearfix">
                         <table width="100%">
-                            <tr>
+                            <tbody><tr>
                                 <td width="8.333333333333332%">
                                     <a href="#" class="carousel-opt">
                                         <img alt="100%x180" src="../img/trp.png" width="170" class="img-responsive">                        
                                         <span>
                                             上一组
-                                            <br />                        
+                                            <br>                        
                                             照片集
                                         </span>
                                     </a>
                                 </td>
                                 <td>
                                     <ol class="carousel-indicators">
-                                        <li data-target="#carousel-example-generic" data-slide-to="0" >
+                                        <li data-target="#carousel-example-generic" data-slide-to="0">
                                             <img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                                        <li class="active" data-target="#carousel-example-generic" data-slide-to="1" >
+                                        <li class="" data-target="#carousel-example-generic" data-slide-to="1">
                                             <img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                                        <li data-target="#carousel-example-generic" data-slide-to="2">
+                                        <li data-target="#carousel-example-generic" data-slide-to="2" class="">
                                             <img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                                        <li data-target="#carousel-example-generic" data-slide-to="3">
+                                        <li data-target="#carousel-example-generic" data-slide-to="3" class="active">
                                             <img src="../img/280.jpg" alt="" class="img-responsive"></li>
                                         <li data-target="#carousel-example-generic" data-slide-to="4">
                                             <img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                                        <li data-target="#carousel-example-generic" data-slide-to="5" >
+                                        <li data-target="#carousel-example-generic" data-slide-to="5">
                                             <img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                                        <li data-target="#carousel-example-generic" data-slide-to="6" >
+                                        <li data-target="#carousel-example-generic" data-slide-to="6">
                                             <img src="../img/280.jpg" alt="" class="img-responsive"></li>
                                         <li data-target="#carousel-example-generic" data-slide-to="7">
                                             <img src="../img/280.jpg" alt="" class="img-responsive"></li>
@@ -816,35 +702,35 @@
                                         <img alt="100%x180" src="../img/trp.png" width="170" class="img-responsive">                        
                                         <span>
                                             下一组
-                                            <br />                        
+                                            <br>                        
                                             照片集
                                         </span>
                                     </a>
                                 </td>
                             </tr>
-                        </table>
+                        </tbody></table>
                     </div>
                     <div class="carousel-inner">
-                        <div class="item">
-                            <img src="../img/960.jpg"  alt="First slide"></div>
-                        <div class="item active">
-                            <img src="http://d.hiphotos.baidu.com/album/w%3D230/sign=7a7a152c58ee3d6d22c680c873176d41/3bf33a87e950352aed1b23835243fbf2b3118bc6.jpg"  alt="Second slide"></div>
-                        <div class="item">
-                            <img src="http://e.hiphotos.baidu.com/album/w%3D2048/sign=af0f94a7d50735fa91f049b9aa690eb3/f703738da9773912b70cb3ddf9198618367ae267.jpg"  alt="Third slide"></div>
-                        <div class="item">
-                            <img src="http://h.hiphotos.baidu.com/album/w%3D2048/sign=730e7fdf95eef01f4d141fc5d4c69825/94cad1c8a786c917b8bf9482c83d70cf3ac757c9.jpg" alt="Third slide"></div>
-                        <div class="item">
-                            <img src="../img/960.jpg" height="300"  alt="Third slide"></div>
-                        <div class="item">
-                            <img src="../img/960.jpg"  alt="First slide"></div>
-                        <div class="item">
-                            <img src="../img/960.jpg"  alt="Second slide"></div>
-                        <div class="item">
-                            <img src="../img/960.jpg"  alt="Third slide"></div>
-                        <div class="item">
-                            <img src="../img/960.jpg"  alt="Third slide"></div>
-                        <div class="item">
-                            <img src="../img/960.jpg"  alt="Third slide"></div>
+                        <div class="item" style="">
+                            <img src="../img/960.jpg" alt="First slide" style="margin-top: 107px;"></div>
+                        <div class="item" style="">
+                            <img src="http://d.hiphotos.baidu.com/album/w%3D230/sign=7a7a152c58ee3d6d22c680c873176d41/3bf33a87e950352aed1b23835243fbf2b3118bc6.jpg" alt="Second slide" style="margin-top: 150.5px;"></div>
+                        <div class="item" style="">
+                            <img src="http://e.hiphotos.baidu.com/album/w%3D2048/sign=af0f94a7d50735fa91f049b9aa690eb3/f703738da9773912b70cb3ddf9198618367ae267.jpg" alt="Third slide" style="margin-top: 0px;"></div>
+                        <div class="item active" style="">
+                            <img src="http://h.hiphotos.baidu.com/album/w%3D2048/sign=730e7fdf95eef01f4d141fc5d4c69825/94cad1c8a786c917b8bf9482c83d70cf3ac757c9.jpg" alt="Third slide" style="margin-top: 0px;"></div>
+                        <div class="item" style="">
+                            <img src="../img/960.jpg" height="300" alt="Third slide" style="margin-top: 107px;"></div>
+                        <div class="item" style="">
+                            <img src="../img/960.jpg" alt="First slide" style="margin-top: 107px;"></div>
+                        <div class="item" style="">
+                            <img src="../img/960.jpg" alt="Second slide" style="margin-top: 107px;"></div>
+                        <div class="item" style="">
+                            <img src="../img/960.jpg" alt="Third slide" style="margin-top: 107px;"></div>
+                        <div class="item" style="">
+                            <img src="../img/960.jpg" alt="Third slide" style="margin-top: 107px;"></div>
+                        <div class="item" style="">
+                            <img src="../img/960.jpg" alt="Third slide" style="margin-top: 107px;"></div>
                     </div>
                     <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left"></span>
@@ -873,7 +759,7 @@
                     </span>
                 </p>
             </div>
-            <div class="yjSlideR">
+            <div class="yjSlideR" style="height: 586px; overflow: auto;">
                 <h4 class="yjCgreen yjYh mNone">婚礼日鲜花摆拍，各种鲜花各种颜色各种情况</h4>
                 <p class="mt10 mb5"><span class="yjCgray6">主题:</span>  勿忘初心</p>
                 <p class="mb5"><span class="yjCgray6">地点:</span>  湖北省宜昌市美丽区</p>
@@ -882,9 +768,9 @@
                 <p class="mb5">
                     <span class="yjCgray6">服饰:</span>  婚纱x2套、礼服x1套、首饰若干、老爷车x1辆、马车x3辆
                 </p>
-                <p class="mb5">
-                  <span class="yjCgray6">  描述:  </span>这里有一些描述哦默认显示两行这里有一些描述哦默认显示两行这里有一些描述这里
-                    <a href="#">[展开]</a>
+                <p class="yjIntro mb5">
+                  <span class="yjCgray6">  描述:  </span>这里有一些描述哦默认显示两行这里有一些描述哦默认显示两行这里有一些描述这里这里有一些描述哦默认显示两行这里有一些描述哦默认显示两行这里有一些描述这里
+                    <a href="#" class="yjShow">[展开]</a>
                 </p>
                 <p>
                     <strong>已被 99+ 个创意夹收纳</strong>
@@ -912,7 +798,7 @@
                         </h5>
                         <div class="mb5">
                             巴厘岛浪漫系列婚纱套装促销中
-                            <br/>                
+                            <br>                
                             ¥15000 / 套
                         </div>
                     </div>
@@ -967,7 +853,8 @@
             </div>
             <!-- /.modal-content --> 
         </div><!-- /.modal-dialog --> 
-    </div>
+  </div>
+  <script src="../js/yj.js"></script>
 
 </body>
 </html>

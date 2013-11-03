@@ -485,51 +485,6 @@
 
         </div>
     </footer>
-  <script>
-        
-        $(document).ready(function() {
-            //是否为移动端设备
-            var isMobile = {  
-                Android: function() {  
-                    return navigator.userAgent.match(/Android/i) ? true : false;  
-                },  
-                BlackBerry: function() {  
-                    return navigator.userAgent.match(/BlackBerry/i) ? true : false;  
-                },  
-                iOS: function() {  
-                    return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;  
-                },  
-                Windows: function() {  
-                    return navigator.userAgent.match(/IEMobile/i) ? true : false;  
-                },  
-                any: function() {  
-                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());  
-                }  
-            }
-           
-            //吸顶效果
-            if(!isMobile.any()){
-                var sTop = $(".yjSubTit2Pn").offset().top;
-                $(window).scroll(function(event) {
-                    var mTop = $(document).scrollTop();
-                    if(mTop > sTop){
-                        $(".yjSubTit2Pn").addClass('fixSub');
-                        var fixWidth = $(".yjSubTit2Pn").parents('.container').width()+20;
-                        $(".yjSubTit2Pn").find('.row').css({
-                            "width": fixWidth,
-                            "margin": '0 auto'
-                        });
-                    }else{
-                        $(".yjSubTit2Pn").removeClass('fixSub');
-                        $(".yjSubTit2Pn").find('.row').css({
-                            "width": "auto",
-                            "margin": '0 -10px'
-                        });
-                    }
-                });
-            }  
-        });
-    
-    </script>
+    <script src="../js/yj.js"></script>
 </body>
 </html>

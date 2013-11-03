@@ -769,9 +769,9 @@
                 <p class="mb5">
                     <span class="yjCgray6">服饰:</span>  婚纱x2套、礼服x1套、首饰若干、老爷车x1辆、马车x3辆
                 </p>
-                <p class="mb5">
-                  <span class="yjCgray6">  描述:  </span>这里有一些描述哦默认显示两行这里有一些描述哦默认显示两行这里有一些描述这里
-                    <a href="#">[展开]</a>
+                <p class="yjIntro mb5">
+                  <span class="yjCgray6">  描述:  </span>这里有一些描述哦默认显示两行这里有一些描述哦默认显示两行这里有一些描述这里这里有一些描述哦默认显示两行这里有一些描述哦默认显示两行这里有一些描述这里
+                    <a href="#" class="yjShow">[展开]</a>
                 </p>
                 <p>
                     <strong>已被 99+ 个创意夹收纳</strong>
@@ -855,105 +855,6 @@
             <!-- /.modal-content --> 
         </div><!-- /.modal-dialog --> 
     </div>
-    <script>
-        
-        $(document).ready(function() {
-            //是否为移动端设备
-            var isMobile = {  
-                Android: function() {  
-                    return navigator.userAgent.match(/Android/i) ? true : false;  
-                },  
-                BlackBerry: function() {  
-                    return navigator.userAgent.match(/BlackBerry/i) ? true : false;  
-                },  
-                iOS: function() {  
-                    return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;  
-                },  
-                Windows: function() {  
-                    return navigator.userAgent.match(/IEMobile/i) ? true : false;  
-                },  
-                any: function() {  
-                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());  
-                }  
-            }
-            //回复部分
-            $('.relay').click(function(event) {
-                this.href = 'javascript://';
-                $(this).parent().next().toggle();
-            });
-            $('.relayBtn').click(function(event) {
-                 $(this).parents('.relayCnt').hide();
-            });
-            //幻灯部分
-            if(!isMobile.any()){
-                $('#myModal').on('hidden.bs.modal', function () {
-                    $("html").css({
-                        "overflow": 'auto',
-                        "padding-right":"0"
-                    });
-                })
-                $('#myModal').on('shown.bs.modal', function () {
-                    $("html").css({
-                        "overflow": 'hidden',
-                        "padding-right":"16px"
-                    });
-                    $(".modal").css({
-                        "overflow": 'hidden'
-                    });
-                    $('.carousel').carousel('pause');
-                     var bodyH = $(window).height() - 20;
-                    $(".yjSlideR").css({
-                        "height": bodyH,
-                        "overflow":"auto"
-                    });
-                    var tHeight = $('.carousel-inner').height();
-                    var tLen = $('.carousel-inner').find('img').length;
-                    
-                   for (var i = 0; i < tLen; i++) {
-                    $('.carousel-inner').find('img').eq(i).css({
-                        "margin-top": (tHeight - $('.carousel-inner').find('.item').eq(i).height())/2
-                    });
-                       
-                   };
-                })
-                
-            }else{
-                $('#myModal').on('shown.bs.modal', function () {
-                    
-                    var tHeight = $('.carousel-inner').height();
-                    var tLen = $('.carousel-inner').find('img').length;
-                    
-                   for (var i = 0; i < tLen; i++) {
-                    $('.carousel-inner').find('img').eq(i).css({
-                        "margin-top": (tHeight - $('.carousel-inner').find('.item').eq(i).height())/2
-                    });
-                       
-                   };
-                })
-            }
-            //吸顶效果
-            if(!isMobile.any()){
-                var sTop = $(".yjSubTit2Pn").offset().top;
-                $(window).scroll(function(event) {
-                    var mTop = $(document).scrollTop();
-                    if(mTop > sTop){
-                        $(".yjSubTit2Pn").addClass('fixSub');
-                        var fixWidth = $(".yjSubTit2Pn").parents('.container').width()+20;
-                        $(".yjSubTit2Pn").find('.row').css({
-                            "width": fixWidth,
-                            "margin": '0 auto'
-                        });
-                    }else{
-                        $(".yjSubTit2Pn").removeClass('fixSub');
-                        $(".yjSubTit2Pn").find('.row').css({
-                            "width": "auto",
-                            "margin": '0 -10px'
-                        });
-                    }
-                });
-            }  
-        });
-    
-    </script>
+    <script src="../js/yj.js"></script>
 </body>
 </html>
