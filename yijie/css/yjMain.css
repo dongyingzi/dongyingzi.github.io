@@ -48,18 +48,22 @@ a:focus {
 .yjSubTit2Pn{ padding:27px 0 0;}
 .affix{ top: 0; background: #fff; z-index: 333;}
 /*头部大图*/
-.yjModLarPicPn{position: relative;margin-bottom: 20px}
+.yjModLarPicPn{position: relative;margin-bottom: 20px; background-color: #000}
+.yjModLarPicPn .img-responsive{ max-height: 690px; margin-left: auto; margin-right: auto;}
+
 .yjModeLarPicFb{ position: absolute;bottom: 20px; right: 20px;color: #ccc; background: rgba(0,0,0,0.8); border-radius: 20px; padding:4px 10px;}
 .yjModeLarPicFb .img-circle{border:1px solid #7ea741;}
 .yjPicListPn ol{ padding: 0; margin-bottom: 10px; margin-left: 0}
-.yjPicListPn ol li{ list-style: none; float: left; margin-right: 10px; margin-bottom: 10px}
+.yjPicListPn ol li{ list-style: none; float: left; display: inline; margin-left: 10px; margin-bottom: 10px}
+.yjPicListPn .carousel-opt{ position: relative;
+border:1px solid #5c5c5c; background:#171717;color: #919191; display: block;}
+.yjPicListPn .carousel-opt:hover{ background:#2c2c2c; color: #fff}
+.yjPicListPn .carousel-opt span { position: absolute; top: 15px; text-align: center;  width:100%;}
 /*图片列表*/
 .yjModPicPn .col-md-3{ padding: 0;}
 .yjModPicPn .yjPicItem{ padding:10px}
-.yjModPicPn .yjPicItem:hover{ border:1px solid #ccc; padding: 9px;z-index: 99; position: relative; }
 .yjPicItemHoverCnt{ display: none;}
-.yjModPicPn .yjPicItem:hover .yjPicItemHoverCnt{ display: block; background: #fff; position: absolute; border:1px solid #ccc;
- 	border-top:none; left:-1px; right:-1px; padding: 10px 10px 0}
+
 .yjPicItem .yjPicFont{ margin-top:10px}
 .yjSubTit{ border-top:1px solid #ddd; padding:20px 0 10px; margin-top: 10px}
 .yjSubTit h3{ margin: 0 10px 0 0; font-weight: normal;}
@@ -99,6 +103,7 @@ a:focus {
 .yjAddIcn,
 .yjConsultIcn{
 	display:inline-block;width: 14px; height: 14px; margin-right:3px; vertical-align: text-top;
+  margin-top: 4px;
 }
 .yjAddIcn{ background-position: 0 -74px}
 .yjConsultIcn{ background-position: -22px -74px}
@@ -135,7 +140,8 @@ margin-right: 3px;
 .yjShare dd{ margin-bottom: 15px;}
 /*幻灯片*/
 .yjDialog{ width:auto; padding:0; background: #fff;padding-right: 320px; height: 100%;}
-.yjDialog .carousel-inner  img{ margin-left: auto; margin-right: auto}
+  .carousel-inner{ height: 690px;}
+.yjDialog .carousel-inner  img{ margin-left: auto; margin-right: auto; max-height: 690px}
 .yjDialog .modal-header{ border-bottom: 0; padding-top:30px}
 .yjDialog .carousel-control{ background: transparent;}
 .yjDialog .modal-header a{ color: #fff; font-size: 30px;opacity: 0.5;
@@ -166,6 +172,7 @@ border:1px solid #5c5c5c; background:#171717;color: #919191; display: block;}
 .yjLbBtn{ position: absolute; right: 20px;}
 .relayCnt{ display: none;}
 /*覆盖样式*/
+.navbar-inverse{background-color: #3d3d3d}
 .navbar-inverse .navbar-text {
   color: #CCC;
 }
@@ -220,6 +227,7 @@ text-decoration: none;
 color: #fff;
 background-color: #8cb948;
 }
+.modal{ overflow: hidden;}
 /*媒体查询部分*/
 @media (min-width: 768px) {
     .navLogin{
@@ -237,6 +245,10 @@ background-color: #8cb948;
 .fixSub{ top: 0; background:rgba(255,255,255,0.9); z-index: 333; border-bottom: 1px solid #ccc; position: fixed; padding-bottom: 15px; left: 0; right: 0}
 .container {max-width: 1200px;}
 .navSearch {width: 240px}
+.yjModPicPn .yjPicItem:hover{ border:1px solid #ccc; padding: 9px;z-index: 99; position: relative; }
+.yjModPicPn .yjPicItem:hover .yjPicItemHoverCnt{ display: block; background: #fff; position: absolute; border:1px solid #ccc;
+ 	border-top:none; left:-1px; right:-1px; padding: 10px 10px 0}
+
 }
 
 @media (max-width: 768px) {

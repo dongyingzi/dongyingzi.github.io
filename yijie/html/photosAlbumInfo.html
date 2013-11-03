@@ -386,7 +386,7 @@
                 </p>
             </div>
         </div><!-- yjPicInfo end -->
-        <div class="row mb10">
+        <div class="row mb10 clearfix">
             <div class="col-md-9">
                 <div class="col-md-11 row">
                     <div class="media pt30">
@@ -404,7 +404,7 @@
                                 </div>
                                 <div class="pull-right">
                                     <span id="commetFont">
-                                        还能输入 <strong class="commetFontNum">133</strong>
+                                        还能输入 <strong class="commetFontNum">140</strong>
                                         个字
                                     </span>
                                     <button type="button" class="btn btn-success">发 布</button>
@@ -683,23 +683,49 @@
             });
             //幻灯部分
             if(!isMobile.any()){
-                var bodyH = $(window).height() - 20;
-                $(".yjSlideR").css({
-                    "height": bodyH,
-                    "overflow":"auto"
-                });
                 $('#myModal').on('hidden.bs.modal', function () {
                     $("html").css({
-                        "overflow": 'auto'
+                        "overflow": 'auto',
+                        "padding-right":"0"
                     });
                 })
                 $('#myModal').on('shown.bs.modal', function () {
                     $("html").css({
-                        "overflow": 'hidden'
+                        "overflow": 'hidden',
+                        "padding-right":"16px"
                     });
                     $(".modal").css({
                         "overflow": 'hidden'
                     });
+                    $('.carousel').carousel('pause');
+                     var bodyH = $(window).height() - 20;
+                    $(".yjSlideR").css({
+                        "height": bodyH,
+                        "overflow":"auto"
+                    });
+                    var tHeight = $('.carousel-inner').height();
+                    var tLen = $('.carousel-inner').find('img').length;
+                    
+                   for (var i = 0; i < tLen; i++) {
+                    $('.carousel-inner').find('img').eq(i).css({
+                        "margin-top": (tHeight - $('.carousel-inner').find('.item').eq(i).height())/2
+                    });
+                       
+                   };
+                })
+                
+            }else{
+                $('#myModal').on('shown.bs.modal', function () {
+                    
+                    var tHeight = $('.carousel-inner').height();
+                    var tLen = $('.carousel-inner').find('img').length;
+                    
+                   for (var i = 0; i < tLen; i++) {
+                    $('.carousel-inner').find('img').eq(i).css({
+                        "margin-top": (tHeight - $('.carousel-inner').find('.item').eq(i).height())/2
+                    });
+                       
+                   };
                 })
             }
             //发布框字数
@@ -707,7 +733,7 @@
                 function maxLimit(){
                         var strlen=0; //初始定义长度为0
                         var num = $('#comment').val();
-                        var maxNum = 133;
+                        var maxNum = 140;
                         function isChinese(str){  //判断是不是中文
                             var reCh=/[u00-uff]/;
                             return !reCh.test(str);
@@ -741,46 +767,84 @@
 
 </script>
 <!-- 幻灯部分 -->
-<div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" >
+<div id="myModal" class="modal " tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
         <div class="modal-dialog yjDialog clearfix">
             <div class="yjSlideL">
                 <div class="modal-header">
                     <a href="javascript:viod()" class="close" data-dismiss="modal" aria-hidden="true">×</a>
                 </div>
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li  data-target="#carousel-example-generic" data-slide-to="0" ><img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                        <li class="active" data-target="#carousel-example-generic" data-slide-to="1" ><img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"><img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="3"><img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="4"><img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="5" ><img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="6" ><img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="7"><img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="8"><img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="9"><img src="../img/280.jpg" alt="" class="img-responsive"></li>
-                    </ol>
+                    <div class="carousel-indicators-pn clearfix">
+                        <table width="100%">
+                            <tr>
+                                <td width="8.333333333333332%">
+                                    <a href="#" class="carousel-opt">
+                                        <img alt="100%x180" src="../img/trp.png" width="170" class="img-responsive">                        
+                                        <span>
+                                            上一组
+                                            <br />                        
+                                            照片集
+                                        </span>
+                                    </a>
+                                </td>
+                                <td>
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel-example-generic" data-slide-to="0" >
+                                            <img src="../img/280.jpg" alt="" class="img-responsive"></li>
+                                        <li class="active" data-target="#carousel-example-generic" data-slide-to="1" >
+                                            <img src="../img/280.jpg" alt="" class="img-responsive"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="2">
+                                            <img src="../img/280.jpg" alt="" class="img-responsive"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="3">
+                                            <img src="../img/280.jpg" alt="" class="img-responsive"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="4">
+                                            <img src="../img/280.jpg" alt="" class="img-responsive"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="5" >
+                                            <img src="../img/280.jpg" alt="" class="img-responsive"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="6" >
+                                            <img src="../img/280.jpg" alt="" class="img-responsive"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="7">
+                                            <img src="../img/280.jpg" alt="" class="img-responsive"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="8">
+                                            <img src="../img/280.jpg" alt="" class="img-responsive"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="9">
+                                            <img src="../img/280.jpg" alt="" class="img-responsive"></li>
+                                    </ol>
+                                </td>
+                                <td width="8.333333333333332%">
+                                    <a href="#" class="carousel-opt">
+                                        <img alt="100%x180" src="../img/trp.png" width="170" class="img-responsive">                        
+                                        <span>
+                                            下一组
+                                            <br />                        
+                                            照片集
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                     <div class="carousel-inner">
                         <div class="item">
-                            <img src="../img/960.jpg" data-src="holder.js/960x500/auto/#777:#555/text:First slide" alt="First slide"></div>
+                            <img src="../img/960.jpg"  alt="First slide"></div>
                         <div class="item active">
-                            <img src="../img/960.jpg" data-src="holder.js/900x500/auto/#666:#444/text:Second slide" alt="Second slide"></div>
+                            <img src="http://d.hiphotos.baidu.com/album/w%3D230/sign=7a7a152c58ee3d6d22c680c873176d41/3bf33a87e950352aed1b23835243fbf2b3118bc6.jpg"  alt="Second slide"></div>
                         <div class="item">
-                            <img src="../img/960.jpg" data-src="holder.js/900x500/auto/#555:#333/text:Third slide" alt="Third slide"></div>
+                            <img src="http://e.hiphotos.baidu.com/album/w%3D2048/sign=af0f94a7d50735fa91f049b9aa690eb3/f703738da9773912b70cb3ddf9198618367ae267.jpg"  alt="Third slide"></div>
                         <div class="item">
-                            <img src="../img/960.jpg" data-src="holder.js/900x500/auto/#555:#333/text:Third slide" alt="Third slide"></div>
+                            <img src="http://h.hiphotos.baidu.com/album/w%3D2048/sign=730e7fdf95eef01f4d141fc5d4c69825/94cad1c8a786c917b8bf9482c83d70cf3ac757c9.jpg" alt="Third slide"></div>
                         <div class="item">
-                            <img src="../img/960.jpg" data-src="holder.js/900x500/auto/#555:#333/text:Third slide" alt="Third slide"></div>
-                            <div class="item">
-                            <img src="../img/960.jpg" data-src="holder.js/960x500/auto/#777:#555/text:First slide" alt="First slide"></div>
+                            <img src="../img/960.jpg" height="300"  alt="Third slide"></div>
                         <div class="item">
-                            <img src="../img/960.jpg" data-src="holder.js/900x500/auto/#666:#444/text:Second slide" alt="Second slide"></div>
+                            <img src="../img/960.jpg"  alt="First slide"></div>
                         <div class="item">
-                            <img src="../img/960.jpg" data-src="holder.js/900x500/auto/#555:#333/text:Third slide" alt="Third slide"></div>
+                            <img src="../img/960.jpg"  alt="Second slide"></div>
                         <div class="item">
-                            <img src="../img/960.jpg" data-src="holder.js/900x500/auto/#555:#333/text:Third slide" alt="Third slide"></div>
+                            <img src="../img/960.jpg"  alt="Third slide"></div>
                         <div class="item">
-                            <img src="../img/960.jpg" data-src="holder.js/900x500/auto/#555:#333/text:Third slide" alt="Third slide"></div>
+                            <img src="../img/960.jpg"  alt="Third slide"></div>
+                        <div class="item">
+                            <img src="../img/960.jpg"  alt="Third slide"></div>
                     </div>
                     <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left"></span>
@@ -903,7 +967,7 @@
             </div>
             <!-- /.modal-content --> 
         </div><!-- /.modal-dialog --> 
- </div>
+    </div>
 
 </body>
 </html>
