@@ -35,6 +35,7 @@ a:focus {
 .picLink:hover{ background-color: transparent;}
 .yjMtNone{ margin: 0!important} .yjPrNone{ padding-right: 0!important;}
 .yjSelectPn .form-control{ display: inline-block; width: auto; height: 22px; padding:0;}
+.yjSelectPn .mb10{ margin-bottom: 7px}
 .checkbox{font-size: 14px; display: inline-block; margin: 0}
 /*导航部分*/
 .navbar-header h1{width:70px; height: 20px; margin: 16px 20px 14px 10px; background-repeat: no-repeat;}
