@@ -139,5 +139,24 @@ $(document).ready(function() {
         };
         $("#comment").keyup(maxLimit);  
     });  
+    //浮层效果
+     
+       $("[data-toggle=popover]").popover();
+      $('.media').on('shown.bs.popover', function () {
+           $('body').find('.popover').each(function(){
+                $('.popover').click(function(e){
+                    return false;
+                });
+                
+               
+            });
+            $('body').click(function(){
+                $('.popover').remove();
+                $('.media').popover({
+                     trigger : 'click'
+                 });
+            });
+        })
+
  
 });

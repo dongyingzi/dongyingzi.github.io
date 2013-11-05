@@ -11,11 +11,10 @@ a:focus {
   background-color: #8cb948;
   text-decoration: none;
 }
-.borNone{ border:0 !important;}
-.mr3{ margin-right: 3px;} .mr20{margin-right: 20px} .mb10{ margin-bottom: 10px} .mb5{margin-bottom: 5px} .mb15{ margin-bottom: 15px;}.mb20{ margin-bottom: 20px} .mt20{ margin-top: 20px!important} .mNone{ margin: 0} .mb40{ margin-bottom: 40px}
-.pl10{ padding-left: 10px} .yjBlock{ display: block;} .mr10{ margin-right: 10px} .ml10{ margin-left: 10px;} .mt50{ margin-top: 50px} .pl20{ padding-left: 20px}
+.mr3{ margin-right: 3px;} .mb10{ margin-bottom: 10px} .mb5{margin-bottom: 5px} .mb15{ margin-bottom: 15px;}.mb20{ margin-bottom: 20px} .mt20{ margin-top: 20px!important} .mNone{ margin: 0}
+.pl10{ padding-left: 10px} .yjBlock{ display: block;} .mr10{ margin-right: 10px} .ml10{ margin-left: 10px;}
 .yjCgreen{ color: #690} .yjCgray6{ color:#666 } .yjCgray9{color: #999} .yjFs12{ font-size: 12px} .pt30{ padding-top: 30px} .yjCgrayc{color: #ccc}
-.yjTxB{ font-weight: bold;} .yjCgrayLink{color: #ccc} .mt10{ margin-top: 10px} .mt5{ margin-top: 5px} .yjFs18{ font-size: 18px} .yjFs30{ font-size: 30px}
+.yjTxB{ font-weight: bold;} .yjCgrayLink{color: #ccc} .mt10{ margin-top: 10px} .mt5{ margin-top: 5px} .yjFs18{ font-size: 18px}
 .yjYh{ font-family: Microsoft Yahei;}
 .yjCgrayLink:hover,
 .yjCgrayLink:focus {
@@ -90,9 +89,6 @@ border:1px solid #5c5c5c; background:#171717;color: #919191; display: block;}
 .yjPicMore:hover{ color: #fff; background-color: #690}
 .yjPicMore span{ position: absolute; bottom: 10px; right: 10px; display: block;}
 .yjPicMore strong{ font-size: 30px; font-weight: normal;}
-
-
-
 /*评论部分*/
 .yjCommB,
 .yjCommI,
@@ -178,54 +174,7 @@ border:1px solid #5c5c5c; background:#171717;color: #919191; display: block;}
 .yjBorderMod{ border-top:1px solid #ccc; padding-top: 10px}
 .yjLbBtn{ position: absolute; right: 20px;}
 .relayCnt{ display: none;}
- /*左侧子导航*/
- .yjSideSubNav{ list-style-type: none; padding: 0; margin-bottom: 30px}
- .yjSideSubNav li{ height: 24px; line-height: 24px; position: relative; margin-bottom: 6px; padding-left: 10px; cursor: pointer;}
- .yjSideSubNav li:hover,.yjSideSubNav li:hover a{  background: #8cb948; color: #fff}
- .yjSideSubNav li span{ position: absolute; top: 0; right: 10px; font-size: 12px}
- .yjSideSubNav li a{ color: #333; letter-spacing: 4px}
- .yjSideSubNav li a:hover{ color: #fff; background-color: transparent;}
- .yjSideSubNav .active, .yjSideSubNav .active a{ background: #8cb948; color: #fff}
-
- .yjSideBanner{ background-color: #f8f8f8; padding: 15px 0 5px 10px}
- .yjSideBanner .media-object{ width: 40px; height: 40px; margin-top: 5px; background-position:-32px -103px }
- .yjSideBanner:hover,
- .yjSideBanner:hover a,
- .yjSideBanner:hover p
- { background-color: #8cb948; color: #fff}
- .yjSideBanner:hover .media-object
- {  background-position:-32px -147px }
-
- .yjArcPicPn{ position: relative; zoom:1;}
- .yjArcPicPn .yjArcPicCont{padding-top: 10px  }
-
-.yjArcPersonPn{ background: #f8f8f8; padding: 10px 0 4px 0}
-.yjArcPersonPn .media{ padding-left: 20px; padding-bottom: 10px;}
-
-.yjArcBasePn{border-top: 1px solid #d3d3d3; padding-top: 20px;}
-.yjArcBasePic{ position: relative;}
-.yjArcBasePos{ position: absolute; bottom: 10px; right: 20px;}
-.yjArcBasePos a{ float:left; display:inline; margin:0 0 10px 20px;color: #ccc; background: rgba(0,0,0,0.8); border-radius: 20px; padding:4px 10px; position: relative;}
-.yjArcBasePos a img{border:1px solid #7ea741}
-.yjArcBasePos a .yjArcBaseAdd{border:1px solid #fff}
-.yjArcBasePos a:hover{background-color: #8cb948;
-color: #fff;}
-
-.yjArcBasePos .glyphicon-plus{ position: absolute; font-size: 12px; top: 8px; left: 14px;}
-.yjPerTit{ line-height: 38px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
-
-.yjPicItem4{ margin-right: -4px}
-.yjPicItem4 .col-md-2{ padding-right:4px}
-.yjPicItem4 .col-md-2 img{margin-bottom: 10px}
-
-.yjTipBg{ background: #f5f5f5; margin: 0 -14px 10px; padding:5px 0 5px 14px;}
-
- 
-
- .yjArcPicTit h3{ height: 40px; margin: 0}
- .yjArcTipL{ width:200px; float: left; margin-right: 20px;}
 /*覆盖样式*/
-.popover{ max-width:350px;}
 .navbar-inverse{background-color: #3d3d3d}
 .navbar-inverse .navbar-text {
   color: #CCC;
@@ -283,25 +232,14 @@ background-color: #8cb948;
 }
 .modal{ overflow: hidden;}
 /*媒体查询部分*/
-@media (max-width: 768px) {
-  .text-right{ text-align: left;}
-  .yjSlideL{ height: auto; padding-bottom: 10px;}
-  .yjSlideR{padding: 10px; position: static; width: auto;}
-  .yjDialog{ padding-right: 0; }
-  .carousel-indicators-pn { display: none;}
-}
 @media (min-width: 768px) {
     .navLogin{
       padding-left:10px;
     }
     .navSearch {width: 128px;}
-    .yjArcPicPn .yjArcPicAbs{ position: absolute; top: 0; background: rgba(255,255,255,.9); right:-10px; height: 100%; padding-right: 20px}
-    .yjAcrBaseBor{border-right: 1px solid #d3d3d3}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 .navSearch {width: 240px}
-.yjArcPicPn .yjArcPicAbs{ position: absolute; top: 0; background: rgba(255,255,255,.9); right:-10px; height: 100%; padding-right: 20px}
-.yjArcPicIntro{ height:40px; overflow: hidden;}
 }
 @media (min-width: 1200px) {
 .yjPicItem3 .col-md-2{ padding-left: 0}
@@ -314,11 +252,13 @@ background-color: #8cb948;
 .yjModPicPn .yjPicItem:hover .yjPicItemHoverCnt{ display: block; background: #fff; position: absolute; border:1px solid #ccc;
  	border-top:none; left:-1px; right:-1px; padding: 10px 10px 0}
 
-.yjArcPicPn .yjArcPicAbs{ position: absolute; top: 0; background: rgba(255,255,255,.9); right:-10px; height: 100%; padding-right: 20px}
-.yjArcPersonPn .media{border-right: 1px solid #d3d3d3}
-.yjAcrBaseBor{border-right: 1px solid #d3d3d3}
-
 }
 
-
+@media (max-width: 768px) {
+	.text-right{ text-align: left;}
+	.yjSlideL{ height: auto; padding-bottom: 10px;}
+	.yjSlideR{padding: 10px; position: static; width: auto;}
+	.yjDialog{ padding-right: 0; }
+	.carousel-indicators-pn { display: none;}
+}
 
