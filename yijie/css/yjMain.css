@@ -12,9 +12,9 @@ a:focus {
   text-decoration: none;
 }
 .borNone{ border:0 !important;}
-.mr3{ margin-right: 3px;} .mr20{margin-right: 20px} .mb10{ margin-bottom: 10px} .mb5{margin-bottom: 5px} .mb15{ margin-bottom: 15px;}.mb20{ margin-bottom: 20px} .mt20{ margin-top: 20px!important} .mNone{ margin: 0} .mb40{ margin-bottom: 40px}
+.mr3{ margin-right: 3px;} .mr20{margin-right: 20px} .mb10{ margin-bottom: 10px} .mb5{margin-bottom: 5px} .mb15{ margin-bottom: 15px;}.mb20{ margin-bottom: 20px} .mt20{ margin-top: 20px!important} .mNone{ margin: 0} .mb40{ margin-bottom: 40px} .mb80{ margin-bottom: 80px} .pl40{padding-left: 40px}
 .pl10{ padding-left: 10px} .yjBlock{ display: block;} .mr10{ margin-right: 10px} .ml10{ margin-left: 10px;} .mt50{ margin-top: 50px} .pl20{ padding-left: 20px}
-.yjCgreen{ color: #690} .yjCgray6{ color:#666 } .yjCgray9{color: #999} .yjFs12{ font-size: 12px} .pt30{ padding-top: 30px} .yjCgrayc{color: #ccc}
+.yjCgreen{ color: #690} .yjCgray6{ color:#666 } .yjCgray9{color: #999} .yjFs12{ font-size: 12px} .pt30{ padding-top: 30px} .yjCgrayc{color: #ccc} .yjFs40{ font-size: 40px}
 .yjTxB{ font-weight: bold;} .yjCgrayLink{color: #ccc} .mt10{ margin-top: 10px} .mt5{ margin-top: 5px} .yjFs18{ font-size: 18px} .yjFs30{ font-size: 30px}
 .yjYh{ font-family: Microsoft Yahei;}
 .yjCgrayLink:hover,
@@ -34,12 +34,12 @@ a:focus {
   text-decoration: none;
 }
 .picLink:hover{ background-color: transparent;}
-.yjMtNone{ margin: 0!important} .yjPrNone{ padding-right: 0!important;}
+.yjMtNone{ margin-top: 0!important} .yjPrNone{ padding-right: 0!important;}
 .yjSelectPn .form-control{ display: inline-block; width: auto; height: 22px; padding:0;}
 .yjSelectPn .mb10{ margin-bottom: 7px}
 .checkbox{font-size: 14px; display: inline-block; margin: 0}
 /*导航部分*/
-.navbar-header h1{width:70px; height: 20px; margin: 16px 20px 14px 10px; background-repeat: no-repeat;}
+.navbar-header h1{width:70px; height: 50px; margin: 0 20px 0 10px; background-position: 0 -193px; background-repeat: no-repeat;}
 .yjIcn{ background: url(../img/sprites.png); _background: url(../img/sprites.ie6.png);}
 .yjIcn:hover{ background-color: transparent;}
 .navSearch{float: right; margin: 13px 0 12px; position: relative;}
@@ -180,27 +180,33 @@ border:1px solid #5c5c5c; background:#171717;color: #919191; display: block;}
 .relayCnt{ display: none;}
  /*左侧子导航*/
  .yjSideSubNav{ list-style-type: none; padding: 0; margin-bottom: 30px}
- .yjSideSubNav li{ height: 24px; line-height: 24px; position: relative; margin-bottom: 6px; padding-left: 10px; cursor: pointer;}
+ .yjSideSubNav li{ height: 24px; line-height: 24px; position: relative; margin-bottom: 8px; padding-left: 10px; cursor: pointer;}
  .yjSideSubNav li:hover,.yjSideSubNav li:hover a{  background: #8cb948; color: #fff}
  .yjSideSubNav li span{ position: absolute; top: 0; right: 10px; font-size: 12px}
  .yjSideSubNav li a{ color: #333; letter-spacing: 4px}
  .yjSideSubNav li a:hover{ color: #fff; background-color: transparent;}
- .yjSideSubNav .active, .yjSideSubNav .active a{ background: #8cb948; color: #fff}
+ .yjSideSubNav .active, 
+ .yjSideSubNav .active a
+ { background: #8cb948; color: #fff}
 
- .yjSideBanner{ background-color: #f8f8f8; padding: 15px 0 5px 10px}
+ .yjSideBanner{ background-color: #f8f8f8; padding: 15px 0 5px 10px; cursor: pointer;}
  .yjSideBanner .media-object{ width: 40px; height: 40px; margin-top: 5px; background-position:-32px -103px }
  .yjSideBanner:hover,
  .yjSideBanner:hover a,
- .yjSideBanner:hover p
+ .yjSideBanner:hover p,
+ .yjSideBannerActive ,
+ .yjSideBannerActive a,
+ .yjSideBannerActive p
  { background-color: #8cb948; color: #fff}
- .yjSideBanner:hover .media-object
+ .yjSideBanner:hover .media-object,
+ .yjSideBannerActive .media-object
  {  background-position:-32px -147px }
 
  .yjArcPicPn{ position: relative; zoom:1;}
  .yjArcPicPn .yjArcPicCont{padding-top: 10px  }
 
 .yjArcPersonPn{ background: #f8f8f8; padding: 10px 0 4px 0}
-.yjArcPersonPn .media{ padding-left: 20px; padding-bottom: 10px;}
+.yjArcPersonPn .media{ padding-left: 20px; padding: 5px 0;}
 
 .yjArcBasePn{border-top: 1px solid #d3d3d3; padding-top: 20px;}
 .yjArcBasePic{ position: relative;}
@@ -208,7 +214,7 @@ border:1px solid #5c5c5c; background:#171717;color: #919191; display: block;}
 .yjArcBasePos a{ float:left; display:inline; margin:0 0 10px 20px;color: #ccc; background: rgba(0,0,0,0.8); border-radius: 20px; padding:4px 10px; position: relative;}
 .yjArcBasePos a img{border:1px solid #7ea741}
 .yjArcBasePos a .yjArcBaseAdd{border:1px solid #fff}
-.yjArcBasePos a:hover{background-color: #8cb948;
+.yjArcBasePos a:hover{background:rgba(140,185,70,.8);
 color: #fff;}
 
 .yjArcBasePos .glyphicon-plus{ position: absolute; font-size: 12px; top: 8px; left: 14px;}
@@ -221,9 +227,23 @@ color: #fff;}
 .yjTipBg{ background: #f5f5f5; margin: 0 -14px 10px; padding:5px 0 5px 14px;}
 
  
-
+.yjArcPicTit{ padding:15px 0 5px;}
  .yjArcPicTit h3{ height: 40px; margin: 0}
  .yjArcTipL{ width:200px; float: left; margin-right: 20px;}
+
+ .yjInTit{ margin-bottom: 30px; margin-top: 30px; font-size: 24px}
+ .yjInCarouselPn{ position: relative;}
+ .yjInCarouselPn li{ background: rgba(255,255,255,.5); border:none; height: 16px; width: 16px; margin:0 2px; }
+ .yjInCarouselPn li.active{ margin:0 2px; width:16px; height: 16px;}
+ .yjInLogin{ background: rgba(0,0,0,.2); border-radius: 5px; position: absolute; bottom: 110px; z-index: 15; padding:10px 20px; color: #fff }
+ .yjInLogin button { font-size: 24px; letter-spacing: 2px;}
+ .yjInLogin a:hover { background-color:transparent; }
+ .yjInArcPn .media{ margin-bottom: 25px}
+ .yjInArcPn .media .pull-left{ margin-right: 15px}
+ .yjInGrayBg{ background-color: #f8f8f8; margin-top: -10px; padding-bottom: 10px}
+ .yjInExpert{ text-align: center; padding-top: 20px; margin-bottom: 10px;}
+ .yjInExpert .img-center{ margin-left: auto;margin-right: auto;}
+ .yjInConsultPn .yjInConsult{ padding-top: 30px;}
 /*覆盖样式*/
 .popover{ max-width:350px;}
 .navbar-inverse{background-color: #3d3d3d}
@@ -302,6 +322,7 @@ background-color: #8cb948;
 .navSearch {width: 240px}
 .yjArcPicPn .yjArcPicAbs{ position: absolute; top: 0; background: rgba(255,255,255,.9); right:-10px; height: 100%; padding-right: 20px}
 .yjArcPicIntro{ height:40px; overflow: hidden;}
+.yjSideSubNavFix{ position: fixed; top: 0}
 }
 @media (min-width: 1200px) {
 .yjPicItem3 .col-md-2{ padding-left: 0}
@@ -317,6 +338,7 @@ background-color: #8cb948;
 .yjArcPicPn .yjArcPicAbs{ position: absolute; top: 0; background: rgba(255,255,255,.9); right:-10px; height: 100%; padding-right: 20px}
 .yjArcPersonPn .media{border-right: 1px solid #d3d3d3}
 .yjAcrBaseBor{border-right: 1px solid #d3d3d3}
+.yjSideSubNavFix{ position: fixed; top: 0}
 
 }
 

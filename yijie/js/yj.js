@@ -109,6 +109,26 @@ $(document).ready(function() {
                 });
             }
         });
+    }
+    // 右侧吸顶
+    if(!isMobile.any() && $(".yjSideSubNav").length>0){
+        var sTop = $(".yjSideSubNav").offset().top;
+        $(window).scroll(function(event) {
+            var mTop = $(document).scrollTop();
+            var sideFixWid= $(".yjSideSubNav").width()
+            if(mTop > sTop){
+                $(".yjSideSubNav").addClass('yjSideSubNavFix');
+               $(".yjSideSubNav").css({
+                    "width":sideFixWid
+                });
+            }else{
+                $(".yjSideSubNav").removeClass('yjSideSubNavFix');
+                $(".yjSideSubNav").css({
+                    "width":"auto"
+                });
+               
+            }
+        });
     } 
     //评论字数
     
