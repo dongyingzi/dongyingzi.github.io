@@ -111,19 +111,19 @@ $(document).ready(function() {
         });
     }
     // 右侧吸顶
-    if(!isMobile.any() && $(".yjSideSubNav").length>0){
-        var sTop = $(".yjSideSubNav").offset().top;
+    if(!isMobile.any() && $("#yjsideFun").length>0){
+        var sTop = $("#yjsideFun").offset().top;
         $(window).scroll(function(event) {
             var mTop = $(document).scrollTop();
-            var sideFixWid= $(".yjSideSubNav").width()
+            var sideFixWid= $("#yjsideFun").width()
             if(mTop > sTop){
-                $(".yjSideSubNav").addClass('yjSideSubNavFix');
-               $(".yjSideSubNav").css({
+                $("#yjsideFun").addClass('yjSideSubNavFix');
+               $("#yjsideFun").css({
                     "width":sideFixWid
                 });
             }else{
-                $(".yjSideSubNav").removeClass('yjSideSubNavFix');
-                $(".yjSideSubNav").css({
+                $("#yjsideFun").removeClass('yjSideSubNavFix');
+                $("#yjsideFun").css({
                     "width":"auto"
                 });
                
@@ -160,23 +160,16 @@ $(document).ready(function() {
         $("#comment").keyup(maxLimit);  
     });  
     //浮层效果
-     
-       $("[data-toggle=popover]").popover();
-      $('.media').on('shown.bs.popover', function () {
-           $('body').find('.popover').each(function(){
-                $('.popover').click(function(e){
-                    return false;
-                });
-                
-               
-            });
-            $('body').click(function(){
-                $('.popover').remove();
-                $('.media').popover({
-                     trigger : 'click'
-                 });
-            });
-        })
+    $('#yjArcPicHead').hover(function() {
+        $('#yjTip').show().hover(function() {
+            clearTimeout(window.timer);
+        }, function() {
+           $(this).hide();
+        });;
+    }, function() {
+         window.timer = setTimeout(function () { $("#yjTip").hide(); }, 200);
+    });
+    
 
  
 });

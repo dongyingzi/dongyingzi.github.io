@@ -147,7 +147,7 @@ margin-right: 3px;
 .yjShare dd{ margin-bottom: 15px;}
 /*幻灯片*/
 .yjDialog{ width:auto; padding:0; background: #fff;padding-right: 320px; height: 100%;}
-  .carousel-inner{ height: 690px;}
+.yjDialog .carousel-inner{ height: 690px;}
 .yjDialog .carousel-inner  img{ margin-left: auto; margin-right: auto; max-height: 690px}
 .yjDialog .modal-header{ border-bottom: 0; padding-top:30px}
 .yjDialog .carousel-control{ background: transparent;}
@@ -233,8 +233,9 @@ color: #fff;}
 
  .yjInTit{ margin-bottom: 30px; margin-top: 30px; font-size: 24px}
  .yjInCarouselPn{ position: relative;}
- .yjInCarouselPn li{ background: rgba(255,255,255,.5); border:none; height: 16px; width: 16px; margin:0 2px; }
- .yjInCarouselPn li.active{ margin:0 2px; width:16px; height: 16px;}
+ .yjInCarouselPn li{ background: rgba(255,255,255,.5); border:none; height: 16px; width: 16px; margin:0 4px; }
+ .yjInCarouselPn li.active{ margin:0 4px; width:16px; height: 16px;}
+  .yjInCarouselPn  .yjArcBasePos{z-index: 15}
  .yjInLogin{ background: rgba(0,0,0,.2); border-radius: 5px; position: absolute; bottom: 110px; z-index: 15; padding:10px 20px; color: #fff }
  .yjInLogin button { font-size: 24px; letter-spacing: 2px;}
  .yjInLogin a:hover { background-color:transparent; }
@@ -244,7 +245,12 @@ color: #fff;}
  .yjInExpert{ text-align: center; padding-top: 20px; margin-bottom: 10px;}
  .yjInExpert .img-center{ margin-left: auto;margin-right: auto;}
  .yjInConsultPn .yjInConsult{ padding-top: 30px;}
+
+
 /*覆盖样式*/
+.nav > li > a:hover, .nav > li > a:focus{
+background-color: #8cb948;
+}
 .popover{ max-width:350px;}
 .navbar-inverse{background-color: #3d3d3d}
 .navbar-inverse .navbar-text {
