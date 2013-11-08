@@ -478,7 +478,7 @@
         </div>
     </footer>
     <script src="../js/yj.js"></script>
-    <div class="modal" id="modal2" role="dialog">
+    <div class="modal archModal" id="modal2" role="dialog">
         <div class="modal-dialog" style="width:500px">
           <div class="modal-content">
             <div class="modal-header">
@@ -486,65 +486,67 @@
               <h4 class="modal-title yjYh fs18">加入创意夹</h4>
             </div>
             <div class="modal-body">
-                <div class="media">
-                        <a class="pull-left" href="#">
-                            <img src="../img/135.jpg" alt="" class="img-responsive"></a>
-                        <div class="media-body" style="overflow:visible">
-                            <p class="text-danger">请选择或新建一个创意夹先 ;-(</p> 
-                            <p>选择你要加入的创意夹：</p>
-                            <div class="btn-group mb10">
-                                <button type="button" class="btn btn-default btn-xs" data-toggle="dropdown">我的默认创意夹</button>
-                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                    <span class="caret"></span>
-                                    <span class="sr-only">Toggle Dropdown</span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="#">湖北省</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">湖北省</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">湖北省</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">湖北省</a>
-                                    </li>
-                                </ul>
-                            </div> 
-                            <p>
-                                <a href="#">+ 新建创意夹</a>
-                            </p>
-                            <div class="clearFix">
-                                <div class="yjArcTipL">
-                                    <div class="input-group input-group-sm">
-                                        <input type="text" class="form-control" placeholder="Message">                                    
-                                        <span class="input-group-btn">
-                                            <button class="btn relayBtn btn-default" type="button">创建</button>
-                                        </span>
-                                    </div>
+                <div class="media clearfix mb10">
+                    <a class="pull-left" href="#">
+                        <img src="../img/135.jpg" alt="" class="img-responsive"></a>
+                    <div class="media-body" style="overflow:visible">
+                        <p class="text-danger">请选择或新建一个创意夹先 ;-(</p>
+                        <p>选择你要加入的创意夹：</p>
+                        <div class="btn-group mb10">
+                            <button type="button" class="btn btn-default btn-xs" data-toggle="dropdown">我的默认创意夹</button>
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="javascript://">默认创意夹</a>
+                                </li>
+                                <li>
+                                    <a href="javascript://">我的创意夹</a>
+                                </li>
+                                <li>
+                                    <a href="javascript://">老刘创意夹</a>
+                                </li>
+                                <li>
+                                    <a href="javascript://">默认创意夹</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>
+                            <a href="javascript://" class="arcAddFun">+ 新建创意夹</a>
+                        </p>
+                        <div class="arcCreatFun" style="display:none">
+                            <div class="yjArcTipL">
+                                <div class="input-group input-group-sm">
+                                    <input type="text" class="form-control" placeholder="Message">                
+                                    <span class="input-group-btn">
+                                        <button class="btn relayBtn btn-default arcBtnFun" type="button">创建</button>
+                                    </span>
                                 </div>
-                                <div class="pull-left"><a href="#">取消</a></div>
                             </div>
-                            
+                            <div class="pull-left">
+                                <a href="#" class="arcBtn2Fun">取消</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="clearfix">
+
+                    <div class="media-body">
+                        <textarea type="text" placeholder="Message" id="comment2" name="comment" rows="3" style="width:100%" class="mb10"></textarea>
+                        <div class="clearfix">
+                            <div class="pull-right">
+                                <span id="commetFont2" class="yjCgray6">
+                                    还能输入 <strong class="commetFontNum">140</strong>
+                                    个字
+                                </span>
+
+                            </div>
                         </div>
                     </div>
-              <div class="media">
-
-                  <div class="media-body">
-                      <textarea type="text" placeholder="Message" id="comment" name="comment" rows="3" style="width:100%" class="mb10"></textarea>
-                      <div class="clearfix">
-                          <div class="pull-right">
-                              <span id="commetFont" class="yjCgray6">
-                                  还能输入 <strong class="commetFontNum">140</strong>
-                                  个字
-                              </span>
-
-                          </div>
-                      </div>
-                  </div>
-              </div>
+                </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-success"> 添 加 </button>

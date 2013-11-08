@@ -158,6 +158,7 @@ $(document).ready(function() {
                 
         };
         $("#comment").keyup(maxLimit);  
+         
     });  
     //浮层效果
     $('#yjArcPicHead').hover(function() {
@@ -169,6 +170,62 @@ $(document).ready(function() {
     }, function() {
          window.timer = setTimeout(function () { $("#yjTip").hide(); }, 200);
     });
+    //创意夹浮层
+    $('.arcAddFun').click(function(event) {
+        $(this).hide();
+        $(this).parent('p').next('div').show();
+    });
+    $('.arcBtnFun').click(function(event) {
+        $('.arcCreatFun').hide();
+        $('.arcAddFun').show();
+    });
+    $('.arcBtn2Fun').click(function(event) {
+        this.href = 'javascript://';
+        $('.arcCreatFun').hide();
+        $('.arcAddFun').show();
+    });
+
+    $('#modal2').on('hidden.bs.modal', function () {
+        $("html").css({
+            "overflow": 'auto',
+            "padding-right":"0"
+        });
+    })
+    $('#modal2').on('shown.bs.modal', function () {
+        $("html").css({
+            "overflow": 'hidden',
+            "padding-right":"16px"
+        });
+    })
+
+    $(function(){
+        function maxLimit(){
+            var strlen=0; //初始定义长度为0
+            var num = $('#comment2').val();
+            var maxNum = 140;
+            function isChinese(str){  //判断是不是中文
+                var reCh=/[u00-uff]/;
+                return !reCh.test(str);
+            }
+            for(var i=0;i<num.length;i++){
+                if(isChinese(num.charAt(i))==true){
+                    strlen=strlen+2;//中文为2个字符
+                }else{
+                    strlen=strlen+2;//英文一个字符
+                }
+            }
+            strlen=Math.ceil(strlen/2);//中英文相加除2取整数
+            if(maxNum-strlen<0){
+                $('#commetFont2').html("已超出 <strong style='color:red' class='commetFontNum'>"+Math.abs(maxNum-strlen)+"</strong> 字"); //超出的样式
+            }
+            else{
+                $('#commetFont2').html("还可以输入 <strong class='commetFontNum'>"+(maxNum-strlen)+"</strong> 字"); //正常时候
+            }
+                
+        };
+        $("#comment2").keyup(maxLimit);  
+         
+    });  
     
 
  

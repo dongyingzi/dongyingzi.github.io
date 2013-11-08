@@ -216,6 +216,11 @@ border:1px solid #5c5c5c; background:#171717;color: #919191; display: block;}
 .yjArcBasePos a .yjArcBaseAdd{border:1px solid #fff}
 .yjArcBasePos a:hover{background:rgba(140,185,70,.8);
 color: #fff;}
+.archModal .modal-header{ background-color: #f8f8f8; border-top-left-radius:5px; border-top-right-radius:5px; border-bottom: none;}
+.archModal .modal-footer{ background-color: #f8f8f8; border-bottom-left-radius:5px; border-bottom-right-radius:5px; border-top: none;
+padding:10px 20px; margin-top: 0;
+}
+.archModal .media{ overflow: visible;}
 
 .yjArcBasePos .glyphicon-plus{ position: absolute; font-size: 12px; top: 8px; left: 14px;}
 .yjPerTit{ line-height: 38px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
