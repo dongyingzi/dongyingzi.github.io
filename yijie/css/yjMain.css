@@ -16,7 +16,7 @@ a:focus {
 .pl10{ padding-left: 10px} .yjBlock{ display: block;} .mr10{ margin-right: 10px} .ml10{ margin-left: 10px;} .mt50{ margin-top: 50px} .pl20{ padding-left: 20px}
 .yjCgreen{ color: #690} .yjCgray6{ color:#666 } .yjCgray9{color: #999} .yjFs12{ font-size: 12px} .pt30{ padding-top: 30px} .yjCgrayc{color: #ccc} .yjFs40{ font-size: 40px}
 .yjTxB{ font-weight: bold;} .yjCgrayLink{color: #ccc} .mt10{ margin-top: 10px} .mt5{ margin-top: 5px} .yjFs18{ font-size: 18px} .yjFs30{ font-size: 30px}
-.yjYh{ font-family: Microsoft Yahei;}
+.yjYh{ font-family: Microsoft Yahei;} .yjLh22{ line-height: 22px;}
 .yjCgrayLink:hover,
 .yjCgrayLink:focus {
   color: #fff;
@@ -38,6 +38,17 @@ a:focus {
 .yjSelectPn .form-control{ display: inline-block; width: auto; height: 22px; padding:0;}
 .yjSelectPn .mb10{ margin-bottom: 7px}
 .checkbox{font-size: 14px; display: inline-block; margin: 0}
+.tag-warning{color: #ffffff;
+background-color: #f0ad4e;
+border-color: #eea236;}
+.tag-success{color: #ffffff;
+background-color: #47a447;
+border-color: #398439;}
+.tag-info{
+  color: #ffffff;
+background-color: #39b3d7;
+border-color: #269abc;
+}
 /*导航部分*/
 .navbar-header h1{width:70px; height: 50px; margin: 0 20px 0 10px; background-position: 0 -193px; background-repeat: no-repeat;}
 .yjIcn{ background: url(../img/sprites.png); _background: url(../img/sprites.ie6.png);}
@@ -216,6 +227,8 @@ border:1px solid #5c5c5c; background:#171717;color: #919191; display: block;}
 .yjArcBasePos a .yjArcBaseAdd{border:1px solid #fff}
 .yjArcBasePos a:hover{background:rgba(140,185,70,.8);
 color: #fff;}
+.yjArcBasePic .yjArcAddTag{ display: none;}
+.yjArcBasePic:hover .yjArcAddTag{ display: block;}
 .archModal .modal-header{ background-color: #f8f8f8; border-top-left-radius:5px; border-top-right-radius:5px; border-bottom: none;}
 .archModal .modal-footer{ background-color: #f8f8f8; border-bottom-left-radius:5px; border-bottom-right-radius:5px; border-top: none;
 padding:10px 20px; margin-top: 0;
@@ -289,7 +302,7 @@ h6,
 .h3,
 .h4,
 .h5,
-.h6{ font-weight: normal;}
+.h6{ font-weight: normal; font-family:"Microsoft Yahei"}
 .pagination > li > a:hover,
 .pagination > li > span:hover,
 .pagination > li > a:focus,
@@ -350,6 +363,10 @@ background-color: #8cb948;
 .yjArcPersonPn .media{border-right: 1px solid #d3d3d3}
 .yjAcrBaseBor{border-right: 1px solid #d3d3d3}
 .yjSideSubNavFix{ position: fixed; top: 0}
+.yjInCarouselPn{ width: 1280px; margin-right: auto; margin-left: auto;}
+.yjInLogin{ left: 50px}
+.yjArcImgPn{text-align: center;}
+.yjArcImgPn img{ max-height: 800px; margin-left: auto; margin-right: auto; }
 
 }
 
