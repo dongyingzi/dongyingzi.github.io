@@ -226,7 +226,17 @@ $(document).ready(function() {
         $("#comment2").keyup(maxLimit);  
          
     });  
-    
+    //下拉框
+    $('.yjExpertFun').hover(function() {
+        $(this).addClass('yjExpertActive');
+        $(this).children('.glyphicon ').hide();
+    }, function() {
+        $(this).removeClass('yjExpertActive');
+        $(this).children('.glyphicon ').show();
+    });
+    $('.yjNavLoginName').click(function(event) {
+       $(this).children('.yjNavLoginDrop').toggle('slow');
+    });
 
  
 });
