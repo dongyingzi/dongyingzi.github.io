@@ -898,6 +898,9 @@ a:focus {
   overflow: hidden;
   position: relative;
 }
+.yjExpertPn .yjExpert{
+  height: auto;
+} 
 .yjExpert .glyphicon-chevron-down{
  position: absolute;
  top:auto;
