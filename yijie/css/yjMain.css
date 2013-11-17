@@ -60,7 +60,11 @@ a:focus {
   color:#666;
 } .yjCgray9{
   color: #999;
-} .yjFs12{
+}
+.yjCred{
+  color:#eb1111;
+} 
+.yjFs12{
   font-size: 12px;
 } .pt30{
   padding-top: 30px;
@@ -217,6 +221,7 @@ a:focus {
   background-color: rgba(61,61,61,0.9);
   z-index: 1001;
   padding:10px 0 20px;
+  display: none;
 }
 .yjNavLoginName .yjNavLoginDrop a{
    display: block;
@@ -893,7 +898,7 @@ a:focus {
  .yjExpert{
   border:1px solid #ccc;
   padding:10px 14px 0;
-  margin-top: 20px;
+  margin-top: 10px;
   height:155px;
   overflow: hidden;
   position: relative;
@@ -936,6 +941,9 @@ a:focus {
   .yjExpertA{
   text-align: center;
 }
+  .yjExpertRe{
+    background-color: #f8f8f8;
+  }
   .yjExpertRe > .media {
   padding:0 20px 20px;
 }
@@ -992,7 +1000,8 @@ a:focus {
   margin-right: 20px;
 }
 .yjAlbumBg2 .yjAlbumEditA{
-  background-color: rgba(171,0,0,0.8)
+  background-color: rgba(171,0,0,0.8);
+  display: none;
 }
 .yjAlbumBtnGroup{
   text-align: center;
@@ -1024,6 +1033,7 @@ a:focus {
   background-color: rgba(0,0,0,0.4);
   z-index: 10;
   text-align: center;
+  display: none;
 }
 .yjArcAPn .yjArcAa a{
   display: inline-block;
@@ -1036,6 +1046,12 @@ margin-top: 110px;
 .yjArcAPn .yjArcAa a:hover{
 background: rgba(140,185,70,.8);
 color: #fff;
+}
+.yjArcAPn:hover .yjArcAa{
+  display: block;
+}
+.yjAlbumBg2:hover .yjAlbumEditA{
+  display: block;
 }
 
 

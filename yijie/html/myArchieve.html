@@ -50,13 +50,13 @@
                     <li>
                         <a href="/">首页</a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="#">婚纱照</a>
                     </li>
                     <li>
                         <a href="#">真实案例</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="#">创意夹</a>
                     </li>
                     <li>
@@ -97,8 +97,45 @@
         </div>
         <div class="row mb20">
             <div class="col-md-3 col-sm-6">
+                <div id="yjTip" class="popover fade bottom in" style="top: 78px; left: -8px; width: 305px; display: none;">
+                    <div class="arrow"></div>
+                    <div class="popover-content">
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object img-circle" src="../img/55.jpg" alt="headPic"></a>
+                            <div class="media-body yjCgray6">
+                                <h5 class="media-heading mb10">
+                                    <a href="#" class="yjCgreenL">老刘好声音</a>
+                                    <span class="tag-warning  btn-xs">撰稿人</span>
+                                </h5>
+                                <div class="mb5">
+
+                                    <p>
+                                        <a href="#" class="yjCgray2Link">影集 10</a>
+                                        <span class="yjCgray6 ml10 mr10">|</span>
+                                        <a href="#" class="yjCgray2Link">创意 8</a>
+                                        <span class="yjCgray6 ml10 mr10">|</span>
+                                        <a href="#" class="yjCgray2Link">粉丝 152</a>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <p class="yjTipBg">
+                            <button type="button" class="btn btn-success btn-sm " data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-plus"></span>
+                                关注
+                            </button>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-ok-circle"></span>
+                                已关注
+                            </a>
+                        </p>
+                        <p class="yjCgray6">这个家伙很懒，毛也没写！</p>
+                    </div>
+                </div>
                 <div class="yjExpert yjExpertRe">
-                    <div class="media">
+                    <div class="media" id="yjArcPicHead">
                         <a class="pull-left" href="#">
                             <img class="media-object img-circle" src="../img/70.jpg" alt="headPic"></a>
                         <div class="media-body yjCgray6">
@@ -203,19 +240,9 @@
         <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-6">
                     <div class="yjArcAPn">
-                        <a href="#">
-                            <img alt="100%x180" src="../img/280.jpg" class="img-responsive"></a>
-                            <div class="yjArcBot">
-                                <div class="col-md-3 col-sm-3 col-xs-6"><a href="#"><img alt="100%x180" src="../img/70.jpg" class="img-responsive"></a></div>
-                                <div class="col-md-3 col-sm-3 col-xs-6"><a href="#"><img alt="100%x180" src="../img/70.jpg" class="img-responsive"></a></div>
-                                <div class="col-md-3 col-sm-3 col-xs-6"><a href="#"><img alt="100%x180" src="../img/70.jpg" class="img-responsive"></a></div>
-                                <div class="col-md-3 col-sm-3 col-xs-6"><a href="#"><img alt="100%x180" src="../img/70.jpg" class="img-responsive"></a></div>
-                            </div>
-                    </div>
-                    <p class="mb40"><a href="#">大美的巴黎婚纱照系列</a></p>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-6">
-                    <div class="yjArcAPn">
+                        <div class="yjArcAa">
+                            <a href="#">共15张图片 》</a>
+                        </div>
                         <a href="#">
                             <img alt="100%x180" src="../img/280.jpg" class="img-responsive"></a>
                             <div class="yjArcBot">
@@ -245,6 +272,9 @@
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6">
                     <div class="yjArcAPn">
+                        <div class="yjArcAa">
+                            <a href="#">共15张图片 》</a>
+                        </div>
                         <a href="#">
                             <img alt="100%x180" src="../img/280.jpg" class="img-responsive"></a>
                             <div class="yjArcBot">
@@ -258,6 +288,9 @@
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6">
                     <div class="yjArcAPn">
+                        <div class="yjArcAa">
+                            <a href="#">共15张图片 》</a>
+                        </div>
                         <a href="#">
                             <img alt="100%x180" src="../img/280.jpg" class="img-responsive"></a>
                             <div class="yjArcBot">
@@ -271,6 +304,25 @@
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6">
                     <div class="yjArcAPn">
+                        <div class="yjArcAa">
+                            <a href="#">共15张图片 》</a>
+                        </div>
+                        <a href="#">
+                            <img alt="100%x180" src="../img/280.jpg" class="img-responsive"></a>
+                            <div class="yjArcBot">
+                                <div class="col-md-3 col-sm-3 col-xs-6"><a href="#"><img alt="100%x180" src="../img/70.jpg" class="img-responsive"></a></div>
+                                <div class="col-md-3 col-sm-3 col-xs-6"><a href="#"><img alt="100%x180" src="../img/70.jpg" class="img-responsive"></a></div>
+                                <div class="col-md-3 col-sm-3 col-xs-6"><a href="#"><img alt="100%x180" src="../img/70.jpg" class="img-responsive"></a></div>
+                                <div class="col-md-3 col-sm-3 col-xs-6"><a href="#"><img alt="100%x180" src="../img/70.jpg" class="img-responsive"></a></div>
+                            </div>
+                    </div>
+                    <p class="mb40"><a href="#">大美的巴黎婚纱照系列</a></p>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="yjArcAPn">
+                        <div class="yjArcAa">
+                            <a href="#">共15张图片 》</a>
+                        </div>
                         <a href="#">
                             <img alt="100%x180" src="../img/280.jpg" class="img-responsive"></a>
                             <div class="yjArcBot">
