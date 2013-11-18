@@ -243,6 +243,21 @@ $(document).ready(function() {
     }, function() {
         window.timer2 = setTimeout(function () { $(".yjNavLoginDrop").hide(); }, 200);
     });
+    //专家头像hoverTips
+    $('.yjExpertPicHove').hover(function() {
+        var _this = $(this).children('.popover');
+         trigger = setTimeout(function(){
+                _this.show().hover(function() {
+                clearTimeout(window.timer3);
+            }, function() {
+                _this.hide();
+            });
+        },200);
+    }, function() {
+        var _this = $(this);
+         clearTimeout(trigger);
+         window.timer3 = setTimeout(function () {_this.children('.popover').hide(); }, 200);
+    });
 
  
 });
