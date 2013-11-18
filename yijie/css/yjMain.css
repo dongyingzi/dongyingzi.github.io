@@ -38,6 +38,9 @@ a:focus {
 } .pl40{
   padding-left: 40px;
 }
+.pt10{
+  padding-top: 10px;
+}
 .pl10{
   padding-left: 10px;
 } .yjBlock{
@@ -753,6 +756,7 @@ a:focus {
   background: rgba(0,0,0,0.8);
   border-radius: 20px;
   padding:4px 10px;
+  height: 30px;
   position: relative;
 }
 .yjArcBasePos a img{
@@ -1165,7 +1169,8 @@ h6,
 .yjArcPersonPn .media{border-right: 1px solid #d3d3d3}
 .yjAcrBaseBor{border-right: 1px solid #d3d3d3}
 .yjSideSubNavFix{ position: fixed; top: 0}
-.yjInCarouselPn{ width: 1280px; margin-right: auto; margin-left: auto;}
+.yjInCarouselPn{margin-right: auto; margin-left: auto; background-color: #000;}
+.yjInCarouselPn .carousel-inner{ width:1280px; margin: 0 auto;}
 .yjInLogin{ left: 50px}
 .yjArcImgPn{text-align: center;}
 .yjArcImgPn img{ max-height: 800px; margin-left: auto; margin-right: auto; }

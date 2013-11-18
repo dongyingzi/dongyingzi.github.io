@@ -234,15 +234,15 @@ $(document).ready(function() {
         $(this).removeClass('yjExpertActive');
         $(this).children('.glyphicon ').show();
     });
-    $('.yjNavLoginName').hover(function() {
-        $(this).children('.yjNavLoginDrop').show().hover(function() {
-             clearTimeout(window.timer2);
-        }, function() {
-            $(this).hide();
-        });
-    }, function() {
-        window.timer2 = setTimeout(function () { $(".yjNavLoginDrop").hide(); }, 200);
-    });
+    // $('.yjNavLoginName').hover(function() {
+    //     $(this).children('.yjNavLoginDrop').show().hover(function() {
+    //          clearTimeout(window.timer2);
+    //     }, function() {
+    //         $(this).hide();
+    //     });
+    // }, function() {
+    //     window.timer2 = setTimeout(function () { $(".yjNavLoginDrop").hide(); }, 200);
+    // });
 
  
 });
