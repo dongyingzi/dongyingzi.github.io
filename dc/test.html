@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>下馆子</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" type="text/css" href="css/dc.css">
+	<link rel="stylesheet" type="text/css" href="css/a.css">
+	<link rel="stylesheet" type="text/css" href="css/gmu.css">
+
+	<script type="text/javascript" src="js/zepto.js"></script>
+	<script type="text/javascript" src="js/gmu.js"></script>
+	<style>
+	.picCont img{ display: none; max-width: 100%;}
+	.picCont .active{ display:block}
+	</style>
+</head>
+<body class="dcBgLogin animated fadeInUp">
+	<div class="picCont">
+		<img class="active" src="img/test/WI-P1.jpg" alt="">
+		<img src="img/test/WI-P2.jpg" alt="">
+		<img src="img/test/WI-P3.jpg" alt="">
+		<img src="img/test/WI-P4.jpg" alt="">
+		<img src="img/test/WI-P5.jpg" alt="">
+		<img src="img/test/WI-P6.jpg" alt="">
+		<img src="img/test/WI-P7.jpg" alt="">
+
+	</div>
+	<script>
+		//alert($(".dcArea > ul").length)
+	 
+
+		$(".picCont > img").swipeUp(function(){//鼠标点击也可以切换 
+			//alert($(this).attr("tabid"));h
+			var len = $('.picCont > img').index(this);
+			if(len !=6){
+			$(".picCont > img").eq(len+1).show().siblings().hide();
+			$('.active').removeClass();
+			$(".picCont > img").eq(len+1).addClass('active');
+			}
+		});
+		$(".picCont > img").swipeDown(function(){//鼠标点击也可以切换 
+			//alert($(this).attr("tabid"));h
+			var len = $('.picCont > img').index(this);
+			if(len !=0){
+			$(".picCont > img").eq(len-1).show().siblings().hide();
+			$('.active').removeClass();
+			$(".picCont > img").eq(len-1).addClass('active');
+			}
+		});
+		
+
+		
+
+	</script>
+	
+	
+	
+
+</body>
+</html>

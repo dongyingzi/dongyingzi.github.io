@@ -11,17 +11,30 @@
 	html{ overflow: hidden; height: 100%}
 	body{ background: url(img/bg.jpg); margin: 0; padding:0; height: 100%; position: relative; -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
-box-sizing: border-box; padding-top:50px;}
+box-sizing: border-box; margin-top: 50px;}
 p{ margin: 0; padding:0;}
-	.c1,.c2,.c3,.c4,.c5{ width:30; height:30px; border:3px solid #000; border-color: rgba(0,0,0,0.5);border-radius:3px; display: block; overflow:hidden; text-indent: 50px; background:red url(img/red.png) center center no-repeat; background-size:30px 30px;}
-	.c2{ background: yellow url(img/yellow.png) center center no-repeat;  background-size:30px 30px;}
-	.c3{ background: green  url(img/green.png) center center no-repeat;  background-size:30px 30px;}
-	.c4{ background: blue  url(img/blue.png) center center no-repeat;  background-size:30px 30px;}
-	.c5{ background: purple  url(img/purple.png) center center no-repeat;  background-size:30px 30px;}
+	.c1,.c2,.c3,.c4,.c5{
+		-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+	 display:block;width:100%; height:10%; border-radius: 5px;
+		border:2px solid rgba(255,255,255,.3);
+		background: -webkit-gradient(linear, left top, left bottom, from(#E84B6E), to(#D82741) );
+		
+	}
+	.c2{
+	background: -webkit-gradient(linear, left top, left bottom, from(#c8dd95), to(#428739) );}
+	.c3{
+		background: #ffa2f7;
+
+background: linear-gradient( 145deg, #ffa6f7 1%,#b534a5 51%,#b534a5 51%,#b534a5 52%,#b534a5 52%,#5a1852 100%);
+
+}
+	.c4{ }
+	.c5{}
 	#pop .hover{ border:3px solid #ccc; border-color: rgba(255,255,255,0.5);}
 	#pop div {position: absolute; bottom: 0}
 	#pop{}
-	#mess{ font-size: 14px; position: absolute; top:0; left: 0 }
+	#mess{ font-size: 14px; position: absolute; top:-50px; left: 0 }
 	.d1{left:10%}
 	.d2{left:20%}
 	.d3{left:30%}
@@ -40,7 +53,7 @@ p{ margin: 0; padding:0;}
 	.d6,
 	.d7,
 	.d8,
-	.d9{ width: 10%}
+	.d9{ width: 10%; height: 100%}
 	</style>
 </head>
 <body>
@@ -116,7 +129,7 @@ p{ margin: 0; padding:0;}
 				inString +="<div class='d"+i+"'>"
 
 				for (var j = arr[i].length-1; j > -1; j--){
-					inString += "<span class='c"+arr[i][j]+"' id='d"+i+j+"'>"+i+j+"</span>";
+					inString += "<span class='c"+arr[i][j]+"' id='d"+i+j+"'></span>";
 				}
 				inString += "</div>"
 			}
