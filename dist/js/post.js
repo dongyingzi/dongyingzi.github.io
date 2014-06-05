@@ -160,6 +160,7 @@ $(document).ready(function(){
                                 position:'static'
                                 ,top:0
                                 ,left:0
+                                ,overflowY:'visible'
                             });
                         }
 
