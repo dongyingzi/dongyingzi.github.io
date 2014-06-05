@@ -1,11 +1,12 @@
 auto: true
 
+encoding: utf-8
 markdown: rdiscount
 pygments: true
 paginate: 8
 permalink: /:title
 
-title: dongyingzi.gtihub.io
+title: yingzi's Blog
 url: http://dongyingzi.github.io
 feed: /atom.xml
 author_info: <a href="http://dongyingzi.github.io/">dongyingzi</a>

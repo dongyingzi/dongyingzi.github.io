@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="yingzi's Blog,js,css,css3,bootstrap,git,grunt">
+<meta name="author" content="yingzi">
+<title>
+    {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
+</title>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<!-- 最新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="dist/css/yz.css">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="dist/js/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="yz-bg"></div>
+    {{ content }}
+    <footer class="yz-footer" role="contentinfo">
+        <div class="container">
+            <div class="yz-mod-style yz-footer-inner">
+                <p class="text-center">本博客配色布局参考<a href="http://blog.dandyweng.com/">Dandy's Blog</a>，转载请注明来源。</p>
+            <p class="text-center">建议使用 Chrome 或 Safari 浏览器以保证显示效果</p>
+                <div class="clearfix">
+                    <div class="col-md-4">
+                        <p>
+                            ©
+                            <a href="#">yingzi's Blog</a>
+                            2011 - 2014
+                        </p>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="text-right">
+                            Developed by yingzidong • Powered by <a href="#" href="http://www.bootcss.com/">bootstrap</a>
+                        </p></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
