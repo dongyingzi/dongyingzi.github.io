@@ -56,7 +56,12 @@ layout: default
             <ul class="yz-art-list">
             {% for post in  paginator.posts %}
                 <li class="yz-mod-style">
-                    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                  {% if post.flag == 'pro' %}
+                      <h2><a href="{{ post.purl }}">{{ post.title }}</a></h2>
+                      {% else %}
+                      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                      {% endif %}
+                    
                     <div class="yz-title-desc">{{ post.description }}</div>
                      {% if post.flag == 'pro' %}
                       <div><a class="yz-link-more" href="{{ post.purl }}">查看作品 »</a></div>
