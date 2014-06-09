@@ -3,7 +3,7 @@ auto: true
 encoding: utf-8
 markdown: rdiscount
 pygments: true
-paginate: 8
+paginate: 5
 permalink: /:title
 
 title: yingzi's Blog

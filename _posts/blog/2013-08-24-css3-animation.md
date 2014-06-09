@@ -5,10 +5,6 @@ description: 随着低版本IE份额下降，以及移动端流量的增长，�
 category: blog
 ---
 
-##CSS3动画
-
-有人认为CSS动画是做了js的事情，较真起来也算，只是已经抢占许多年了，早些年要实现鼠标滑过链接变色的基本效果，需要动用Java Applet，后来只需给HTML元素加事件`onclick=changecolor()`，再之后正如你所知，只要写`:hover`、`:focus`这样的伪类即可，同样的，现在有了CSS3动画。
-
 ####CSS3动画的优势：
 <ul>
     <li>写起来非常方便，不会js也没问题</li>

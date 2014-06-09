@@ -2,6 +2,9 @@ body{
  background:url(../img/bg.jpg);
  font: 500 14px/1.8 'Optima', 'Verdana', 'Microsoft Yahei', sans-serif;
 }
+.body2{
+ background:url(../img/bg1.png); 
+}
 .yz-bg{background: -webkit-radial-gradient(50% 10%, transparent 45%, black) no-repeat;
 background: -moz-radial-gradient(50% 10%, transparent 45%, black) no-repeat;
 opacity: 1;position: fixed;left: 0;top: 0;width: 100%;height: 100%;
@@ -16,11 +19,12 @@ border-radius: 5px;
 background: #f8f8f8 url(../img/pageBg.jpg)
 }
 .yz-art-single{ padding:18px 30px; margin-bottom: 20px;}
+.yz-art-single img{ display: block; max-width: 100%; margin:0 auto}
 .yz-art-list > li{
   padding:18px;
   margin-bottom: 20px;
 }
-.yz-art-list > li >h2{
+.yz-art-list > li >h2,.yz-mod-h2{
   text-align: center;
   padding:20px;
   color: #444;
@@ -28,7 +32,7 @@ color: rgba(0, 0, 0, 0.7);
 -webkit-box-reflect: below -45px -webkit-gradient(linear, left top, left bottom, color-stop(30%,rgba(255, 255, 255, .05)), color-stop(100%,rgba(255, 255, 255, .25)));
 margin-bottom: 20px;
 }
-.yz-art-list > li >h2 >a{ text-decoration: none;color:#444;color: rgba(0, 0, 0, 0.7);}
+.yz-art-list > li >h2 >a,.yz-mod-h2 a{ text-decoration: none;color:#444;color: rgba(0, 0, 0, 0.7);}
 .yz-art-list .yz-title-desc{ margin-bottom: 20px;}
 .yz-art-list .yz-link-more{width: 80px;
 padding: 6px 15px;
@@ -53,25 +57,113 @@ background-color: #f7f5fa;
 border-radius: 5px;}
 .yz-footer-inner{ padding-top: 20px;}
 .yz-footer-inner a{ color: #444;}
+.yz-page-nav{text-align: right; height: 60px; overflow: hidden;}
+  .yz-page-nav p,.yz-page-nav li,.yz-page-nav ul{ float:left; margin-right: 10px}
+  .yz-page-nav .disabled span{background: #ccc;}
+.yz-page-nav a, .yz-page-nav span {
+  background: #a11c22;
+  color: #333;
+  text-decoration: none;
+  padding: 1px 8px;
+  vertical-align: middle;
+  display: inline-block;
+  zoom:1;
+  *display:inline;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  text-shadow: 0 1px 0 rgba(255,255,255,.7);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.1);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,.1);
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+  background: #eee;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+  background: -moz-linear-gradient(top,  #fff,  #ddd);
+  background: linear-gradient(-90deg, #fff, #ddd);
+}
+.yz-page-nav a:hover {
+  text-decoration: none;
+  background: #fff;
+}
+.yz-page-nav .current-page {
+   border: 2px solid #bebebe; 
+cursor: default;
+  background: #333;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0,0,0,.7);
+  -webkit-box-shadow: 0 -1px 0 rgba(0,0,0,.2);
+  -moz-box-shadow: 0 -1px 0 rgba(0,0,0,.2);
+  box-shadow: 0 -1px 0 rgba(0,0,0,.2);
+}
+.yz-img{position: absolute;
+z-index: 1;
+left:35px;
+top:10px;
+height: 110px;
+width: 110px;
+background: #000;
+background: rgba(0,0,0,.25);
+border-radius: 5px;}
+.yz-img img{
+  display: block;
+  border-radius:3px;
+  margin:5px 0 0 5px;
+}
+.yz-about-pn{
+  margin-top: 40px;
+}
+.yz-about{
+  position: relative;
+}
+.yz-info{
+  margin-top: 110px;
+  padding-top: 20px;
+  padding-left:20px;
+  background: url(../img/pageBg.jpg);
+}
+.yz-about h2{
+  position: absolute;
+  z-index: 5;
+  left: 180px;
+  top:48px;
+ font:500 20px/28px 'Microsoft Yahei'; font-size:24px;
+letter-spacing:5px;
+white-space: nowrap;
+color: #fff;
+text-shadow: 1px 1px 3px rgba(0,0,0,.5);
+}
+.nav-about{
+width: 100%;
+background: #000;
+background: rgba(0,0,0,.4);
+text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+position: absolute;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+top:59px;
+height:50px;
+}
 /* All levels of nav */
 .yz-nav > li > a {
   display: block;
   color: #716b7a;
   padding: 5px 20px;
 }
+
 .yz-nav > li > a:hover,
-.yz-nav > li > a:focus {
+.yz-nav > li > a:focus, 
+{
   text-decoration: none;
   background-color: #e5e3e9;
-  border-right: 1px solid #dbd8e0;
+  border-left: 1px solid #dbd8e0;
 }
-.yz-nav > .active > a,
-.yz-nav > .active:hover > a,
-.yz-nav > .active:focus > a {
+.yz-nav > .on > a,
+.yz-nav > .on:hover > a,
+.yz-nav > .on:focus > a {
   font-weight: bold;
   color: #563d7c;
   background-color: transparent;
-  border-right: 1px solid #563d7c;
+  border-left: 2px solid #563d7c;
 }
 .yz-footer{ margin-bottom:80px}
 

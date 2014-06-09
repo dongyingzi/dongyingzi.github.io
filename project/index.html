@@ -1,0 +1,71 @@
+---
+layout: default
+---
+<header class="navbar navbar-inverse" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">yingzi'Blog</a>
+      <script>
+      $(document).ready(function() {
+        // $('.navbar-brand').addClass('swing animated');
+        // setTimeout(function(){ $('.navbar-brand').removeClass('swing animated');},3000)
+        $('.navbar-brand').hover(function() {
+          $(this).addClass('swing animated')
+        }, function() {
+          $(this).removeClass('swing animated')
+          /* Stuff to do when the mouse leaves the element */
+        });
+      });
+        
+      </script>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li >
+          <a href="/">Blog</a>
+        </li>
+        <li>
+          <a href="/share">share</a>
+        </li>
+        <li class="active">
+          <a href="/project">project</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="/about">About me</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="container yz-cont">
+    <div class="row">
+        <div class="col-md-9">
+            <ul class="yz-art-list">
+            {% for post in site.categories.project %}
+                <li class="yz-mod-style">
+                    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                    <div class="yz-title-desc">{{ post.description }}</div>
+                    <div><a class="yz-link-more" href="{{ post.url }}">阅读全文 »</a></div>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <ul class="yz-nav yz-mod-style">
+                {% for post in site.categories.project %}
+                <li>
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

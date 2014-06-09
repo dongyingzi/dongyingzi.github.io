@@ -154,6 +154,7 @@ $(document).ready(function(){
                                 ,left:menuIndexLeft
                                 ,width:vwidth
                                 ,overflowY:'scroll'
+                                ,zIndex:'999'
                             });
                         }else{
                             $('#menuIndex').css({
@@ -207,8 +208,8 @@ $(document).ready(function(){
         $('#disqus_container .comment').trigger('click');
     }
 
-    // if(/css3-animation/.test(location.href)){
-    //     $("head").append("<link rel='stylesheet' type='text/css' href='/css/css3-ani.css'/>");
-    //     $.getScript('/dist/js/css3-ani.js',function(){});
-    // }
+    if(/css3-animation/.test(location.href)){
+        $("head").append("<link rel='stylesheet' type='text/css' href='/dist/css/css3-ani.css'/>");
+        $.getScript('/dist/js/css3-ani.js',function(){});
+    }
 });

@@ -25,23 +25,6 @@ Github Pages有以下几个优点：
 
 大致介绍到此，作为个人博客来说，简洁清爽的表达自己的工作、心得，就已达目标，所以Github Pages是我认为此需求最完美的解决方案了。
 
-## 购买、绑定独立域名
-虽说[Godaddy][]曾支持过SOPA，并且首页放着极其不专业的大胸美女，但是作为域名服务商他做的还不赖，选择它最重要的原因是他支持支付宝，没有信用卡有时真的很难过。
-
-域名的购买不用多讲，注册、选域名、支付，有网购经验的都毫无压力，优惠码也遍地皆是。域名的配置需要提醒一下，因为伟大英明的GFW的存在，我们必须多做些事情。
-
-流传Godaddy的域名解析服务器被墙掉，导致域名无法访问，后来这个事情在[BeiYuu][]也发生了，不得已需要把域名解析服务迁移到国内比较稳定的服务商处，这个迁移对于域名来说没有什么风险，最终的控制权还是在Godaddy那里，你随时都可以改回去。
-
-我们选择[DNSPod][]的服务，他们的产品做得不错，易用、免费，收费版有更高端的功能，暂不需要。注册登录之后，按照DNSPod的说法，只需三步（我们插入一步）：
-
-<ul>
-	<li>首先添加域名记录，可参考DNSPod的帮助文档：<a href="https://www.dnspod.cn/Support">https://www.dnspod.cn/Support</a></li>
-	<li>在DNSPod自己的域名下添加一条<a href="http://baike.baidu.com/view/65575.htm">A记录</a>，地址就是Github Pages的服务IP地址：207.97.227.245</li>
-	<li>在域名注册商处修改DNS服务:去Godaddy修改Nameservers为这两个地址：f1g1ns1.dnspod.net、f1g1ns2.dnspod.net。如果你不明白在哪里修改，可以参考这里：<a href="https://www.dnspod.cn/support/index/fid/119">Godaddy注册的域名如何使用DNSPod</a></li>
-	<li>等待域名解析生效</li>
-</ul>
-
-域名的配置部分完成，跪谢方校长。
 
 ## 配置和使用Github
 Git是版本管理的未来，他的优点我不再赘述，相关资料很多。推荐这本[Git中文教程][4]。
@@ -51,7 +34,7 @@ Git是版本管理的未来，他的优点我不再赘述，相关资料很多�
 下载安装客户端之后，各个系统的配置就类似了，我们使用windows作为例子，Linux和Mac与此类似。
 
 在Windows下，打开Git Bash，其他系统下面则打开终端（Terminal）：
-![Git Bash](/images/githubpages/bootcamp_1_win_gitbash.jpg)
+![Git Bash](/dist/img/githubpages/bootcamp_1_win_gitbash.jpg)
 
 ###1、检查SSH keys的设置
 首先我们需要检查你电脑上现有的ssh key：
@@ -82,7 +65,7 @@ Git是版本管理的未来，他的优点我不再赘述，相关资料很多�
     Enter same passphrase again:<再次输入加密串>
 
 最后看到这样的界面，就成功设置ssh key了：
-![ssh key success](/images/githubpages/ssh-key-set.png)
+![ssh key success](/dist/img/githubpages/ssh-key-set.png)
 
 ###4、添加SSH Key到GitHub：
 在本机设置SSH Key之后，需要添加到GitHub上，以完成SSH链接的设置。
@@ -90,10 +73,10 @@ Git是版本管理的未来，他的优点我不再赘述，相关资料很多�
 用文本编辑工具打开id_rsa.pub文件，如果看不到这个文件，你需要设置显示隐藏文件。准确的复制这个文件的内容，才能保证设置的成功。
 
 在GitHub的主页上点击设置按钮：
-![github account setting](/images/githubpages/github-account-setting.png)
+![github account setting](/dist/img/githubpages/github-account-setting.png)
 
 选择SSH Keys项，把复制的内容粘贴进去，然后点击Add Key按钮即可：
-![set ssh keys](/images/githubpages/bootcamp_1_ssh.jpg)
+![set ssh keys](/dist/img/githubpages/bootcamp_1_ssh.jpg)
 
 PS：如果需要配置多个GitHub账号，可以参看这个[多个github帐号的SSH key切换](http://omiga.org/blog/archives/2269)，不过需要提醒一下的是，如果你只是通过这篇文章中所述配置了Host，那么你多个账号下面的提交用户会是一个人，所以需要通过命令`git config --global --unset user.email`删除用户账户设置，在每一个repo下面使用`git config --local user.email '你的github邮箱@mail.com'` 命令单独设置用户账户信息
 
@@ -129,7 +112,7 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
 有些工具没有通过SSH来链接GitHub。如果要使用这类工具，你需要找到然后设置你的API Token。
 
 在GitHub上，你可以点击*Account Setting > Account Admin*：
-![set ssh keys](/images/githubpages/bootcamp_1_token.jpg)
+![set ssh keys](/dist/img/githubpages/bootcamp_1_token.jpg)
 
 然后在你的命令行中，输入下面的命令，把token添加进去：
 
@@ -145,27 +128,27 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
 与GitHub建立好链接之后，就可以方便的使用它提供的Pages服务，GitHub Pages分两种，一种是你的GitHub用户名建立的`username.github.io`这样的用户&组织页（站），另一种是依附项目的pages。
 
 ###User & Organization Pages
-想建立个人博客是用的第一种，形如`beiyuu.github.io`这样的可访问的站，每个用户名下面只能建立一个，创建之后点击`Admin`进入项目管理，可以看到是这样的：
-![user pages](/images/githubpages/user-pages.png)
+想建立个人博客是用的第一种，形如`dongyingzi.github.io`这样的可访问的站，每个用户名下面只能建立一个，创建之后点击`Admin`进入项目管理，可以看到是这样的：
+![user pages](/dist/img/githubpages/user-pages.png)
 而普通的项目是这样的，即使你也是用的`othername.github.io`：
-![other pages](/images/githubpages/other-pages.png)
+![other pages](/dist/img/githubpages/other-pages.png)
 
 创建好`username.github.io`项目之后，提交一个`index.html`文件，然后`push`到GitHub的`master`分支（也就是普通意义上的主干）。第一次页面生效需要一些时间，大概10分钟左右。
 
-生效之后，访问`username.github.io`就可以看到你上传的页面了，[beiyuu.github.com][7]就是一个例子。
+生效之后，访问`username.github.io`就可以看到你上传的页面了，[dongyingzi.github.com][7]就是一个例子。
 
 关于第二种项目`pages`，简单提一下，他和用户pages使用的后台程序是同一套，只不过它的目的是项目的帮助文档等跟项目绑定的内容，所以需要在项目的`gh-pages`分支上去提交相应的文件，GitHub会自动帮你生成项目pages。具体的使用帮助可以参考[Github Pages][]的官方文档：
 
 ###绑定域名
 我们在第一部分就提到了在DNS部分的设置，再来看在GitHub的配置，要想让`username.github.io`能通过你自己的域名来访问，需要在项目的根目录下新建一个名为`CNAME`的文件，文件内容形如：
 
-    beiyuu.com
+    ****.com
 
 你也可以绑定在二级域名上：
 
-    blog.beiyuu.com
+    blog.****.com
 
-需要提醒的一点是，如果你使用形如`beiyuu.com`这样的一级域名的话，需要在DNS处设置A记录到`207.97.227.245`（**这个地址会有变动，[这里][a-record]查看**），而不是在DNS处设置为CNAME的形式，否则可能会对其他服务（比如email）造成影响。
+需要提醒的一点是，如果你使用形如`****.com`这样的一级域名的话，需要在DNS处设置A记录到`207.97.227.245`（**这个地址会有变动，[这里][a-record]查看**），而不是在DNS处设置为CNAME的形式，否则可能会对其他服务（比如email）造成影响。
 
 设置成功后，根据DNS的情况，最长可能需要一天才能生效，耐心等待吧。
 
@@ -233,7 +216,7 @@ Jekyll的配置写在_config.yml文件中，可配置项有很多，我们不去
 
 * `permalink: /:title` /github-pages
 
-自定义项的内容，例如我们定义了`title:BeiYuu的博客`这样一项，那么你就可以在文章中使用`{ { site.title }}`来引用这个变量了，非常方便定义些全局变量。
+自定义项的内容，例如我们定义了`title:dongyingzi的博客`这样一项，那么你就可以在文章中使用`{ { site.title }}`来引用这个变量了，非常方便定义些全局变量。
 
 ###YAML Front Matter和模板变量
 对于使用YAML定义格式的文章，Jekyll会特别对待，他的格式要求比较严格，必须是这样的形式：
@@ -260,7 +243,7 @@ Jekyll的配置写在_config.yml文件中，可配置项有很多，我们不去
 现在专做评论模块的产品有很多，比如[Disqus][]，还有国产的[多说][]，Disqus对现在各种系统的支持都比较全面，到写博客为止，多说现在仅是WordPress的一个插件，所以我这里暂时也使用不了，多说与国内的社交网络紧密结合，还是有很多亮点的，值得期待一下。我先选择了Disqus。
 
 注册账号什么的就不提了，Disqus支持很多的博客平台，参见下图：
-![Disqus sites](/images/githubpages/disqus-site.jpg)
+![Disqus sites](/dist/img/githubpages/disqus-site.jpg)
 
 我们选择最下面的`Universal Code`就好，然后会看到一个介绍页面，把下面这段代码复制到你的模板里面，可以只复制到显示文章的模板中：
 
@@ -283,7 +266,7 @@ Jekyll的配置写在_config.yml文件中，可配置项有很多，我们不去
 
     $('#disqus_container .comment').on('click',function(){
             $(this).html('加载中...');
-            var disqus_shortname = 'beiyuu';
+            var disqus_shortname = 'dongyingzi';
             var that = this;
             BYB.includeScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()}); //这是一个加载js的函数
     });
@@ -325,7 +308,7 @@ Google的高亮插件使用也比较方便，只需要在`<pre>`的标签上加�
 
 这个时候，你就可以通过`localhost:4000`来访问了。还有关于[jekyll bootstrap][17]的资料，需要自己修改调试的，可以研究一下。
 
-我在这个过程中还遇到两个诡异的没有解决的问题，一个是我放在根目录下面的blog.md等文件，在GitHub的pages服务上一切正常，可以通过`beiyuu.com/blog`访问的到，但是在本地环境下，总是`not found`，很是让人郁闷，看生成的`_site`目录下面的文件，也是正常的`blog.html`，但就是找不到，只有当我把URL改为`localhost:4000/blog.html`的时候，才能访问的到，环境不同真糟糕。
+我在这个过程中还遇到两个诡异的没有解决的问题，一个是我放在根目录下面的blog.md等文件，在GitHub的pages服务上一切正常，可以通过`dongyingzi.github.io/blog`访问的到，但是在本地环境下，总是`not found`，很是让人郁闷，看生成的`_site`目录下面的文件，也是正常的`blog.html`，但就是找不到，只有当我把URL改为`localhost:4000/blog.html`的时候，才能访问的到，环境不同真糟糕。
 
 还有一个是关于`category`的问题，根据`YAML`的语法，我们在文章头部可以定义文章所属的类别，也可以定义为`category:[blog,rss]`这样子的多类别，我在本地试一切正常，但是push到GitHub之后，就无法读取了，真让人着急，没有办法，只能采用别的办法满足我的需求了。这里还有一篇[Jekyll 本地调试之若干问题][18]，安装中如果有其他问题，也可以对照参考一下。
 
@@ -333,7 +316,7 @@ Google的高亮插件使用也比较方便，只需要在`<pre>`的标签上加�
 如果你跟着这篇不那么详尽的教程，成功搭建了自己的博客，恭喜你！剩下的就是保持热情的去写自己的文章吧。
 
 
-[BeiYuu]:    http://beiyuu.com  "BeiYuu"
+[yingzi]:    http://dongyingzi.github.com  "dongyingzi"
 [Github]:   http://github.com "Github"
 [jQuery]:   https://github.com/jquery/jquery "jQuery@github"
 [Twitter]:  https://github.com/twitter/bootstrap "Twitter@github"
@@ -349,11 +332,11 @@ Google的高亮插件使用也比较方便，只需要在`<pre>`的标签上加�
 [4]: http://progit.org/book/zh/ "Pro Git中文版"
 [5]: http://help.github.com/mac-set-up-git/ "Mac下Git安装"
 [6]: http://help.github.com/ssh-key-passphrases/
-[7]: http://beiyuu.github.com
+[7]: http://dongyingzi.github.com
 [8]: https://github.com/mojombo/jekyll/blob/master/README.textile
 [9]: https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter
 [10]: https://github.com/mojombo/jekyll/wiki/configuration
-[11]: https://github.com/beiyuu/beiyuu.github.com
+[11]: https://github.com/dongyingzi/dongyingzi.github.com
 [12]: http://docs.disqus.com/developers/universal/
 [13]: http://mihai.bazon.net/projects/javascript-syntax-highlighting-engine
 [14]: http://code.google.com/p/google-code-prettify/

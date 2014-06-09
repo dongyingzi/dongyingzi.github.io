@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="yingzi's Blog,js,css,css3,bootstrap,git,grunt">
+    <meta name="author" content="yingzi">
+    <title>About yingzidong</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <!-- 最新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/dist/css/yz.css">
+    <link rel="stylesheet" href="/dist/ccs/yz.css" media="print">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="/dist/js/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="/dist/js/bootstrap.min.js"></script>
+    <style>
+       .timeline { list-style-type: none;}
+       .timeline .line{position: absolute; right:45px;
+                top:0;
+                height: 100%;
+                width:5px;
+                background: #5cb85c;
+                background:rgba(51, 153, 51, 0.6);
+            }
+            .timeline li {
+                position: relative;
+                height: 100%;
+            }
+            .timeline li .time {
+                position: absolute;
+                width: 90px;
+                text-align: right;
+                left: 0;
+                top: 10px;
+                color: #999;
+            }
+            .timeline li .number {
+                position: absolute;
+                width: 56px;
+                height: 56px;
+                right: 20px;
+                line-height: 50px;
+                text-align: center;
+                color: #339933;
+                font-size:20px;
+                border:5px solid rgba(51, 153, 51,.7);
+                border-radius: 50%;
+                background: #fff;
+            }
+            .timeline li .content {
+                background-color: #339933;
+                padding: 20px;
+                color: #fff;
+                font-size: 14px;
+                line-height: 24px;
+                border-radius: 10px;
+                min-height:105px;
+                margin-bottom: 20px;
+            }
+            
+    </style>
+</head>
+<body class="body2">
+    <div class="yz-bg"></div>
+    <header class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand">yingzi'Blog</a>
+                <script>
+      $(document).ready(function() {
+        // $('.navbar-brand').addClass('swing animated');
+        // setTimeout(function(){ $('.navbar-brand').removeClass('swing animated');},3000)
+        $('.navbar-brand').hover(function() {
+          $(this).addClass('swing animated')
+        }, function() {
+          $(this).removeClass('swing animated')
+          /* Stuff to do when the mouse leaves the element */
+        });
+      });
+        
+      </script>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="/">Blog</a>
+                    </li>
+                    <li>
+                        <a href="/share">share</a>
+                    </li>
+                    <li>
+                        <a href="/project">project</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li  class="active">
+                        <a href="/about">About me</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container yz-about-pn">
+        <div class="row yz-about">
+            <div class="yz-img">
+                <img src="/dist/img/yz.jpg" alt="dongyingzi"></div>
+            <h2>********</h2>
+            <div class="nav-about"></div>
+        </div>
+        <div class="row yz-info">
+            <div class="col-md-12">
+                <p> <strong>基本信息</strong>
+                </p>
+            </div>
+            <div class="clearfix">
+                <div class="col-md-6">
+                    <p>email: dongyingzi@gmail.com</p>
+                    <p>生日:*****************</p>
+                </div>
+                <div class="col-md-6">
+                    <p>电话:****************************</p>
+                    <p>博客:http://dongyingzi.github.io</p>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <p> <strong>技能</strong>
+                </p>
+            </div>
+            <div class="clearfix">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-2">css:</div>
+                        <div class="col-md-9">
+                            <div class="progress col-md-10" style=" margin-top:5px; padding:0">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                    <span class="sr-only">90% Complete (success)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">less:</div>
+                        <div class="col-md-9 clearfix">
+                            <div class="progress col-md-10" style=" margin-top:5px; padding:0">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                    <span class="sr-only">70% Complete (success)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">javascript:</div>
+                        <div class="col-md-9 clearfix">
+                            <div class="progress col-md-10" style=" margin-top:5px; padding:0">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                    <span class="sr-only">70% Complete (success)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">jquery:</div>
+                        <div class="col-md-9 clearfix">
+                            <div class="progress col-md-10" style=" margin-top:5px; padding:0">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:65%">
+                                    <span class="sr-only">65% Complete (success)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">java:</div>
+                        <div class="col-md-9 clearfix">
+                            <div class="progress col-md-10" style=" margin-top:5px; padding:0">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                    <span class="sr-only">50% Complete (success)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">jsp:</div>
+                        <div class="col-md-9 clearfix">
+                            <div class="progress col-md-10" style=" margin-top:5px; padding:0">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                    <span class="sr-only">50% Complete (success)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">github:</div>
+                        <div class="col-md-9 clearfix">
+                            <div class="progress col-md-10" style=" margin-top:5px; padding:0">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                    <span class="sr-only">70% Complete (success)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-2">photoshop:</div>
+                        <div class="col-md-9">
+                            <div class="progress col-md-10" style=" margin-top:5px; padding:0">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                    <span class="sr-only">90% Complete (success)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">sublime:</div>
+                        <div class="col-md-9 clearfix">
+                            <div class="progress col-md-10" style=" margin-top:5px; padding:0">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                    <span class="sr-only">80% Complete (success)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">grunt:</div>
+                        <div class="col-md-9 clearfix">
+                            <div class="progress col-md-10" style=" margin-top:5px; padding:0">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                    <span class="sr-only">70% Complete (success)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">eclipse:</div>
+                        <div class="col-md-9 clearfix">
+                            <div class="progress col-md-10" style=" margin-top:5px; padding:0">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                    <span class="sr-only">60% Complete (success)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">flash:</div>
+                        <div class="col-md-9 clearfix">
+                            <div class="progress col-md-10" style=" margin-top:5px; padding:0">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                    <span class="sr-only">50% Complete (success)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">linux:</div>
+                        <div class="col-md-9 clearfix">
+                            <div class="progress col-md-10" style=" margin-top:5px; padding:0">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                    <span class="sr-only">50% Complete (success)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <p>
+                    <strong>时间轴</strong>
+                </p>
+            </div>
+            <ul class="timeline clearfix">
+                <li class="row">
+                    <div class="col-md-3">
+                        <div class="line"></div>
+                        <div class="number">
+                            <span class="glyphicon glyphicon-lock"></span>
+                        </div>
+                        <p class="text-center">2012-10-10</p>
+                        <p class="text-center">至</p>
+                        <p class="text-center">今</p>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="content">
+                            <h3>********** | 用户体验组 | 网页重构</h3>
+                            <ul>
+                                <li>
+                                    工作描述：***************************************************************<br>
+                                   </li>
+                                   <li>
+                                       个人项目：jsp的组内周报系统的开发（jsp+mysql）,***内网官网的开发
+                                   </li>
+                                   <li>
+                                       个人分享：sublime text2 的使用，grunt+less+smartsprites无线建站环境介绍，livestyle的调试工具，popstar js游戏的开发……
+                                   </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-md-3">
+                        <div class="number">
+                            <span class="glyphicon glyphicon-lock"></span>
+                        </div>
+                        <p class="text-center">2007-8-10</p>
+                        <p class="text-center">至</p>
+                        <p class="text-center">2012-10-1</p>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="content">
+                            <h3>*********************************</h3>
+                            <ul>
+                                <li>
+                                    工作描述：****************************************
+                                    <br>
+                                    *******************************************
+                                    <br>
+                                    前端规范的制定，性能优化、竞品分析，部分demo的制作，flash修改,人员招聘
+                                    <br>
+                                    短暂参与游戏官网的jsp页面开发
+                                    <br></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-md-3">
+                        <div class="number">
+                            <span class="glyphicon glyphicon-book"></span>
+                        </div>
+                        <p class="text-center">2004-09-10</p>
+                        <p class="text-center">至</p>
+                        <p class="text-center">2007-07-10</p>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="content">
+                            <h3>*****************************</h3>
+                            <ul>
+                                <li>学习课程：photoshop flash dw aps sql server 网络基础 数据结构 ……</li>
+                                <li>职务：班长</li>
+                                <li>获得奖励：三好学生、优秀学生干部（2次）、山东省优秀毕业生</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+    $(document).ready(function() {
+        var h = $('.timeline').height()-55;
+        $('.line').css('height', h);
+        
+    });
+    </script>
+</body>
+</html>
