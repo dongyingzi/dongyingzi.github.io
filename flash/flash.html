@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flash</title>
+	<style>
+	body,div,p{ margin: 0; padding:0;}
+	img{border:0;}
+	ul,li{ list-style-type: none;}
+	.bannerPn{ position: relative; width:960px; margin: 0 auto }
+	.bannerPn ul{ position: absolute; top:10px; right: 20px; width:268px; height: 175px;}
+	.bannerPn li{ position: absolute; top:0; width:38px;height:0; background-image: url(img/bg.png); background-repeat: no-repeat;}
+	.bannerPn .col7{ background-position:-230px 0; left: 230px }
+	.bannerPn .col6{ background-position:-191px 0; left:191px; }
+	.bannerPn .col5{ background-position:-153px 0; left:153px; /*height: 174px*/}
+	.bannerPn .col4{ background-position:-115px 0; left:115px; /*height: 174px*/}
+	.bannerPn .col3{ background-position:-77px 0; left:77px; }
+	.bannerPn .col2{ background-position:-38px 0; left:38px}
+	.bannerPn .col1{/*height:133px;*/ left: 0;}
+	.bannerPn img{ display:block; max-width: 100%; margin: 0 auto;}
+	.bannerPn .hsFont1{ position: absolute; top:108px; left: 755px; width:17px; height: 33px; filter:alpha(opacity=0);opacity: 0; background-image: url(img/hsFont.png);}
+	.bannerPn .hsFont2{ position: absolute; top:108px; left: 755px; width:20px; height: 40px; filter:alpha(opacity=0);opacity: 0; background-image: url(img/hsFont2.png);}
+	.bannerPn .tzFont{ position: absolute; top:74px; left: 755px; width:22px; height: 42px; filter:alpha(opacity=0);opacity: 0; background-image: url(img/tzFont.png);}
+	.bannerPn .slognFont{ position: absolute; top:32px; left: 743px; width:12px; height: 118px; filter:alpha(opacity=0);opacity: 0; background-image: url(img/slognFont.png);}
+	</style>
+</head>
+<body>
+	<div class="bannerPn">
+		<img src="img/banner.jpg" alt="banner">
+		<div class="hsFont1" id="hsFont1"></div>
+		<div class="hsFont2" id="hsFont2"></div>
+		<div class="tzFont" id="tzFont"></div>
+		<div class="slognFont" id="slognFont"></div>
+		<ul id="bannerFont">
+			<li class="col1" id="col1"></li>
+			<li class="col2" id="col2"></li>
+			<li class="col3" id="col3"></li>
+			<li class="col4" id="col4"></li>
+			<li class="col5" id="col5"></li>
+			<li class="col6" id="col6"></li>
+			<li class="col7" id="col7"></li>
+		</ul>
+	</div>
+	 <script type="text/javascript">
+        /*
+        t:currentCount 当前执行第t次
+        b:initPos 初始值
+        c:targetPos - initPos 发生偏移的距离值
+        d:count 一共执行d次
+        JavaScript Tween算法及缓动效果 http://www.cnblogs.com/cloudgamer/archive/2009/01/06/tween.html
+        */
+        var Tween = {
+            Linear: function(initPos, targetPos, currentCount, count) {
+                var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                return c * t / d + b;
+            },
+            Quad: {
+                easeIn: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    return c * (t /= d) * t + b;
+                },
+                easeOut: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    return -c * (t /= d) * (t - 2) + b;
+                },
+                easeInOut: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    if ((t /= d / 2) < 1) return c / 2 * t * t + b;
+                    return -c / 2 * ((--t) * (t - 2) - 1) + b;
+                }
+            },
+            Cubic: {
+                easeIn: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    return c * (t /= d) * t * t + b;
+                },
+                easeOut: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    return c * ((t = t / d - 1) * t * t + 1) + b;
+                },
+                easeInOut: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    if ((t /= d / 2) < 1) return c / 2 * t * t * t + b;
+                    return c / 2 * ((t -= 2) * t * t + 2) + b;
+                }
+            },
+            Quart: {
+                easeIn: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    return c * (t /= d) * t * t * t + b;
+                },
+                easeOut: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    return -c * ((t = t / d - 1) * t * t * t - 1) + b;
+                },
+                easeInOut: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    if ((t /= d / 2) < 1) return c / 2 * t * t * t * t + b;
+                    return -c / 2 * ((t -= 2) * t * t * t - 2) + b;
+                }
+            },
+            Quint: {
+                easeIn: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    return c * (t /= d) * t * t * t * t + b;
+                },
+                easeOut: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    return c * ((t = t / d - 1) * t * t * t * t + 1) + b;
+                },
+                easeInOut: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    if ((t /= d / 2) < 1) return c / 2 * t * t * t * t * t + b;
+                    return c / 2 * ((t -= 2) * t * t * t * t + 2) + b;
+                }
+            },
+            Sine: {
+                easeIn: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    return -c * Math.cos(t / d * (Math.PI / 2)) + c + b;
+                },
+                easeOut: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    return c * Math.sin(t / d * (Math.PI / 2)) + b;
+                },
+                easeInOut: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    return -c / 2 * (Math.cos(Math.PI * t / d) - 1) + b;
+                }
+            },
+            Expo: {
+                easeIn: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    return (t == 0) ? b : c * Math.pow(2, 10 * (t / d - 1)) + b;
+                },
+                easeOut: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    return (t == d) ? b + c : c * (-Math.pow(2, -10 * t / d) + 1) + b;
+                },
+                easeInOut: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    if (t == 0) return b;
+                    if (t == d) return b + c;
+                    if ((t /= d / 2) < 1) return c / 2 * Math.pow(2, 10 * (t - 1)) + b;
+                    return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
+                }
+            },
+            Circ: {
+                easeIn: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    return -c * (Math.sqrt(1 - (t /= d) * t) - 1) + b;
+                },
+                easeOut: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    return c * Math.sqrt(1 - (t = t / d - 1) * t) + b;
+                },
+                easeInOut: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    if ((t /= d / 2) < 1) return -c / 2 * (Math.sqrt(1 - t * t) - 1) + b;
+                    return c / 2 * (Math.sqrt(1 - (t -= 2) * t) + 1) + b;
+                }
+            },
+            Elastic: {
+                easeIn: function(initPos, targetPos, currentCount, count, a, p) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    if (t == 0) return b; if ((t /= d) == 1) return b + c; if (!p) p = d * .3;
+                    if (!a || a < Math.abs(c)) { a = c; var s = p / 4; }
+                    else var s = p / (2 * Math.PI) * Math.asin(c / a);
+                    return -(a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p)) + b;
+                },
+                easeOut: function(initPos, targetPos, currentCount, count, a, p) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    if (t == 0) return b; if ((t /= d) == 1) return b + c; if (!p) p = d * .3;
+                    if (!a || a < Math.abs(c)) { a = c; var s = p / 4; }
+                    else var s = p / (2 * Math.PI) * Math.asin(c / a);
+                    return (a * Math.pow(2, -10 * t) * Math.sin((t * d - s) * (2 * Math.PI) / p) + c + b);
+                },
+                easeInOut: function(initPos, targetPos, currentCount, count, a, p) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    if (t == 0) return b; if ((t /= d / 2) == 2) return b + c; if (!p) p = d * (.3 * 1.5);
+                    if (!a || a < Math.abs(c)) { a = c; var s = p / 4; }
+                    else var s = p / (2 * Math.PI) * Math.asin(c / a);
+                    if (t < 1) return -.5 * (a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p)) + b;
+                    return a * Math.pow(2, -10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p) * .5 + c + b;
+                }
+            },
+            Back: {
+                easeIn: function(initPos, targetPos, currentCount, count, s) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    if (s == undefined) s = 1.70158;
+                    return c * (t /= d) * t * ((s + 1) * t - s) + b;
+                },
+                easeOut: function(initPos, targetPos, currentCount, count, s) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    if (s == undefined) s = 1.70158;
+                    return c * ((t = t / d - 1) * t * ((s + 1) * t + s) + 1) + b;
+                },
+                easeInOut: function(initPos, targetPos, currentCount, count, s) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    if (s == undefined) s = 1.70158;
+                    if ((t /= d / 2) < 1) return c / 2 * (t * t * (((s *= (1.525)) + 1) * t - s)) + b;
+                    return c / 2 * ((t -= 2) * t * (((s *= (1.525)) + 1) * t + s) + 2) + b;
+                }
+            },
+            Bounce: {
+                easeIn: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    return c - Tween.Bounce.easeOut(d - t, 0, c, d) + b;
+                },
+                easeOut: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    if ((t /= d) < (1 / 2.75)) {
+                        return c * (7.5625 * t * t) + b;
+                    } else if (t < (2 / 2.75)) {
+                        return c * (7.5625 * (t -= (1.5 / 2.75)) * t + .75) + b;
+                    } else if (t < (2.5 / 2.75)) {
+                        return c * (7.5625 * (t -= (2.25 / 2.75)) * t + .9375) + b;
+                    } else {
+                        return c * (7.5625 * (t -= (2.625 / 2.75)) * t + .984375) + b;
+                    }
+                },
+                easeInOut: function(initPos, targetPos, currentCount, count) {
+                    var b = initPos, c = targetPos - initPos, t = currentCount, d = count;
+                    if (t < d / 2) return Tween.Bounce.easeIn(t * 2, 0, c, d) * .5 + b;
+                    else return Tween.Bounce.easeOut(t * 2 - d, 0, c, d) * .5 + c * .5 + b;
+                }
+            }
+        }
+
+        ///------------------------------------------------------------------------------------------------------        
+        Animation = {
+            timer: 10,
+            SetOpacity: function(obj, n) {
+                // console.log(document.all);
+                if (document.all) {
+                	// console.log(obj.filters.alpha.opacity);
+                    //obj.filters.alpha.opacity = n;
+                    obj.style.filter = "alpha(opacity=" + n + ")";
+                    obj.style.opacity = n / 100;
+                }
+                else {
+                    obj.style.opacity = n / 100;
+                    obj.style.filter = "alpha(opacity=" + n + ")";
+                }
+            },
+            fade: function(obj, target, count, Func) {
+                obj = this.getItself(obj);
+                var currentCount = 0;
+                count = Math.abs(count) || 1;
+                target = target < 0 ? 0 : (target > 100) ? 100 : target;
+                var opacityNum = null;
+                try {
+
+                    opacityNum = elem.filters['DXImageTransform.Microsoft.Alpha'].opacity;
+
+                    opacityNum =opacityNum/100;
+
+                }catch(e) {
+
+                    try {
+
+                        opacityNum = elem.filters('alpha').opacity;
+
+                    } catch(err){}
+
+                }
+                var init = !!window.getComputedStyle ?  window.getComputedStyle(obj, null).opacity * 100 : opacityNum;
+                Func = Func || Tween.Linear;
+                var opr = this;
+                var flag = setInterval(function() {
+                    if (currentCount > count) {
+                        clearInterval(flag);
+                    }
+                    else {
+                        currentCount++;
+                        var tmp = Func(init, target, currentCount, count);
+                        opr.SetOpacity(obj, tmp);
+                        //清除小数点的误差
+                        if (Math.abs(tmp - target) < 1) {
+                            opr.SetOpacity(obj, target);
+                        }
+                    }
+                }
+                , this.timer);
+            },
+            resize: function(obj, targetPos, count, Func) {
+                obj = this.getItself(obj);
+                var currentCount = 0;
+                count = Math.abs(count) || 1;
+                var initPos = { x: obj.offsetWidth, y: obj.offsetHeight }
+                Func = Func || Tween.Linear;
+                targetPos = { x: targetPos.x < 0 ? 0 : targetPos.x, y: targetPos.y < 0 ? 0 : targetPos.y }
+                var flag = setInterval(function() {
+                    if (currentCount > count) {
+                        clearInterval(flag);
+                    }
+                    else {
+                        currentCount++;
+                        var tmpX = Func(initPos.x, targetPos.x, currentCount, count);
+                        var tmpY = Func(initPos.y, targetPos.y, currentCount, count);
+                        //width值不能小于0，但是算法返回值有可能出现负值
+                        try {
+                            obj.style.width = tmpX + "px";
+                            obj.style.height = tmpY + "px";
+                        }
+                        catch (e) {
+                        }
+                        //清除小数点的误差
+                        if (Math.abs(tmpX - targetPos.x) < 1) {
+                            obj.style.width = targetPos.x + "px";
+                        }
+                        if (Math.abs(tmpY - targetPos.y) < 1) {
+                            obj.style.height = targetPos.y + "px";
+                        }
+                    }
+                }
+                , this.timer);
+            },
+            move: function(obj, targetPos,inTargetPos, count, Func) {
+                obj = this.getItself(obj);
+                var currentCount = 0;
+                count = Math.abs(count) || 1;
+                if( typeof(inTargetPos) !== 'undefined' ){
+                	var initPos = { x: inTargetPos.x, y: inTargetPos.y }
+                }else{
+                	var elPos = this.getElementPos(obj);
+                	var initPos = { x: elPos.x, y: elPos.y }
+                }
+                
+                Func = Func || Tween.Linear;
+                var flag = setInterval(function() {
+                    if (currentCount > count) {
+                        clearInterval(flag);
+                    }
+                    else {
+                        currentCount++;
+                        var tmpX = Func(initPos.x, targetPos.x, currentCount, count);
+                        var tmpY = Func(initPos.y, targetPos.y, currentCount, count);
+                        obj.style.left = tmpX + "px";
+                        obj.style.top = tmpY + "px";
+                        //清除小数点的误差
+                        if (Math.abs(tmpX - targetPos.x) < 1) {
+                            obj.style.left = targetPos.x + "px";
+                        }
+                        if (Math.abs(tmpY - targetPos.y) < 1) {
+                            obj.style.top = targetPos.y + "px";
+                        }
+                    }
+                }
+                , this.timer);
+            },
+            getElementPos: function(el) {
+                el = this.getItself(el);
+                var _x = 0, _y = 0;
+                do {
+                    _x += el.offsetLeft;
+                    _y += el.offsetTop;
+                } while (el = el.offsetParent);
+                return { x: _x, y: _y };
+            },
+            getItself: function(id) {
+                return "string" == typeof id ? document.getElementById(id) : id;
+            }
+        }
+        function flash (auto){
+            var t = 1000;
+        	Animation.resize('col7',{x:38,y:74},100,Tween.Cubic.easeIn);
+        	setTimeout(function(){Animation.resize('col6',{x:38,y:74},100,Tween.Cubic.easeIn)},t); 
+            t += 1000;
+        	setTimeout(function(){Animation.resize('col5',{x:38,y:174},150,Tween.Cubic.easeIn)},t);
+            t += 1500;
+        	setTimeout(function(){Animation.resize('col4',{x:38,y:174},150,Tween.Cubic.easeIn)},t);
+            t += 1500;
+        	setTimeout(function(){Animation.resize('col3',{x:38,y:74},100,Tween.Cubic.easeIn);},t);  
+            t += 1000; 	
+        	setTimeout(function(){Animation.resize('col2',{x:38,y:74},100,Tween.Cubic.easeIn);},t); 
+            t += 1000;	
+        	setTimeout(function(){Animation.resize('col1',{x:38,y:133},100,Tween.Cubic.easeIn);},t);
+            t += 3000;
+        	setTimeout(function(){Animation.fade('bannerFont',0,100,Tween.Cubic.easeOut);},t)
+            // t += 100;
+        	setTimeout(function(){Animation.fade('hsFont1',80,100,Tween.Cubic.easeIn);},t);
+            t += 1000;
+            
+        	setTimeout(function(){Animation.fade('hsFont1',0,100,Tween.Cubic.easeOut);},t)
+            setTimeout(function(){Animation.fade('hsFont2',90,100,Tween.Cubic.easeIn);},t)
+        	
+            t += 500;
+        	setTimeout(function(){Animation.move('hsFont2',{x:755,y:30},{x:755,y:108},100,Tween.Quart.easeInOut);},t);
+            t += 500;
+        	setTimeout(function(){Animation.fade('tzFont',80,100,Tween.Cubic.easeIn);},t)
+            t += 500;
+        	setTimeout(function(){Animation.fade('slognFont',80,100,Tween.Cubic.easeIn);Animation.move('slognFont',{x:730,y:32},{x:743,y:32},100,Tween.Quart.easeInOut)},t);
+            t += 3000;
+            setTimeout(function(){
+                Animation.fade('hsFont2',0,100,Tween.Cubic.easeOut);
+                Animation.fade('tzFont',0,100,Tween.Cubic.easeOut);
+                Animation.fade('slognFont',0,100,Tween.Cubic.easeOut);
+            },t);
+            t += 1500;
+        	setTimeout(function(){
+        		if (auto === "auto"){
+        			Animation.SetOpacity(Animation.getItself('bannerFont'),100);
+		        	// Animation.SetOpacity(Animation.getItself('hsFont2'),0);
+		        	// Animation.SetOpacity(Animation.getItself('tzFont'),0);
+		        	// Animation.SetOpacity(Animation.getItself('slognFont'),0);
+                    Animation.getItself('hsFont2').style.top = "108px"
+		        	for (var i = 1; i < 8; i++) {
+		        		Animation.getItself('col'+i).style.height = 0;
+		        	}
+		        	flash("auto");
+                }
+        	}, t) 	
+        	
+
+        }
+        window.onload = function(){
+        	//执行一次
+        	 // flash()
+        	//自动执行
+        	 flash("auto")
+        }
+    </script>
+
+
+</body>
+</html>
