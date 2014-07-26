@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -17,17 +17,16 @@
 	.bannerPn .col3{ background-position:-77px 0; left:77px; }
 	.bannerPn .col2{ background-position:-38px 0; left:38px}
 	.bannerPn .col1{/*height:133px;*/ left: 0;}
-	.bannerPn img{ display:block; max-width: 100%; margin: 0 auto;}
-	.bannerPn .hsFont1{ position: absolute; top:108px; left: 755px; width:17px; height: 33px; filter:alpha(opacity=0);opacity: 0; background-image: url(img/hsFont.png);}
-	.bannerPn .hsFont2{ position: absolute; top:108px; left: 755px; width:20px; height: 40px; filter:alpha(opacity=0);opacity: 0; background-image: url(img/hsFont2.png);}
+	.bannerPn .banner{ display:block; max-width: 100%; margin: 0 auto;}
+	.bannerPn .hsFont1{ position: absolute; top:109px; left: 755px; width:17px; height: 33px; filter:alpha(opacity=0);opacity: 0;}
 	.bannerPn .tzFont{ position: absolute; top:74px; left: 755px; width:22px; height: 42px; filter:alpha(opacity=0);opacity: 0; background-image: url(img/tzFont.png);}
 	.bannerPn .slognFont{ position: absolute; top:32px; left: 743px; width:12px; height: 118px; filter:alpha(opacity=0);opacity: 0; background-image: url(img/slognFont.png);}
 	</style>
 </head>
 <body>
 	<div class="bannerPn">
-		<img src="img/banner.jpg" alt="banner">
-		<div class="hsFont1" id="hsFont1"></div>
+		<img src="img/banner.jpg" alt="banner" class="banner">
+        <img src="img/hsFont2.png" alt="厚生"  class="hsFont1" id="hsFont1">
 		<div class="hsFont2" id="hsFont2"></div>
 		<div class="tzFont" id="tzFont"></div>
 		<div class="slognFont" id="slognFont"></div>
@@ -376,38 +375,46 @@
         	setTimeout(function(){Animation.resize('col2',{x:38,y:74},100,Tween.Cubic.easeIn);},t); 
             t += 1000;	
         	setTimeout(function(){Animation.resize('col1',{x:38,y:133},100,Tween.Cubic.easeIn);},t);
+            //文字 end
             t += 3000;
-        	setTimeout(function(){Animation.fade('bannerFont',0,100,Tween.Cubic.easeOut);},t)
-            // t += 100;
-        	setTimeout(function(){Animation.fade('hsFont1',80,100,Tween.Cubic.easeIn);},t);
+            //banner渐隐 厚生文字渐现;
+        	setTimeout(function(){
+                Animation.fade('bannerFont',0,100,Tween.Cubic.easeOut);
+                Animation.fade('hsFont1',100,100,Tween.Cubic.easeIn);
+            },t)
             t += 1000;
-            
-        	setTimeout(function(){Animation.fade('hsFont1',0,100,Tween.Cubic.easeOut);},t)
-            setTimeout(function(){Animation.fade('hsFont2',90,100,Tween.Cubic.easeIn);},t)
-        	
+            //文字放大
+            setTimeout(function(){ 
+                Animation.resize('hsFont1',{x:20,y:40},30,Tween.Linear.easeIn);
+             },t); 
+            t += 300;
+            //文字移动
+        	setTimeout(function(){Animation.move('hsFont1',{x:755,y:30},{x:755,y:108},100,Tween.Quart.easeInOut);},t);
             t += 500;
-        	setTimeout(function(){Animation.move('hsFont2',{x:755,y:30},{x:755,y:108},100,Tween.Quart.easeInOut);},t);
-            t += 500;
-        	setTimeout(function(){Animation.fade('tzFont',80,100,Tween.Cubic.easeIn);},t)
-            t += 500;
-        	setTimeout(function(){Animation.fade('slognFont',80,100,Tween.Cubic.easeIn);Animation.move('slognFont',{x:730,y:32},{x:743,y:32},100,Tween.Quart.easeInOut)},t);
-            t += 3000;
+            //投资渐现
+        	setTimeout(function(){Animation.fade('tzFont',90,100,Tween.Cubic.easeIn);},t)
+            t += 1000;
+            //slogn 渐现移动
+        	setTimeout(function(){Animation.fade('slognFont',90,100,Tween.Cubic.easeIn);Animation.move('slognFont',{x:730,y:32},{x:743,y:32},100,Tween.Quart.easeInOut)},t);
+            t += 5000;
+            //定格动画 渐隐
             setTimeout(function(){
-                Animation.fade('hsFont2',0,100,Tween.Cubic.easeOut);
+                Animation.fade('hsFont1',0,100,Tween.Cubic.easeOut);
                 Animation.fade('tzFont',0,100,Tween.Cubic.easeOut);
                 Animation.fade('slognFont',0,100,Tween.Cubic.easeOut);
             },t);
             t += 1500;
         	setTimeout(function(){
         		if (auto === "auto"){
+                    //还原
         			Animation.SetOpacity(Animation.getItself('bannerFont'),100);
-		        	// Animation.SetOpacity(Animation.getItself('hsFont2'),0);
-		        	// Animation.SetOpacity(Animation.getItself('tzFont'),0);
-		        	// Animation.SetOpacity(Animation.getItself('slognFont'),0);
-                    Animation.getItself('hsFont2').style.top = "108px"
+                    Animation.getItself('hsFont1').style.top = "109px";
+                    Animation.getItself('hsFont1').style.width = "17px";
+                    Animation.getItself('hsFont1').style.height = "33px";
 		        	for (var i = 1; i < 8; i++) {
 		        		Animation.getItself('col'+i).style.height = 0;
 		        	}
+                    // 自执行
 		        	flash("auto");
                 }
         	}, t) 	
@@ -418,7 +425,7 @@
         	//执行一次
         	 // flash()
         	//自动执行
-        	 flash("auto")
+        	flash("auto")
         }
     </script>
 
