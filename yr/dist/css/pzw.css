@@ -1,0 +1,199 @@
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 14px "Microsoft Yahei", "Arial Narrow", HELVETICA;
+  background: #fff;
+  -webkit-text-size-adjust: 100%;
+  color: #555;
+}
+a {
+  color: #172c45;
+  text-decoration: none;
+}
+a:hover {
+  color: #cd0200;
+  text-decoration: underline;
+}
+em {
+  font-style: normal;
+}
+li {
+  list-style: none;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+p {
+  word-wrap: break-word;
+}
+.clearFix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clearFix {
+  *zoom: 1;
+}
+h2 {
+  font-size: 30px;
+  font-weight: normal;
+}
+.pzTopPn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95px;
+  background-color: rgba(46, 52, 61, 0.85);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#DD2e343d', endColorstr='#DD2e343d');
+}
+.pzTopPn .pzTopInner {
+  width: 1000px;
+  margin: 0 auto;
+}
+.pzTopPn .pzTopInner .logo {
+  float: left;
+}
+.pzTopPn .pzTopInner .logo a {
+  display: block;
+  width: 238px;
+  height: 61px;
+  margin-top: 15px;
+  background: url(../images/logo.png);
+}
+.pzTopPn .pzTopInner .search {
+  float: right;
+}
+.pzTopPn .pzTopInner .userInfo {
+  float: right;
+  margin-top: 30px;
+  color: #fefefe;
+  font-size: 12px;
+  line-height: 26px;
+}
+.pzTopPn .pzTopInner .userInfo img {
+  border-radius: 50%;
+  vertical-align: text-top;
+  float: left;
+  margin-right: 5px;
+}
+:root .pzTopPn {
+  filter: none \9;
+}
+.pzNavPn {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 95px;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(26, 30, 36, 0.9);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#DD1a1e24', endColorstr='#DD1a1e24');
+}
+.pzNavPn .pzNavInner {
+  width: 1000px;
+  margin: 0 auto;
+}
+.pzNavPn .pzNavInner li {
+  float: left;
+  width: 20%;
+  height: 50px;
+}
+.pzNavPn .pzNavInner li a {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+.pzNavPn .pzNavInner li a:hover {
+  text-decoration: none;
+}
+.pzNavPn .pzNavInner .select a {
+  color: #3aaae3;
+}
+.pzNavPn .pzNavInner .hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.pzNavPn .pzNavInner .hover dd {
+  height: 137px;
+  padding-left: 60px;
+  border-bottom: 1px solid #4b4d52;
+  background: rgba(34, 36, 40, 0.9);
+  color: #a3a3a4;
+  position: relative;
+}
+.pzNavPn .pzNavInner .hover dd i {
+  display: inline-block;
+  position: absolute;
+  top: 40px;
+  left: 26px;
+  width: 22px;
+  height: 22px;
+  background: #fff;
+}
+.pzNavPn .pzNavInner .hover dd .topFont {
+  color: #fff;
+  padding-top: 40px;
+  margin-bottom: 5px;
+}
+.pzBannerPn {
+  height: 695px;
+  background: url(../images/topBanner1.jpg) top center no-repeat;
+  margin-bottom: 60px;
+}
+.pzMobilePn {
+  width: 1000px;
+  margin: 0 auto 60px;
+}
+.pzMobilePn .hd {
+  text-align: center;
+  margin-bottom: 65px;
+}
+.pzMobilePn .bd li {
+  float: left;
+  width: 25%;
+}
+.pzMobilePn .bd li .inner {
+  text-align: center;
+  color: #999;
+}
+.pzMobilePn .bd li .inner img {
+  margin-bottom: 40px;
+}
+.pzMobilePn .bd li .inner .tit {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.pzNewSuccPn {
+  background-color: #f3f3f3;
+}
+/*# sourceMappingURL=pzw.css.map */
