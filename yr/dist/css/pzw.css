@@ -195,5 +195,64 @@ h2 {
 }
 .pzNewSuccPn {
   background-color: #f3f3f3;
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+.pzNewSuccPn .pzNewSuccInner {
+  width: 1000px;
+  margin: 0 auto;
+}
+.pzNewSuccPn .pzNewSuccInner .col {
+  float: left;
+  width: 480px;
+}
+.pzNewSuccPn .pzNewSuccInner .col2 {
+  float: right;
+  width: 495px;
+}
+.pzNewSuccPn .pzNewSuccInner .innerLeft {
+  padding-right: 115px;
+}
+.pzNewSuccPn .pzNewSuccInner h2 {
+  color: #555555;
+  margin-bottom: 40px;
+}
+.pzNewSuccPn .pzNewSuccInner .list li {
+  border-left: 4px solid #ddd;
+  font-size: 18px;
+  line-height: 36px;
+  padding: 10px 15px;
+  margin-bottom: 25px;
+  color: #999;
+}
+.pzNewSuccPn .pzNewSuccInner .picInner {
+  background: #fff;
+  padding: 5px 0 0 5px;
+}
+.pzNewSuccPn .pzNewSuccInner .picInner li {
+  width: 240px;
+  float: left;
+  background: #fff;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.pzProfessorPn {
+  background-color: #46a5d5;
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+.pzProfessorPn .pzProFessorInner {
+  width: 1000px;
+  margin: 0 auto;
+  color: #a3d2ea;
+}
+.pzProfessorPn .pzProFessorInner .hd ul {
+  text-align: center;
+  font-size: 0;
+}
+.pzProfessorPn .pzProFessorInner .hd li {
+  display: inline-block;
+  width: 260px;
+  font-size: 30px;
 }
 /*# sourceMappingURL=pzw.css.map */
