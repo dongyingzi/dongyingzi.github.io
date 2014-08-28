@@ -234,6 +234,7 @@ h2 {
 }
 .pzNavPn .pzNavInner .hover {
   background: rgba(0, 0, 0, 0.3);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#4C000000', endColorstr='#4C000000');
 }
 .pzNavPn .pzNavInner .hover .icnCirUp {
   display: inline-block;
@@ -278,6 +279,31 @@ h2 {
   color: #fff;
   padding-top: 40px;
   margin-bottom: 5px;
+}
+.pzNavPn .pzNavInner .hover .show {
+  background: rgba(65, 67, 72, 0.9);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#E5414348', endColorstr='#E5414348');
+  *filter: none;
+  position: relative;
+  zoom: 1;
+}
+.pzNavPn .pzNavInner .hover .show .bg {
+  *position: absolute;
+  *top: 0;
+  *left: 0;
+  *z-index: -1;
+  *width: 100%;
+  *filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#DD1a1e24', endColorstr='#DD1a1e24');
+  *height: 137px;
+}
+.pzNavPn .pzNavInner .hover .show .threeTag {
+  position: absolute;
+  right: -200px;
+  top: 0;
+  background: rgba(255, 255, 255, 0.9);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#E5ffffff', endColorstr='#E5ffffff');
+  width: 200px;
+  height: 550px;
 }
 .pzBannerPn {
   background: url(../images/topBanner1.jpg) top center no-repeat;
@@ -354,6 +380,7 @@ h2 {
 .pzMobilePn .bd li {
   float: left;
   width: 25%;
+  *width: 24.99%;
 }
 .pzMobilePn .bd li .inner {
   text-align: center;
@@ -441,6 +468,7 @@ h2 {
   width: 240px;
   height: 240px;
   background: rgba(255, 255, 255, 0.9);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#E5ffffff', endColorstr='#E5ffffff');
 }
 .pzNewSuccPn .pzNewSuccInner .picInner li:hover .cover a {
   color: #555555;
@@ -476,6 +504,9 @@ h2 {
   font-size: 30px;
   cursor: pointer;
 }
+.pzProfessorPn .pzProFessorInner .hd li {
+  *display: inline;
+}
 .pzProfessorPn .pzProFessorInner .hd .select {
   color: #fff;
 }
@@ -493,6 +524,7 @@ h2 {
 .pzProfessorPn .pzProFessorInner .bd ul li {
   float: left;
   width: 25%;
+  *width: 24.99%;
 }
 .pzProfessorPn .pzProFessorInner .bd ul li .cirImg {
   border: 3px solid #fff;
@@ -564,6 +596,7 @@ h2 {
 .pzDynamicNewsPn .pzDynamicInner .commentPn {
   float: left;
   width: 33.33%;
+  *width: 33.22%;
   margin-bottom: 40px;
 }
 .pzDynamicNewsPn .pzDynamicInner .commentPn .commentHd {
@@ -633,6 +666,7 @@ h2 {
 .pzPartnerPn .pzPartnerInner .bd li {
   float: left;
   width: 14.28%;
+  *width: 14.2%;
 }
 .pzPartnerPn .pzPartnerInner .bd li .inner {
   width: 100px;
