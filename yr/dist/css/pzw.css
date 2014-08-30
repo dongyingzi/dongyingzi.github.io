@@ -69,8 +69,14 @@ p {
 .fc9 {
   color: #999;
 }
+.fcBlue {
+  color: #3aaae3;
+}
 .txR {
   text-align: right;
+}
+.fs16 {
+  font-size: 16px;
 }
 h2 {
   font-size: 30px;
@@ -229,14 +235,10 @@ h2 {
 .pzNavPn .pzNavInner li a:hover {
   text-decoration: none;
 }
-.pzNavPn .pzNavInner .select a {
-  color: #3aaae3;
+.pzNavPn .pzNavInner li dl {
+  display: none;
 }
-.pzNavPn .pzNavInner .hover {
-  background: rgba(0, 0, 0, 0.3);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#4C000000', endColorstr='#4C000000');
-}
-.pzNavPn .pzNavInner .hover .icnCirUp {
+.pzNavPn .pzNavInner li .icnCirUp {
   display: inline-block;
   vertical-align: text-top;
   width: 12px;
@@ -245,6 +247,16 @@ h2 {
   font-size: 0;
   margin: 6px 0 0 12px;
   background: url(../images/cirTop.png);
+}
+.pzNavPn .pzNavInner .select a {
+  color: #3aaae3;
+}
+.pzNavPn .pzNavInner .hover {
+  background: rgba(0, 0, 0, 0.3);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#4C000000', endColorstr='#4C000000');
+}
+.pzNavPn .pzNavInner .hover dl {
+  display: block;
 }
 .pzNavPn .pzNavInner .hover dd {
   height: 137px;
@@ -718,5 +730,305 @@ h2 {
 }
 .pzWebInfoPn p {
   padding-top: 30px;
+}
+/*个人中心*/
+.personalPn {
+  margin-top: 213px;
+  margin-bottom: 80px;
+}
+.personalPn .personalInner {
+  width: 1000px;
+  margin: 0 auto;
+}
+.personalPn .personalInner .col1 {
+  width: 200px;
+  float: left;
+}
+.personalPn .personalInner .col2 {
+  float: right;
+  width: 750px;
+}
+.personalPn .personNavPn {
+  background: #f5f5f5;
+  border: 2px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 0 18px;
+  margin-top: 60px;
+}
+.personalPn .personNavPn .hd {
+  position: relative;
+}
+.personalPn .personNavPn .headPn {
+  margin-top: -60px;
+  text-align: center;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 30px;
+}
+.personalPn .personNavPn .headPn .headImg {
+  width: 114px;
+  height: 114px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-bottom: 30px;
+}
+.personalPn .personNavPn .headPn .headName {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.personalPn .personNavPn .headPn .headTit {
+  margin-bottom: 30px;
+  color: #999;
+}
+.personalPn .personNavPn .bd li {
+  position: relative;
+  padding: 0 18px;
+  color: #999;
+  line-height: 42px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  *zoom: 1;
+}
+.personalPn .personNavPn .bd li span {
+  position: absolute;
+  right: 18px;
+  font-size: 12px;
+}
+.personalPn .personNavPn .bd .select {
+  background: #fff;
+}
+.personalPn .personListNav .hd {
+  position: relative;
+  height: 59px;
+  border-bottom: 1px solid #f5f5f5;
+}
+.personalPn .personListNav .hd h2 {
+  font-size: 24px;
+}
+.personalPn .personListNav .hd .blueBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  background: url(../images/btnBlue.png);
+}
+.personalPn .personListNav .hd .select {
+  position: absolute;
+  right: 120px;
+  top: 6px;
+}
+.personalPn .personListNav .bd li {
+  position: relative;
+  height: 63px;
+  line-height: 63px;
+  border-bottom: 1px solid #f3f3f3;
+  *zoom: 1;
+}
+.personalPn .personListNav .bd li .opt {
+  display: none;
+}
+.personalPn .personListNav .bd li .iconYp,
+.personalPn .personListNav .bd li .iconPic,
+.personalPn .personListNav .bd li .iconZh,
+.personalPn .personListNav .bd li .iconSp,
+.personalPn .personListNav .bd li .iconWd,
+.personalPn .personListNav .bd li .iconQt {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: text-top;
+  margin: 0 10px 0 0;
+  background: url(../images/ly.png);
+}
+.personalPn .personListNav .bd li .iconPic {
+  background: url(../images/tp.png);
+}
+.personalPn .personListNav .bd li .iconZh {
+  background: url(../images/zh.png);
+}
+.personalPn .personListNav .bd li .iconSp {
+  background: url(../images/sp.png);
+}
+.personalPn .personListNav .bd li .iconWd {
+  background: url(../images/wd.png);
+}
+.personalPn .personListNav .bd li .iconQt {
+  background: url(../images/qt.png);
+}
+.personalPn .personListNav .bd li:hover {
+  background: url(../images/LineBg.png);
+}
+.personalPn .personListNav .bd li:hover .opt {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+.personalPn .personListNav .bd li:hover .opt a {
+  margin-right: 30px;
+  cursor: pointer;
+  color: #999;
+  font-size: 12px;
+}
+.personalPn .personListNav .bd li:hover .opt .iconCy {
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  vertical-align: text-top;
+  background: url(../images/cy.png);
+  margin-right: 8px;
+}
+.personalPn .personListNav .bd li:hover .opt .iconSq {
+  display: inline-block;
+  width: 17px;
+  height: 16px;
+  vertical-align: text-top;
+  background: url(../images/sq.png);
+  margin-right: 8px;
+}
+.personalPn .personListNav .bd li:hover .opt .iconDel {
+  display: inline-block;
+  width: 15px;
+  height: 16px;
+  vertical-align: text-top;
+  background: url(../images/sc.png);
+  margin-right: 8px;
+}
+.personalPn .personListNav2 .hd {
+  position: relative;
+  height: 59px;
+}
+.personalPn .personListNav2 .hd h2 {
+  font-size: 24px;
+}
+.personalPn .personListNav2 .bd .myProe {
+  margin-left: -20px;
+}
+.personalPn .personListNav2 .bd li {
+  float: left;
+  width: 130px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  padding-top: 5px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.personalPn .personListNav2 .bd li .imgIcn {
+  margin-bottom: 30px;
+}
+.personalPn .personListNav2 .bd li .tit {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.personalPn .personListNav2 .bd li .tit a {
+  color: #999;
+}
+.pzTip {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.pzTip .bg {
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: alpha(opacity=35);
+  -moz-opacity: 0.35;
+  opacity: 0.35;
+}
+.pzTip .pzTipInner {
+  width: 560px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  border-radius: 5px;
+  margin: -190px 0 0 -280px;
+  box-shadow: 0 0 10px #bababa;
+}
+.pzTip .pzTipInner .hd {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: 20px;
+  padding-left: 30px;
+  height: 70px;
+  line-height: 70px;
+  background: #f3f3f3;
+}
+.pzTip .pzTipInner .hd h3 {
+  font-weight: normal;
+}
+.pzTip .pzTipInner .hd .close {
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  background: url(../images/close.jpg);
+}
+.pzTip .pzTipInner .bd {
+  padding: 40px;
+}
+.pzTip .pzTipInner .bd .btnCont {
+  margin: 0 -30px 0 -10px;
+  padding-top: 40px;
+  font-size: 0;
+}
+.pzTip .pzTipInner .bd .btnCont .androidBtn,
+.pzTip .pzTipInner .bd .btnCont .iphoneBtn,
+.pzTip .pzTipInner .bd .btnCont .pcBtn {
+  display: inline-block;
+  width: 218px;
+  height: 60px;
+  background: url(../images/btn_07.jpg);
+  margin: 0 40px 40px 0;
+}
+.pzTip .pzTipInner .bd .btnCont .iphoneBtn {
+  background: url(../images/btn_09.jpg);
+}
+.pzTip .pzTipInner .bd .btnCont .pcBtn {
+  background: url(../images/btn_13.jpg);
+}
+.addPzList {
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+.addPzList li {
+  line-height: 40px;
+  color: #999;
+}
+.addPzList li .icnCirRig {
+  display: inline-block;
+  width: 6px;
+  height: 16px;
+  vertical-align: text-top;
+  margin: 5px 20px 0 0;
+  background: url(../images/tip_03.jpg);
+}
+.btnBottonMod {
+  margin-left: -20px;
+}
+.btnBottonMod .btnQx {
+  float: left;
+  width: 198px;
+  height: 50px;
+  background: url(../images/tip_07.jpg);
+}
+.btnBottonMod .btnQd {
+  float: right;
+  width: 198px;
+  height: 50px;
+  background: url(../images/tip_09.jpg);
 }
 /*# sourceMappingURL=pzw.css.map */
