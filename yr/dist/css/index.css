@@ -79,6 +79,7 @@
   text-align: center;
   color: #999;
   padding: 0 25px;
+  /*position: relative;*/
 }
 .pzMobilePn .bd li .inner img {
   margin-bottom: 40px;
@@ -87,6 +88,57 @@
   font-size: 18px;
   color: #333;
   margin-bottom: 20px;
+}
+.pzMobilePn .bd li .inner .tip {
+  display: none;
+}
+.pzMobilePn .bd li .inner:hover .tip {
+  display: block;
+  background: #f3f3f3;
+  border-radius: 5px;
+  position: absolute;
+  padding: 30px 40px 10px 40px;
+  text-align: left;
+}
+.pzMobilePn .bd li .inner:hover .tip .col {
+  margin-bottom: 20px;
+}
+.pzMobilePn .bd li .inner:hover .tip .col2 {
+  float: left;
+  width: 50%;
+  margin-bottom: 20px;
+}
+.pzMobilePn .bd li .inner:hover .tip .tipTit {
+  color: #555;
+  margin-bottom: 10px;
+}
+.pzMobilePn .bd li .inner:hover .tip .info {
+  font-size: 12px;
+  line-height: 28px;
+  color: #999;
+}
+.pzMobilePn .bd li .inner:hover .tip .arrow {
+  position: absolute;
+  left: -20px;
+  top: 60px;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  border-width: 10px;
+  border-style: solid solid dashed dashed;
+  border-color: #f3f3f3 #f3f3f3 transparent transparent;
+}
+.pzMobilePn .bd li .inner:hover .right .arrow {
+  position: absolute;
+  left: auto;
+  right: -20px;
+  top: 60px;
+  border-style: solid  dashed dashed solid;
+  border-color: #f3f3f3 transparent transparent #f3f3f3 ;
+}
+.pzMobilePn .bd li .inner:hover .right .info {
+  padding-right: 50px;
 }
 .pzNewSuccPn {
   background-color: #f3f3f3;
