@@ -32,7 +32,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #cd0200;
+  color: #3aaae3;
   text-decoration: underline;
 }
 em {
@@ -158,8 +158,7 @@ h2 {
   float: right;
   width: 37px;
   height: 35px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-radius: 0 5px 0 5px;
   border-left: 1px solid #383c3f;
   background-image: url(../images/search.png);
 }
@@ -190,6 +189,9 @@ h2 {
   vertical-align: text-top;
   float: left;
   margin-right: 5px;
+}
+.pzTopPn .pzTopInner .userInfo a {
+  color: #fff;
 }
 :root .pzTopPn {
   filter: none \9;

@@ -42,22 +42,21 @@
 .pzBannerPn .info {
   position: absolute;
   right: 0;
-  bottom: 90px;
+  bottom: 156px;
   color: #fff;
   font-size: 18px;
-  width: 380px;
+  width: 461px;
   line-height: 40px;
 }
-.pzBannerPn .info .tit {
-  font-size: 50px;
-  margin-bottom: 50px;
+.pzBannerPn .info .iosBtn {
+  position: absolute;
+  top: 0;
+  left: 230px;
 }
-.pzBannerPn .info .btn {
-  margin-top: 50px;
-  display: block;
-  width: 290px;
-  height: 80px;
-  background: url(../images/downBtn.png);
+.pzBannerPn .info .pcBtn {
+  position: absolute;
+  top: 90px;
+  left: 0;
 }
 .pzMobilePn {
   width: 1000px;
