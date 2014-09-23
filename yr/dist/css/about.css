@@ -1,0 +1,113 @@
+.aboutMePn {
+  margin-top: 213px;
+  margin-bottom: 80px;
+}
+.aboutMePn .aboutMeInner {
+  width: 1000px;
+  margin: 0 auto;
+}
+.aboutMePn .aboutMeInner .col1 {
+  width: 200px;
+  float: left;
+}
+.aboutMePn .aboutMeInner .col1 .aboutMe {
+  background: #f5f5f5;
+  border: 2px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 0 18px;
+}
+.aboutMePn .aboutMeInner .col1 .aboutMe .bd li {
+  position: relative;
+  padding: 0 18px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.aboutMePn .aboutMeInner .col1 .aboutMe .bd li a {
+  color: #999;
+}
+.aboutMePn .aboutMeInner .col1 .aboutMe .bd .firstTit {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 16px;
+}
+.aboutMePn .aboutMeInner .col1 .aboutMe .bd .select {
+  background: #fff;
+}
+.aboutMePn .aboutMeInner .col1 .aboutMe .bd .select a {
+  color: #3aaae3;
+}
+.aboutMePn .aboutMeInner .col2 {
+  float: right;
+  width: 750px;
+}
+.aboutMePn .aboutMeInner .col2 .hd {
+  font-size: 24px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #f3f3f3;
+}
+.aboutMePn .aboutMeInner .col2 .bd {
+  padding-top: 30px;
+}
+.aboutMePn .aboutMeInner .col2 .bd .line {
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+.aboutMePn .aboutMeInner .col2 .bd .line .tit {
+  color: #555;
+}
+.aboutMePn .aboutMeInner .col2 .bd .line a {
+  color: #3aaae3;
+}
+.aboutMePn .aboutMeInner .col2 .bd .mb10 {
+  margin-bottom: 10px;
+}
+.aboutMePn .aboutMeInner .col2 .bd .autoWidth {
+  width: 100%;
+  max-width: 100%;
+}
+.aboutMePn .aboutMeInner .col2 .bd .listType {
+  padding-left: 20px;
+  line-height: 30px;
+}
+.aboutMePn .aboutMeInner .col2 .bd .listType li {
+  list-style-type: circle;
+}
+.aboutMePn .aboutMeInner .col2 .bd .qzImg {
+  display: block;
+  margin: 20px 0;
+}
+.attentionTab {
+  height: 40px;
+  border-bottom: 1px solid #e8e8e8;
+  *overflow: hidden;
+}
+.attentionTab li {
+  float: left;
+  padding: 0 20px;
+  cursor: pointer;
+  color: #999;
+  height: 39px;
+}
+.attentionTab li:hover {
+  color: #555;
+  border-bottom: 3px solid #3aa9e1;
+}
+.attentionTab .select {
+  color: #555;
+  border-bottom: 3px solid #3aa9e1;
+  position: relative;
+}
+.exampleSingle li {
+  margin-bottom: 20px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  color: #999;
+  padding: 10px 20px;
+  line-height: 26px;
+}
+.exampleSingle li .tit {
+  color: #555;
+}
+/*# sourceMappingURL=pzw.css.map */
