@@ -301,6 +301,7 @@
 }
 .personalPn .personNavPn .bd .select {
   background: #fff;
+  color: #555;
 }
 .personalPn .personListNav .hd {
   position: relative;
@@ -410,6 +411,16 @@
 .personalPn .personListNav2 .hd h2 {
   font-size: 24px;
 }
+.personalPn .personListNav2 .hd .left {
+  float: left;
+}
+.personalPn .personListNav2 .hd .tInfo {
+  font-size: 12px;
+  color: #999;
+  margin-top: 12px;
+  float: left;
+  padding-left: 20px;
+}
 .personalPn .personListNav2 .bd .myProe {
   margin-left: -20px;
 }
@@ -483,6 +494,72 @@
   height: 35px;
   background: url(../images/close.jpg);
 }
+.pzTip .pzTipInner .detailsHd {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: #f3f3f3;
+  padding: 40px;
+}
+.pzTip .pzTipInner .detailsHd .detailsBtnCnt {
+  text-align: right;
+  margin-bottom: 20px;
+}
+.pzTip .pzTipInner .detailsHd .imgCnt {
+  float: left;
+  margin-right: 40px;
+}
+.pzTip .pzTipInner .detailsHd .imgCnt .detailsOpt {
+  margin-top: 20px;
+}
+.pzTip .pzTipInner .detailsHd .imgCnt .detailsOpt .iconDown,
+.pzTip .pzTipInner .detailsHd .imgCnt .detailsOpt .iconDdel {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(../images/detail_06.jpg);
+  margin-right: 20px;
+}
+.pzTip .pzTipInner .detailsHd .imgCnt .detailsOpt .iconDdel {
+  background: url(../images/detail_08.jpg);
+}
+.pzTip .pzTipInner .detailsHd .detailsInfo {
+  width: 290px;
+  float: left;
+}
+.pzTip .pzTipInner .detailsHd .detailsInfo li {
+  margin-bottom: 15px;
+  color: #999;
+}
+.pzTip .pzTipInner .detailsHd .detailsInfo .tit {
+  font-size: 24px;
+  border-bottom: 1px dashed #ccc;
+  height: 39px;
+  color: #555;
+}
+.pzTip .pzTipInner .detailsHd .btnCl,
+.pzTip .pzTipInner .detailsHd .btnOk {
+  display: inline-block;
+  width: 68px;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 28px;
+  color: #ccc;
+}
+.pzTip .pzTipInner .detailsHd .btnCl:hover,
+.pzTip .pzTipInner .detailsHd .btnOk:hover {
+  color: #ccc;
+  text-decoration: none;
+}
+.pzTip .pzTipInner .detailsHd .btnOk {
+  border: 1px solid #46a5d5;
+  color: #46a5d5;
+  margin-left: 10px;
+}
+.pzTip .pzTipInner .detailsHd .btnOk:hover {
+  color: #46a5d5;
+}
 .pzTip .pzTipInner .bd {
   padding: 40px;
 }
@@ -506,6 +583,16 @@
 .pzTip .pzTipInner .bd .btnCont .pcBtn {
   background: url(../images/btn_13.jpg);
 }
+.pzTip .pzTipInner .bd .yellowSmTip {
+  text-align: center;
+  font-size: 12px;
+  border: 1px solid #ece9d6;
+  border-radius: 5px;
+  line-height: 33px;
+  color: #bbb072;
+  background: #fffdf1;
+  margin-bottom: 20px;
+}
 .addPzList {
   padding-top: 20px;
   margin-bottom: 30px;
@@ -522,19 +609,755 @@
   margin: 5px 20px 0 0;
   background: url(../images/tip_03.jpg);
 }
-.btnBottonMod {
-  margin-left: -20px;
-}
 .btnBottonMod .btnQx {
   float: left;
   width: 198px;
   height: 50px;
   background: url(../images/tip_07.jpg);
 }
-.btnBottonMod .btnQd {
+.btnBottonMod .btnQd,
+.btnBottonMod .btnLjsq {
   float: right;
   width: 198px;
   height: 50px;
   background: url(../images/tip_09.jpg);
+}
+.btnBottonMod .btnLjsq {
+  background: url(../images/btnBlue2.png);
+}
+.inputGroup {
+  padding-right: 20px;
+}
+.inputGroup .inputGroupTit {
+  color: #555;
+  float: left;
+  line-height: 48px;
+  width: 90px;
+  text-align: right;
+  margin-right: 10px;
+}
+.inputGroup .inputGroupPut {
+  border: 1px solid #f3f3f3;
+  border-radius: 3px;
+  height: 48px;
+  overflow: hidden;
+  *zoom: 1;
+}
+.inputGroup .inputGroupPut input {
+  color: #ccc;
+  font-size: 14px;
+  border: 0;
+  outline: none;
+  height: 22px;
+  line-height: 22px;
+  margin-top: 12px;
+  margin-left: 10px;
+  font-family: "Microsoft Yahei";
+}
+.inputGroup .mess {
+  margin-top: 20px;
+  color: #999;
+  height: 48px;
+  margin-bottom: 10px;
+}
+.inputGroup .mess a {
+  color: #3aaae3;
+}
+.pzTextEdit {
+  padding-top: 20px;
+}
+.pzTextEdit textarea {
+  font-size: 14px;
+  color: #999;
+  width: 95%;
+  line-height: 24px;
+  min-height: 100px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  padding: 5px;
+}
+.myCentRecordPn .myCentTip {
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  padding: 30px;
+}
+.myCentRecordPn .myCentTip .fcGray {
+  color: #999999;
+}
+.myCentRecordPn .myCentTip .myCentLeft {
+  float: left;
+}
+.myCentRecordPn .myCentTip .myCentRight {
+  float: right;
+}
+.fcRed {
+  color: #d52b2a;
+}
+.fcBlue {
+  color: #3aaae3;
+}
+.fs20 {
+  font-size: 20px;
+}
+.fs12 {
+  font-size: 12px;
+}
+.mr30 {
+  margin-right: 30px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.mt5 {
+  margin-top: 5px;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.blueBtn {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  background: url(../images/btnBlue.png);
+}
+.blueBtn:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.greenBtn {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  background: url(../images/btnGreen.png);
+}
+.greenBtn:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.myCentRecord {
+  border: 1px solid #f3f3f3;
+  border-bottom: none;
+  margin-top: 30px;
+  height: 39px;
+  line-height: 39px;
+  background: #f3f3f3;
+}
+.myCentRecord .tag {
+  float: left;
+}
+.myCentRecord .tag li {
+  padding: 0 20px;
+  float: left;
+  cursor: pointer;
+}
+.myCentRecord .tag .select {
+  color: #3aaae3;
+  background: #fff;
+}
+.myCentRecord .right {
+  float: right;
+  padding-right: 10px;
+  color: #999;
+  font-size: 12px;
+}
+.table {
+  width: 100%;
+  max-width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: 1px solid #f3f3f3;
+  border-top: none;
+}
+.table td {
+  border: 1px solid #f3f3f3;
+  border-top: none;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 12px;
+  color: #999;
+}
+.table .title {
+  text-align: left;
+  padding-left: 20px;
+  color: #555;
+  font-size: 14px;
+}
+.personPay {
+  border: 1px solid #f3f3f3;
+  background: #ffffff;
+  border-radius: 5px;
+  width: 940px;
+  margin: 0 auto;
+  padding: 35px 35px 90px;
+}
+.personPay .hd {
+  border-bottom: 1px solid #f5f5f5;
+  padding-bottom: 15px;
+  padding-left: 20px;
+}
+.personPay .bd {
+  position: relative;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+.personPay .bd td {
+  padding: 10px 0;
+  vertical-align: top;
+}
+.personPay .bd .title {
+  text-align: right;
+  padding-right: 20px;
+  line-height: 48px;
+}
+.personPay .bd .mess {
+  vertical-align: bottom;
+  padding-left: 20px;
+}
+.personPay .bd .loginBtn {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background-color: #3aaae3;
+  border: 1px solid #3aaae3;
+  border-radius: 3px;
+  font: 18px/50px "Microsoft Yahei", "Arial Narrow", HELVETICA;
+}
+.personPay .bd .personPayCard {
+  border: 2px solid #e8e8e8;
+  border-radius: 3px;
+  height: 96px;
+}
+.personPay .bd .personPayCard input {
+  float: left;
+  display: inline;
+  margin: 40px 25px 0 25px;
+}
+.personPay .bd .personPayCard .ico-bank {
+  float: left;
+  margin-top: 30px;
+}
+.personPay .bd .personPayCard .name {
+  float: left;
+  display: inline;
+  margin: 35px 25px 0 25px;
+}
+.personPay .bd .select {
+  border-color: #c4e5f7;
+}
+.personPay .bd .personPayCardBtn {
+  border: 2px solid #e8e8e8;
+  border-radius: 3px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  cursor: pointer;
+}
+.personPay .personPayTip {
+  position: absolute;
+  top: 35px;
+  right: 10px;
+  width: 300px;
+  padding: 25px;
+  background: #fffdf2;
+  border-radius: 3px;
+  color: #bbb072;
+}
+.personPay .personPayTip .hd {
+  border: none;
+  padding: 0;
+}
+.personPay .personPayTip .bd {
+  padding: 0;
+  padding-top: 20px;
+  margin-bottom: 30px;
+  font-size: 12px;
+}
+.personPay .personPayTip .fd {
+  font-size: 12px;
+}
+.personPayPn {
+  background: #f3f3f3;
+  padding-top: 213px;
+  padding-bottom: 80px;
+}
+.inputModle {
+  position: relative;
+  display: inline-block;
+  width: 320px;
+  height: 44px;
+  padding: 4px 30px 4px 4px;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  background: #fff;
+  *zoom: 1;
+}
+.inputModle input {
+  border: 1px solid #fff;
+  height: 40px;
+  line-height: 40px;
+  width: 98%;
+  color: #3aaae3;
+  font: 14px "Microsoft Yahei", "Arial Narrow", HELVETICA;
+}
+.inputModle .opt {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  line-height: 44px;
+  color: #999;
+  cursor: pointer;
+}
+.inputModle .opt .cirDown1 {
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  margin-top: 21px;
+  background: url(../images/cirdown1.png);
+}
+.inputModle .putDownList {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  border: 1px solid #e8e8e8;
+  border-top: none;
+  width: 80%;
+  background: #fff;
+}
+.inputModle .putDownList li {
+  line-height: 35px;
+  cursor: pointer;
+  padding-left: 10px;
+}
+.inputModle .putDownList li:hover {
+  background: #eee;
+}
+.attentionTab {
+  height: 40px;
+  border-bottom: 1px solid #e8e8e8;
+  *overflow: hidden;
+}
+.attentionTab li {
+  float: left;
+  padding: 0 20px;
+  cursor: pointer;
+  color: #999;
+  height: 39px;
+}
+.attentionTab li:hover {
+  color: #555;
+  border-bottom: 3px solid #3aa9e1;
+}
+.attentionTab .select {
+  color: #555;
+  border-bottom: 3px solid #3aa9e1;
+  position: relative;
+}
+.attentionList li {
+  background: #f5f5f5;
+  border-radius: 5px;
+  margin-top: 40px;
+  height: 100px;
+  padding: 20px 0;
+}
+.attentionList .colLeft {
+  float: left;
+  width: 150px;
+  padding-left: 20px;
+}
+.attentionList .colLeft .tit {
+  text-align: center;
+  margin-top: 10px;
+  width: 128px;
+  font-size: 18px;
+}
+.attentionList .colLeft .tit a {
+  color: #999;
+}
+.attentionList .colMiddle {
+  float: left;
+  width: 460px;
+}
+.attentionList .colMiddle dl {
+  line-height: 30px;
+}
+.attentionList .colRight {
+  float: left;
+}
+.attentionList .colRight .attentionBtn {
+  display: inline-block;
+  border-radius: 25px;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  background-color: #ddd;
+}
+.pzReport {
+  margin-right: -100px;
+}
+.pzReport li {
+  padding: 30px 20px 20px 40px;
+  border: 2px solid #f3f3f3;
+  border-radius: 5px;
+  float: left;
+  width: 300px;
+  margin: 0 50px 50px 0;
+}
+.pzReport li .tit {
+  margin-bottom: 20px;
+}
+.pzReport li p {
+  line-height: 30px;
+  color: #999;
+  font-size: 12px;
+}
+.pzReport li .opt {
+  padding-top: 10px;
+}
+.iconDown,
+.iconDdel,
+.iconSearchCir {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(../images/detail_06.jpg);
+  margin-right: 20px;
+}
+.iconDdel {
+  background: url(../images/detail_08.jpg);
+}
+.iconSearchCir {
+  background: url(../images/iconSearchCir.png);
+}
+.attentionTabEx li {
+  font-size: 20px;
+  padding: 0 30px;
+}
+.searchPutTop {
+  text-align: left;
+  margin-top: 20px;
+  position: relative;
+}
+.searchPutTop input {
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  padding: 2px;
+  height: 34px;
+  line-height: 34px;
+  color: #999;
+  width: 500px;
+}
+.searchPutTop a {
+  display: inline-block;
+  position: absolute;
+  border-left: 1px solid #e8e8e8;
+  top: 1px;
+  left: 463px;
+  width: 37px;
+  height: 38px;
+  background-image: url(../images/btnSearchWhite.png);
+}
+.attentionListEx li {
+  padding: 20px;
+  height: auto;
+}
+.attentionListEx table {
+  width: 100%;
+}
+.attentionListEx td {
+  border-right: 1px solid #e8e8e8;
+  height: 100px;
+  text-align: center;
+  color: #999;
+}
+.attentionListEx .opt {
+  border-right: none;
+}
+.attentionListEx .opt p {
+  margin-top: 10px;
+}
+.attentionListEx .cont {
+  text-align: left;
+  line-height: 30px;
+}
+.attentionListEx .cont .title {
+  color: #555;
+}
+.attentionListEx .comment {
+  margin-top: 20px;
+  border-top: 1px solid #e8e8e8;
+  padding-top: 30px;
+}
+.attentionListEx .comment .left {
+  float: left;
+}
+.attentionListEx .comment .level {
+  float: left;
+  display: inline;
+  width: 90px;
+  background: url(../images/star-g.png) repeat-x;
+  height: 18px;
+  margin-left: 10px;
+}
+.attentionListEx .comment .level .inner {
+  background: url(../images/star-b.png) repeat-x;
+  height: 18px;
+}
+.pzBtnModeBlue,
+.pzBtnModeGreen,
+.pzBtnModeWhite {
+  display: inline-block;
+  border-radius: 25px;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  background-color: #3aaae3;
+}
+.pzBtnModeBlue:hover,
+.pzBtnModeGreen:hover,
+.pzBtnModeWhite:hover {
+  color: #fff;
+}
+.pzBtnModeGreen {
+  background-color: #23b12c;
+}
+.pzBtnModeWhite {
+  border: 1px solid #e8e8e8;
+  background: #fff;
+  color: #999;
+}
+.pzBtnModeWhite:hover {
+  color: #999;
+}
+.personListNav2 .result-lst-box .side-info {
+  width: 580px;
+}
+.personListNav2 .result-lst-box li:hover {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px 10px;
+}
+.personListNav2 .result-lst-box .ico-del-gray {
+  background-image: url(../images/delbs.png);
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
+.g-block .searchPutTop {
+  margin-top: 1px;
+}
+.g-block .searchPutTop input {
+  width: 300px;
+  height: 31px;
+  line-height: 31px;
+}
+.g-block .searchPutTop a {
+  left: 266px;
+  height: 35px;
+}
+.bsSearchNone {
+  text-align: center;
+  min-height: 500px;
+  padding-top: 50px;
+  border: 1px solid #f3f3f3;
+  border-top: 0;
+  color: #999;
+  line-height: 30px;
+}
+.bsSearchNone .icnSearchNone {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  background-image: url(../images/searchNone.png);
+}
+.pzCommetTip .title {
+  position: relative;
+  font-size: 24px;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+.pzCommetTip .title .btnOk {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 1px solid #46a5d5;
+  color: #46a5d5;
+  margin-left: 10px;
+  display: inline-block;
+  width: 100px;
+  height: 28px;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 28px;
+  font-size: 14px;
+}
+.pzCommetTip .commentCont {
+  height: 280px;
+  padding-right: 20px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.pzCommetTip .commentListRight {
+  margin-bottom: 20px;
+}
+.pzCommetTip .commentListRight .commentInfo {
+  background-color: #3aaae3;
+  border-radius: 5px;
+  border-bottom-right-radius: 0;
+  text-align: right;
+  color: #fff;
+  padding: 10px;
+  line-height: 1.8;
+  float: right;
+  position: relative;
+}
+.pzCommetTip .commentListRight .commentInfo .commentBlue {
+  position: absolute;
+  bottom: 0;
+  right: -13px;
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-image: url(../images/commentBlue.png);
+}
+.pzCommetTip .commentList {
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 90px;
+  *zoom: 1;
+}
+.pzCommetTip .commentList .imgHead {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.pzCommetTip .commentList .imgHead img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+.pzCommetTip .commentList .commentInfo {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  border-bottom-left-radius: 0;
+  text-align: left;
+  color: #555;
+  padding: 10px;
+  line-height: 1.8;
+  float: left;
+  position: relative;
+}
+.pzCommetTip .commentList .commentInfo .commentGray {
+  position: absolute;
+  bottom: 0;
+  left: -13px;
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-image: url(../images/commentGray.png);
+}
+.pzUpList {
+  padding-right: 20px;
+  padding-top: 10px;
+}
+.pzUpList .pzUpItem {
+  height: 28px;
+  line-height: 28px;
+  position: relative;
+  background: #f3f3f3;
+  padding: 0 15px;
+  margin-bottom: 5px;
+}
+.pzUpList .pzUpItem .icnDelUp {
+  position: absolute;
+  top: 6px;
+  right: 20px;
+  display: inline-block;
+  cursor: pointer;
+  width: 15px;
+  height: 16px;
+  background-image: url(../images/del.png);
+}
+.userSafe {
+  padding-top: 20px;
+}
+.userSafe table {
+  width: 100%;
+}
+.userSafe li {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.userSafe li a {
+  color: #3aaae3;
+}
+.userSafe li .blueBtn {
+  color: #fff;
+}
+.userSafe li .cirStat {
+  display: inline-block;
+  position: relative;
+  vertical-align: text-top;
+  width: 160px;
+  height: 6px;
+  overflow: hidden;
+  font-size: 0;
+  background: #ff8f35;
+  border-radius: 3px;
+  margin: 5px 5px 0;
+}
+.userSafe li .cirStat .statNum2,
+.userSafe li .cirStat .statNum3 {
+  display: inline-block;
+  width: 2px;
+  height: 6px;
+  overflow: hidden;
+  font-size: 0;
+  background: #ccc;
+  position: absolute;
+  top: 0;
+  left: 53px;
+}
+.userSafe li .cirStat .statNum3 {
+  left: 106px;
+}
+.userSafe li .stat1 .statNum3 {
+  width: 53px;
+  left: auto;
+  right: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.userSafe li .stat2 .statNum2 {
+  width: 53px;
+}
+.userSafe li .stat2 .statNum3 {
+  width: 53px;
+  left: auto;
+  right: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 /*# sourceMappingURL=pzw.css.map */
