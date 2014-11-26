@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="brankPn">
+		<div class="info">
+			
+		</div>
+		<div class="skuList">
+			
+		</div>
+	</div>
+	<script>
+		var adConfig = {
+			data:{
+				"brandPicUrl":"http://www.jd.com",
+				"brandPicLink":"http://www.jd.com",
+				"slogn":"我的世界我做主",
+				"buttonLink":"http://www.jd.com",
+				"skuItem":[1112323,123123,12312312,123123],
+				"title":"nike"
+			},
+			adWidthType:[990,1210,1390]
+		}
+
+		// window.onresize = function(){
+		// 	var w = document.documentElement.clientWidth;
+		// 	console.log(w);
+		// }
+		;(function(id){
+		    var doc = document,
+		        uid = 'jd' + id.replace(/[^a-z0-9\-]/ig, '-') + '-' + (+new Date());
+		    doc.write('<div class="brankPn" id="brank' + uid + '" style="display:none"></div>');
+		})('20141011');
+		var brankObj = {
+			html:"",
+			css:"",
+			getSkuPrice:function(){
+
+			},
+			setEvaluation:function(){
+
+			}
+		}
+	</script>
+	
+</body>
+</html>
