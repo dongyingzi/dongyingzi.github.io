@@ -14,6 +14,7 @@
 		</div>
 	</div>
 	<script>
+	
 		var adConfig = {
 			data:{
 				"brandPicUrl":"http://www.jd.com",
@@ -26,10 +27,10 @@
 			adWidthType:[990,1210,1390]
 		}
 
-		// window.onresize = function(){
-		// 	var w = document.documentElement.clientWidth;
-		// 	console.log(w);
-		// }
+		window.onresize = function(){
+			var w = document.documentElement.clientWidth;
+			console.log(w);
+		}
 		;(function(id){
 		    var doc = document,
 		        uid = 'jd' + id.replace(/[^a-z0-9\-]/ig, '-') + '-' + (+new Date());

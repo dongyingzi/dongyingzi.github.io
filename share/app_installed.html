@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        触屏版
+    </title>
+
+
+</head>
+
+<body id="body">
+<script language="javascript">
+
+    /*
+    * apps custom url schemes 是与APP约定的一个协议URL，IOS同事或Android同事在写程序的时候会设置一个URL Scheme，
+     例如设置：
+     URL Scheme ：app
+     然后其他的程序就可以通过URLString ＝ app://  调用该应用。
+
+     还可以传参数，如：
+     app://reaction/?uid=1
+     原理：500ms内，本机有应用程序能解析这个协议并打开程序，调用该应用；
+     如果本机没有应用程序能解析该协议或者500ms内没有打开这个程序，
+     则执行setTimeout里面的function，就是跳转到你想跳转的页面。
+     */
+
+        var state = null;
+        try {
+            state = window.open('openApp.jdMobile://virtual?params={"category":"jump","des":"productDetail","skuId":"1060887","sourceType":"JSHOP_SOURCE_TYPE","sourceValue":"JSHOP_SOURCE_VALUE"}', '_blank');
+        } catch(e) {}
+        if (state) {
+            window.close();
+        } else {
+            window.location = "http://m.jd.com/product/694891.html?jd_pop=720c7c39-ce8e-4b2e-8895-92902debf76a&xx=dasd";
+        }
+
+</script>
+
+</body>
+</html>
