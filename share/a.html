@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.6.2/jquery.min.js"></script>
+</head>
+<body>
+	<a href="#" onclick="return Mobile.openApp(this,'http://www.jd.com','1' );" >打开appp</a>
+	<script>
+	var Mobile = {
+	// a是个<a>标签，u是个链接,id是sku
+	openApp:function(a, u , id) {
+		$(a).after('<iframe id="app'+id+'" src="'+u+'" width="1" height="1" frameborder="no"  style="display:none;"></iframe>');
+		$("#app"+id).on('load',function() {
+			var cur = new Date();
+			var toApp = Mobile.parseiframe("app"+id, "toApp");
+			if (toApp) {
+				toApp.src = toApp.attributes['url'].nodeValue;
+				setTimeout(function(){
+					if (new Date() - cur < 3000){
+						var toURL = Mobile.parseiframe("app"+id, "toURL");
+						$(a).attr("href",toURL.attributes['url'].nodeValue);
+						$("#app"+id).remove();
+						return true;
+					}else {
+						$("#app"+id).remove();
+						return false;
+					}
+				}, 1000);
+			}
+		});
+		
+	},
+	parseiframe: function(iframeid, id) {
+		var v = null;
+		try {v =  document.getElementById(iframeid).contentWindow.document.getElementById(id); } catch(e){}
+		return v;
+	}
+}
+	</script>
+	
+</body>
+</html>
