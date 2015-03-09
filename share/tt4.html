@@ -20,7 +20,6 @@
 <script type="text/javascript" src="http://static.360buyimg.com/ad/m/js/common/wap_common_v1.1.js?t=20150212"></script>
 <script type="text/javascript" charset="utf-8" src="common.js?t=20150212"></script>
 <script type="text/javascript" charset="utf-8" src="good.info_v1.0.js?t=20150304"></script>
-<style>.srp{height: 40px}</style>
 <script>
 	var sku_id = '1229087633';
 	var first = '1315';
@@ -36,7 +35,7 @@
 		<header class="top_logo">
 			<a href="http://m.jd.com/"><em class="jingdong_logo"></em></a><em class="remai_logo"></em>
 		</header>
-		
+		<section class="search_whole"></section>
 <script type="text/javascript" charset="utf-8" src="http://static.360buyimg.com/ad/m/js/search/search.bar.show_v1.0.js"></script>
 <script>
 	$("section[class=search_whole]").append(bar());
@@ -73,9 +72,9 @@
 		Product.comments(sku);</script>		<section class="recommend_shops" data-title="更多您可能喜欢的">
 			更多您可能喜欢的
 		</section>
-		<section class="quick_search_box">
-	<div class="quick_search_box_cen">
-		<div class="swiper-wrapper">
+		<section class="quick_search_box" >
+	<div class="quick_search_box_cen"  >
+		<div class="swiper-wrapper" style="height:39px; overflow:hidden" >
 			<ul  class="swiper-slide xiding">
 										<li><a href="http://re.m.jd.test/item/itemList/1315-1343-11991.html" target="_blank">短裤</a><s></s></li>
 										<li><a href="http://re.m.jd.test/item/itemList/1315-1343-3983.html" target="_blank">羽绒服</a><s></s></li>
@@ -99,9 +98,10 @@
 <!-- // 导航快捷链接区 -->
 <script>
 var mySwiper1 = new Swiper('.quick_search_box_cen',{
-   scrollContainer: true,
+   scrollContainer: false,
+    speed:600
 });
-var xiding_show = 'default';
+
 (function(){
 	$(".xiding li").eq(0).addClass("curr");
 	$(".xiding li a").bind("click", function(){
@@ -129,36 +129,7 @@ var xiding_show = 'default';
 var maxPage = 20;
 var page = 2;
 var flag = true;
-(function() {
-	$(window).on('scroll', function(){
-	    if($(window).scrollTop() >=  $(".wap_container").height() -$(window).height() - 10){
-	        if(page<=maxPage && flag){
-	        	flag = false;
-	        	$(".loading").show();  
-		        setTimeout(function(){
-		        	url = $(".curr a").attr('href') +'?'+getQueryString()+'&page_uuid='+page_uuid+'&page=' +page;
-		        	$.ajax({
-		                url : url,
-		                dataType : 'html',
-		                success : function(data) {
-		                    var html = $(data);
-		                    $(".display_of_goods").append(html);          
-		                    $(".loading").hide();
-		                    if (html.length == 0) {
-		                    	flag = false;
-		                    	return;
-		                    }
-		                    flag = true;
-		                },
-		                error: function(xhr, type) {
-		                	flag = true;
-		                }
-		            });		            
-		        },300);
-		    } 
-	    }
-	});
-})();
+
 </script>
 <section class ="srp_section" data-title="商品展示-模块">
 	<div class="srp display_of_goods album_display">				<div class="product">  
@@ -592,8 +563,7 @@ var flag = true;
 })();
 </script></div>
 	<div class="loading">
-		<span class="img-loading"></span>
-		<span class="text-loading">加载中</span>
+
 	</div>
 </section>	</div>
 	<div class="over"></div>
