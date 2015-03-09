@@ -28,7 +28,7 @@
 	var page_uuid = '3a530f5a-74a3-44ed-89a8-5c1cb6d837b1';
 	var noCurrUrl = window.location.href,page_point = false;
 </script>
-<style>.quick_search_box{position: relative; height: 38px;} .quick_search_box_cen {position: fixed;}</style>
+<style>.quick_search_box{/*position: relative; height: 38px; overflow: hidden;*/ float: left; position: relative; overflow: hidden;} .srp_section{overflow: hidden;}</style>
 </head>
 <body class="wap_all">
 	<div class="wap_container">
@@ -96,6 +96,7 @@
 		</div>
 	</div>
 </section>
+<div style="clear:both;"></div>
 <!-- // 导航快捷链接区 -->
 <script>
 var mySwiper1 = new Swiper('.quick_search_box_cen',{
