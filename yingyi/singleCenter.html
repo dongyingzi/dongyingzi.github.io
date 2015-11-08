@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>artYoo-home</title>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#333333">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse yy-nav-bar">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand logo" href="index.html">Bootstrap中文网</a>
+            </div>
+            <div class="navbar-collapse collapse" role="navigation" aria-expanded="false" style="height: 1px;">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">首页</a>
+                    </li>
+                    <li>
+                        <a href="#">活动</a>
+                    </li>
+                    <li>
+                        <a href="#">作品</a>
+                    </li>
+                    <li>
+                        <a href="#">艺训</a>
+                    </li>
+                    <li>
+                        <a tabindex="0" class="more" role="button" data-toggle="popover" data-html="true" data-placement="bottom" data-trigger="focus" data-content="<a href='#' class='issue'><span class='glyphicon glyphicon-send' aria-hidden='true'></span>发布内容</a>">可消失的弹出框</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#myModal" data-toggle="modal" data-target="#myModal">登陆</a></li>
+                    <li><a href="#">注册</a></li>
+                    <li>
+                        <a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><span class="label label-danger">1</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a tabindex="0" class="userName" role="button" data-toggle="popover" data-trigger="focus" data-html="true" data-placement="bottom" data-content="<ul class='userDownList'><li><a href='#'>我的ARTYOO</a></li><li><a href='#'>我的收藏</a></li><li><a href='#'>设置</a></li><li><a href='#'>退出</a></li></ul>"><img class="img-circle mr10 pull-left" alt="headPic" src="img/headImg.jpg">Nutsa Avaliani</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+    $(function() {
+        $('.more').popover()
+        $('.userName').popover()
+    })
+    </script>
+    <div class="container">
+        <div class="row">
+            <img src="img/topBar.jpg" class="img-responsive" alt="">
+        </div>
+        <div class="row thumbnailsCont">
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img alt="pic" src="img/ex1.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                    <div class="caption">
+                        <p><img class="img-circle mr10" alt="headPic" src="img/headImg.jpg"><a href="#">Nutsa Avaliani</a></p>
+                        <p class="info">
+                            <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                        </p>
+                        <p class="veiwPn">
+                            <lable class="lable"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>1,571</lable>
+                            <lable class="lable"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>12</lable>
+                            <lable class="lable"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>112</lable>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img alt="pic" src="img/ex2.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                    <div class="caption">
+                        <p><img class="img-circle mr10" alt="headPic" src="img/headImg.jpg"><a href="#">Nutsa Avaliani</a></p>
+                        <p class="info">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p class="veiwPn">
+                            <lable class="lable"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>1,571</lable>
+                            <lable class="lable"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>12</lable>
+                            <lable class="lable"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>112</lable>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img alt="pic" src="img/ex3.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                    <div class="caption">
+                        <p><img class="img-circle mr10" alt="headPic" src="img/headImg.jpg"><a href="#">Nutsa Avaliani</a></p>
+                        <p class="info">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p class="veiwPn">
+                            <lable class="lable"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>1,571</lable>
+                            <lable class="lable"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>12</lable>
+                            <lable class="lable"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>112</lable>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img alt="pic" src="img/ex4.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                    <div class="caption">
+                        <p><img class="img-circle mr10" alt="headPic" src="img/headImg.jpg"><a href="#">Nutsa Avaliani</a></p>
+                        <p class="info">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p class="veiwPn">
+                            <lable class="lable"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>1,571</lable>
+                            <lable class="lable"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>12</lable>
+                            <lable class="lable"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>112</lable>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img alt="pic" src="img/ex5.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                    <div class="caption">
+                        <p><img class="img-circle mr10" alt="headPic" src="img/headImg.jpg"><a href="#">Nutsa Avaliani</a></p>
+                        <p class="info">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p class="veiwPn">
+                            <lable class="lable"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>1,571</lable>
+                            <lable class="lable"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>12</lable>
+                            <lable class="lable"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>112</lable>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img alt="pic" src="img/ex6.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                    <div class="caption">
+                        <p><img class="img-circle mr10" alt="headPic" src="img/headImg.jpg"><a href="#">Nutsa Avaliani</a></p>
+                        <p class="info">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p class="veiwPn">
+                            <lable class="lable"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>1,571</lable>
+                            <lable class="lable"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>12</lable>
+                            <lable class="lable"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>112</lable>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img alt="pic" src="img/ex7.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                    <div class="caption">
+                        <p><img class="i mr10mg-circle" alt="headPic" src="img/headImg.jpg"><a href="#">Nutsa Avaliani</a></p>
+                        <p class="info">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p class="veiwPn">
+                            <lable class="lable"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>1,571</lable>
+                            <lable class="lable"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>12</lable>
+                            <lable class="lable"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>112</lable>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img alt="pic" src="img/ex8.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                    <div class="caption">
+                        <p><img class="img-circle mr10" alt="headPic" src="img/headImg.jpg"><a href="#">Nutsa Avaliani</a></p>
+                        <p class="info">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p class="veiwPn">
+                            <lable class="lable"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>1,571</lable>
+                            <lable class="lable"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>12</lable>
+                            <lable class="lable"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>112</lable>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="pageNav">
+                <a href="#" class="active"> 1 </a> <a href="#"> 2 </a> <a href="#">3</a> <a href="#"> 4 </a> <a href="#">5</a> <a href="#"> ... </a> <a href="#">342</a>
+                <ul class="pager">
+                    <li><a href="#" class="previous"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a></li>
+                    <li><a href="#" class="next"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="footer ">
+        <div class="container">
+            <div class="row footer-top">
+                <div class="col-sm-3 col-lg-3">
+                    <h6> ARTYOO</h6> 这个网站做什么的？ ARTYOO是一个为设计师展示和讲述 设计师分享截图的工作过程和项目， 社区。
+                </div>
+                <div class="col-sm-3  col-lg-3">
+                    <div class="row about">
+                        <div class="col-xs-3">
+                            <ul class="list-unstyled">
+                                <li><a href="#">首页  </a></li>
+                                <li><a href="#">摄影</a></li>
+                                <li><a href="#">收藏品</a></li>
+                                <li><a href="#">油画</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-3">
+                            <ul class="list-unstyled">
+                                <li><a href="#" title="Bootstrap中文网官方微博" target="_blank">活动</a></li>
+                                <li><a href="#">室外</a></li>
+                                <li><a href="#">室外展</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-3">
+                            <ul class="list-unstyled">
+                                <li><a href="#" target="_blank">作品</a></li>
+                                <li><a href="#" target="_blank">最新</a></li>
+                                <li><a href="#" target="_blank">最热</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-3">
+                            <ul class="list-unstyled">
+                                <li><a href="#" target="_blank">艺讯</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-lg-3 cooperatePn">
+                    <h6>合作企业</h6>
+                    <div>
+                        <a href="#" class="fc3">中国艺术教育协会<br />
+                            <span>www.zhongguojianyu.com</span></a>
+                    </div>
+                    <div class="icn2">
+                        <a href="#" class="fc3">中国电视艺术家协会演员工作委员会 <br />
+                            <span>www.zhongguojianyu.com</span></a>
+                    </div>
+                    <div class="icn3">
+                        <a href="#" class="fc3">中国艺术家协会 <br />
+                            <span>www.zhongguojianyu.com</span></a>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-lg-3">
+                    <p class=" fc3 phone"><span class="glyphicon glyphicon-earphone mr10" aria-hidden="true"></span>400-800-3966</p>
+                    服务热线
+                </div>
+            </div>
+            <div class="row footer-bottom">
+                <ul class="list-inline">
+                    <li><a href="#" target="_blank">Copyright © 2009–2015 ARTYOO LLC. All screenshots © their respe</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div id="myModal" class="modal fade in loginAlert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <h2 class="alertLogo"></h2>
+                    <h3 class="text-center">登录</h3>
+                    <div class="row mt30">
+                        <div class="col-md-6 col-md-offset-1">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <div class="mb10">
+                                <button type="button" class="btn btn-danger mr10">登录</button><a href="#" class="mr10">忘记密码</a><span class="mr10">不是会员？</span><a href="#">现在注册</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <p>使用第三方快速登陆</p>
+                            <a href="#" class="shareBtn"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress" style="bottom:30px">
+                    <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                        <span>loading-80%</span>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                        <span>输入错误</span>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+</body>
+
+</html>

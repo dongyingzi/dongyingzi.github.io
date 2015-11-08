@@ -1,0 +1,74 @@
+body{background-color: #f3f3f3}
+/*导航*/
+.yy-nav-bar{ background-color: #323232; border-color: #323232; min-height: 55px; border-radius: 0; margin-bottom: 0}
+.yy-nav-bar .logo{ width:180px; height: 55px; background: url(../img/logo.png) no-repeat center center; line-height: 1000px; overflow: hidden;}
+.yy-nav-bar .navbar-nav>li>a{color: #999; padding-top:20px;}
+.yy-nav-bar .more{ width:60px; height:55px;  overflow: hidden; background: url(../img/more.png) no-repeat center center; line-height: 100px}
+.yy-nav-bar .issue{ color: #333;text-overflow: ellipsis; white-space: nowrap;}
+.yy-nav-bar .issue span{ color: #666; margin-right: 5px;}
+.yy-nav-bar .navbar-right .label-danger{ border-radius: 50%;font-size: 10px; padding: 0; font-weight: normal; top:0; position: absolute; display: block; min-width: 14px; height: 14px; line-height: 14px; overflow: hidden; top:12px; right:5px;}
+.yy-nav-bar .navbar-right .userDownList{ list-style: none; padding:0;}
+.yy-nav-bar .navbar-right .userDownList a{ color: #333; margin-bottom: 5px; display: block;}
+.topBanner{ height:121px; background: url(../img/topBanner.png) no-repeat center center;}
+/*topBar*/
+.topBar{ height: 50px; border-bottom: 1px solid #999; background: #fff; margin-bottom: 12px;}
+.topBar .topBarL{ position: absolute; top:10px; left:0;}
+.topBar .row{ position: relative}
+.topBar .dropdown button{ color: #999}
+.topBar .nav-pills{ margin: 0 auto; width:255px; margin-top: 7px}
+.topBar .nav-pills a{ color: #999; font-size: 14px;}
+.topBar .nav-pills .dropdown-menu a{ color: #333;}
+
+/*.topBar .nav-pills a:hover{ background: none}*/
+
+
+.thumbnailsCont{ margin:14px -30px 20px}
+.thumbnailsCont .thumbnail .btn-xs{ margin-right:5px; margin-bottom: 5px; color: #999}
+.thumbnailsCont .thumbnail .veiwPn{ color: #999}
+.thumbnailsCont .thumbnail .veiwPn .glyphicon{ margin-right: 2px; top:2px;}
+.thumbnailsCont .thumbnail .veiwPn .lable{ margin-right:8px; }
+.thumbnailsCont .thumbnail .info{ height: 50px; line-height:25px;color:#999; overflow: hidden;}
+
+.pageNav{ text-align: center; color: #999; position:relative; height: 50px;}
+.pageNav a{ display: inline-block; margin-right:5px; color: #999}
+.pageNav .active{ color: #333}
+.pageNav .pager{ position:absolute; top:-10px; right:0; margin:0;}
+.pageNav .pager li>a{ width:45px; height:45px; background: #d5d5d5; border-radius:50%; border:0;line-height: 45px;}
+.pageNav .pager li>a:hover{ background:#b6b6b6;}
+.pageNav .pager .glyphicon{ color: #fff; font-size: 22px; top:6px; left:2px;}
+.pageNav .pager .glyphicon-menu-left{ left:-2px;}
+/*注册*/
+.registerPn{ padding-top: 30px;}
+.registerPn .form-horizontal{ width:60%}
+.registerPn .followCode .col-sm-10{ padding-right: 160px; position:relative;}
+.registerPn .followCode .posRight{ position:absolute;right:10px; top:0;}
+.registerPn .followCode .checkCodeBtn{ display: inline-block; padding:6px 12px; background: #999999; color:#fff; border:1px solid #dcdce0; right:25px}
+.registerPn .followCode .imgCode{  right:65px; top:10px;}
+/*公用*/
+.btnLarPl{ padding-left:50px; padding-right: 50px;}
+.mb30{ margin-bottom: 30px;}
+.mb10{ margin-bottom: 10px;}
+.mr10{ margin-right: 10px;}
+.mr5{ margin-right: 5px;}
+.fc3{ color: #333!important}
+.mt30{ margin-top: 30px;}
+
+/*页尾*/
+.footer{ color: #999; background: #fff; padding-top: 15px; font-size: 12px;}
+.footer a{ color: #999; font-size: 12px; line-height: 21px;}
+.footer .about{ margin-top: 10px; text-overflow: ellipsis;
+ white-space: nowrap;}
+ .footer .phone{ margin-top: 10px; font-size: 18px;}
+ .footer .cooperatePn span{ color: #999}
+ .footer .cooperatePn div{ padding-left: 40px; background: url(../img/footerBg.png) no-repeat;}
+ .footer .cooperatePn .icn2 {background-position:0 -48px;}
+ .footer .cooperatePn .icn3 {background-position:0 -96px;}
+
+ .loginAlert .modal-content{ background: #333; border-color:#333; color:#999; font-size: 12px; padding-bottom: 60px;}
+ .loginAlert .modal-content a{ color:#999; font-size: 12px;}
+ .loginAlert .modal-content .close{ color: #999}
+ .loginAlert .modal-content .modal-header{border-bottom: 0}
+ .loginAlert .alertLogo{ height:32px; background:url(../img/alertLogo.png) no-repeat center center;}
+ .loginAlert .shareBtn{ display: block;  height:62px; background:url(../img/share.png) no-repeat; }
+ .loginAlert .progress{ width: 100%; position:absolute; bottom:0;left:0; margin-bottom: 0;}
+
