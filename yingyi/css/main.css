@@ -48,10 +48,21 @@ body{background-color: #f3f3f3}
 .btnLarPl{ padding-left:50px; padding-right: 50px;}
 .mb30{ margin-bottom: 30px;}
 .mb10{ margin-bottom: 10px;}
+.mb5{ margin-bottom: 5px;}
 .mr10{ margin-right: 10px;}
 .mr5{ margin-right: 5px;}
+.mt5{ margin-top: 5px;}
+.mt20{ margin-top: 20px;}
 .fc3{ color: #333!important}
+.fc9{ color:#999;}
+.fc6{ color: #666;}
 .mt30{ margin-top: 30px;}
+.mb20{ margin-bottom: 20px;}
+.mr20{ margin-right: 20px}
+.vLine{ margin:0 20px; vertical-align: text-top; position: relative; top:-3px;}
+
+.progressNomarl{ margin-bottom: 0; border-radius: 0; height: 5px; width:140px; margin-right: 10px;}
+.progressNomarl .progress-bar{ background-color: #00b19d}
 
 /*页尾*/
 .footer{ color: #999; background: #fff; padding-top: 15px; font-size: 12px;}
@@ -71,4 +82,42 @@ body{background-color: #f3f3f3}
  .loginAlert .alertLogo{ height:32px; background:url(../img/alertLogo.png) no-repeat center center;}
  .loginAlert .shareBtn{ display: block;  height:62px; background:url(../img/share.png) no-repeat; }
  .loginAlert .progress{ width: 100%; position:absolute; bottom:0;left:0; margin-bottom: 0;}
+
+ .myNav{border-bottom: 2px solid #dedede; list-style: none; padding-left: 0; margin-bottom: 0;}
+ .myNav > li{position: relative;display: block; float:left; margin-bottom:-2px;}
+ .myNav > li> a{position: relative;display: block; float:left; color: #999; margin-right: 40px; padding: 10px 0} 
+ .myNav > li> .tit {display: inline-block;color: #999;padding: 10px 0}
+ 
+ .myNav > li> a:hover,
+ .myNav > li> a:active{ text-decoration: none;}
+ .myNav >li.active>a { color: #333;border-bottom: 2px solid #666; text-decoration: none;}
+ .navSubPill{ background-color: #fff; height: 35px; border-bottom:0;}
+ .navSubPill>li>a{ border-radius: 0; margin-right: 10px; padding:7px 10px; color: #999; text-decoration: none;}
+ .navSubPill>li>a:hover,
+ .navSubPill>li>a:active{ border-radius: 0; background-color: #fff; text-decoration: none;}
+ .navSubPill>li.active>a{ background-color: #fff;border-bottom: 0; color: #333; text-decoration: none;}
+ .navSubPill>li.active>a:hover,
+ .navSubPill>li.active>a:active{ border-bottom: 0; text-decoration: none;}
+
+ .thumbnailList .thumbnail:hover{background:#d4d4d4}
+ .thumbnailList .thumbnail .caption{ color: #999}
+ .thumbnailList .thumbnail .btn-xs{ color: #999; margin-bottom: 5px;}
+ .thumbnailList .thumbnail .glyphicon-pencil{display:none; position: absolute; top:10px; left:30px; width:33px; height: 33px; background-color: #fff; border:1px solid #5d5d5d; color: #5d5d5d; border-radius: 2px; text-align: center;line-height: 2}
+ .thumbnailList .thumbnail .glyphicon-trash{display:none; position: absolute; top:10px; left:73px; width:33px; height: 33px; background-color: #fff; border:1px solid #5d5d5d; color: #a50000; border-radius: 2px; text-align: center;line-height: 2}
+ .thumbnailList .thumbnail:hover .glyphicon-pencil,
+ .thumbnailList .thumbnail:hover .glyphicon-trash
+  {display: block}
+  .pannelList{ padding-left: 0; list-style: none; padding-top:20px;}
+  .pannelList li { margin-bottom: 10px;}
+  .pannelList .tagList .btn-xs{ margin-bottom: 5px;}
+  .pannelList .tit{color: #999; margin-right: 20px;}
+
+.userChart{ padding-left: 0;  list-style: none;}
+.userChart li{ position: relative;}
+.userChart li:before{ display: block; position: absolute; width:0; height: 40px; border-right:1px solid #ddd;right:10px; top:10px;
+content: " ";
+}
+.userChart li:last-child:before{
+	display: none;
+}
 
