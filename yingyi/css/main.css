@@ -1,7 +1,7 @@
 body{background-color: #f3f3f3}
 /*导航*/
 .yy-nav-bar{ background-color: #323232; border-color: #323232; min-height: 55px; border-radius: 0; margin-bottom: 0}
-.yy-nav-bar .logo{ width:180px; height: 55px; background: url(../img/logo.png) no-repeat center center; line-height: 1000px; overflow: hidden;}
+.yy-nav-bar .logo{ width:180px; height: 55px; /*background: url(../img/logo.png) no-repeat center center;*/ line-height: 1000px; overflow: hidden;}
 .yy-nav-bar .navbar-nav>li>a{color: #999; padding-top:20px;}
 .yy-nav-bar .more{ width:60px; height:55px;  overflow: hidden; background: url(../img/more.png) no-repeat center center; line-height: 100px}
 .yy-nav-bar .issue{ color: #333;text-overflow: ellipsis; white-space: nowrap;}
@@ -26,8 +26,9 @@ body{background-color: #f3f3f3}
 .thumbnailsCont .thumbnail .btn-xs{ margin-right:5px; margin-bottom: 5px; color: #999}
 .thumbnailsCont .thumbnail .veiwPn{ color: #999}
 .thumbnailsCont .thumbnail .veiwPn .glyphicon{ margin-right: 2px; top:2px;}
-.thumbnailsCont .thumbnail .veiwPn .lable{ margin-right:8px; }
+
 .thumbnailsCont .thumbnail .info{ height: 50px; line-height:25px;color:#999; overflow: hidden;}
+.thumbnail .veiwPn .lable{ margin-right: 8px;}
 
 .pageNav{ text-align: center; color: #999; position:relative; height: 50px;}
 .pageNav a{ display: inline-block; margin-right:5px; color: #999}
@@ -102,15 +103,32 @@ body{background-color: #f3f3f3}
  .thumbnailList .thumbnail:hover{background:#d4d4d4}
  .thumbnailList .thumbnail .caption{ color: #999}
  .thumbnailList .thumbnail .btn-xs{ color: #999; margin-bottom: 5px;}
- .thumbnailList .thumbnail .glyphicon-pencil{display:none; position: absolute; top:10px; left:30px; width:33px; height: 33px; background-color: #fff; border:1px solid #5d5d5d; color: #5d5d5d; border-radius: 2px; text-align: center;line-height: 2}
- .thumbnailList .thumbnail .glyphicon-trash{display:none; position: absolute; top:10px; left:73px; width:33px; height: 33px; background-color: #fff; border:1px solid #5d5d5d; color: #a50000; border-radius: 2px; text-align: center;line-height: 2}
+ .thumbnailList .thumbnail .glyphicon-pencil,
+ .thumbnailList .thumbnail .operate-up
+ {display:none; position: absolute; top:10px; left:30px; width:33px; height: 33px; 
+ background-color: #fff; color: #5d5d5d; border-radius:50%; text-align: center;line-height: 2.2; cursor: pointer;}
+ .thumbnailList .thumbnail .glyphicon-pencil:hover,
+ .thumbnailList .thumbnail .operate-up:hover
+ {background-color: #e5e7ec; text-decoration: none;}
+
+
+ .thumbnailList .thumbnail .glyphicon-trash,
+ .thumbnailList .thumbnail .operate-heart
+ {display: none; position: absolute; top:10px; left:73px; width:33px; height: 33px; background-color: #fff;  color: #a50000; border-radius:50%; text-align: center;line-height: 2.4; cursor: pointer;}
+ .thumbnailList .thumbnail .glyphicon-trash:hover,
+  .thumbnailList .thumbnail .operate-heart:hover
+ {background-color: #e5e7ec; }
  .thumbnailList .thumbnail:hover .glyphicon-pencil,
- .thumbnailList .thumbnail:hover .glyphicon-trash
+ .thumbnailList .thumbnail:hover .glyphicon-trash,
+ .thumbnailList .thumbnail:hover .operate-heart,
+  .thumbnailList .thumbnail:hover .operate-up
   {display: block}
   .pannelList{ padding-left: 0; list-style: none; padding-top:20px;}
   .pannelList li { margin-bottom: 10px;}
   .pannelList .tagList .btn-xs{ margin-bottom: 5px;}
   .pannelList .tit{color: #999; margin-right: 20px;}
+
+
 
 .userChart{ padding-left: 0;  list-style: none;}
 .userChart li{ position: relative;}
@@ -120,4 +138,17 @@ content: " ";
 .userChart li:last-child:before{
 	display: none;
 }
+.glyphicon-exclamation-sign{ color: #f6a623; font-size: 20px; margin-right: 5px; top:4px;}
+.selectPut{ border:1px solid #ccc; color: #999; position: relative; float: left; border-radius:5px; padding: 3px 8px; margin-right:6px; font-size: 12px; margin-top:6px; cursor: pointer; }
+.select{ border:1px solid #ff2a08; }
+.selectPut .glyphicon{display: none;}
+.select .glyphicon{ display: block; color: #ff2a08; font-size: 8px; position: absolute; bottom:0; right: -10px;}
+.addBtn{ float: left; margin-top: 6px; padding:2px 10px 3px}
+.addBtn span{ left:1px}
+
+.yyFormListPn{ background: #fff; border:1px solid #ddd; border-top: none; padding: 0 20px; margin-bottom: 40px;}
+
+
+
+
 
