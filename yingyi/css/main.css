@@ -1,7 +1,7 @@
 body{background-color: #f3f3f3}
 /*导航*/
 .yy-nav-bar{ background-color: #323232; border-color: #323232; min-height: 55px; border-radius: 0; margin-bottom: 0}
-.yy-nav-bar .logo{ width:180px; height: 55px; /*background: url(../img/logo.png) no-repeat center center;*/ line-height: 1000px; overflow: hidden;}
+.yy-nav-bar .logo{ width:180px; height: 55px; background: url(../img/logo.png) no-repeat center center; line-height: 1000px; overflow: hidden;}
 .yy-nav-bar .navbar-nav>li>a{color: #999; padding-top:20px;}
 .yy-nav-bar .more{ width:60px; height:55px;  overflow: hidden; background: url(../img/more.png) no-repeat center center; line-height: 100px}
 .yy-nav-bar .issue{ color: #333;text-overflow: ellipsis; white-space: nowrap;}
