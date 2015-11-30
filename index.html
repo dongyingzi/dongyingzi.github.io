@@ -64,7 +64,7 @@ layout: default
                     <div class="yz-title-desc">{{ post.description }}</div>
                      {% if post.flag == 'pro' %}
                       <div><a class="yz-link-more" href="{{ post.purl }}">查看作品 »</a></div>
-                      {% else if post.flag == 'share' %}
+                      {% elseif post.flag == 'share' %}
                       <div><a class="yz-link-more" href="{{ post.url }}">阅读全文 »</a><a class="yz-link-more" href="{{ post.ppturl }}"> 查看ppt»</a></div>
                       {% else %}
                       <div><a class="yz-link-more" href="{{ post.url }}">阅读全文 »</a></div>
