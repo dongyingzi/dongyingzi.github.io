@@ -1,32 +1,32 @@
 ---
 layout: post
-title: jquery 的prototype
-description: jquery 的框架分析
+title: javascript的prototype和构造函数的使用分析
+description: javascript的prototype的使用
 category: blog
 ---
 
 ####构造函数：
-    function jquery(){}
-    jquery.prototype ={
+    function person(){}
+    person.prototype ={
         say:function(){
             console.log(this.name)
         },
         name:"dongyingzi"
     }
-    var d = new jquery();
+    var d = new person();
     d.say(); //dongyingzi
     以上必须要new
     不想要new呢 
-    function jquery(){
+    function person(){
         console.log("死循环")
-        return new jquery()
+        return new person()
     }
-    jquery()
-    晕了 死循环
-    function jquery(){
-        return jquery.prototype.init()
+    person()
+    晕了 死循环 还有没有其他办法呢？
+    function person(){
+        return person.prototype.init()
     }
-    jquery.prototype = {
+    person.prototype = {
         init:function(){
             console.log(this)
             return this;
@@ -36,12 +36,12 @@ category: blog
         },
         name:"dongyingzi"
     }
-    jquery().say();//dongyingzi
-    init 中this 已经指向了jquery jquery的原型上了，能不能把this区分呢
-    function jquery(){
-        return new jquery.prototype.init()
+    person().say();//dongyingzi
+    init 中this 已经指向了person的原型上了，男人，女人 想区分一下怎么办呢？
+    function person(){
+        return new person.prototype.init()
     }
-    jquery.prototype = {
+    person.prototype = {
         init:function(){
             console.log(this)
             return this;
@@ -51,15 +51,15 @@ category: blog
         },
         name:"dongyingzi"
     }
-    jquery().say()
-    jquery.init {} VM633:7
+    person().say()
+    person.init {} VM633:7
     TypeError: undefined is not a function
 
-    this是对了， init 实例化后有不能使用jquery的原型方法了，那就把juqery的原型方法给 init就可以了吗
-    function jquery(){
-        return new jquery.prototype.init()
+    this是对了， init 实例化后有不能使用person的原型方法了，那就把juqery的原型方法给 init就可以了吗
+    function person(){
+        return new person.prototype.init()
     }
-    jquery.prototype = {
+    person.prototype = {
         init:function(){
             console.log(this)
             return this;
@@ -69,18 +69,18 @@ category: blog
         },
         name:"dongyingzi"
     }
-    jquery.prototype.init.prototype=jquery.prototype;
-    jquery().say()
-    jquery.init {init: function, say: function, name: "dongyingzi"}
+    person.prototype.init.prototype=person.prototype;
+    person().say()
+    person.init {init: function, say: function, name: "dongyingzi"}
      VM679:7
     dongyingzi VM679:11
 
-    jquery().say() 看着有点不习惯呢 
+    person().say() 看着有点不习惯呢 
 
-     function jquery(){
-        return new jquery.prototype.init()
+     function person(){
+        return new person.prototype.init()
     }
-    jquery.prototype = {
+    person.prototype = {
         init:function(){
             console.log(this)
             return this;
@@ -90,10 +90,10 @@ category: blog
         },
         name:"dongyingzi"
     }
-    jquery.prototype.init.prototype=jquery.prototype;
-    var J = jquery();
+    person.prototype.init.prototype=person.prototype;
+    var J = person();
     J.say()
-
+    收工
 
 ##结语
 多谢超哥今天和我说讨论的这个问题，让我静下心来好好思考了一下这个问题。
