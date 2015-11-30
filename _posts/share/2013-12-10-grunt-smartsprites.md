@@ -3,8 +3,8 @@ layout: post
 title: 无线建站制作环境简介
 description: grunt+less+smartsprits 搭建制作环境，grunt 安装和使用，smartsprites 自动合并图片，less组织css代码。自动化神器，剩去重复劳动的工作
 category: share
-ppturl:/ppt/plugin/markdown/example.html
-flag:share
+ppturl :/ppt/plugin/markdown/example.html
+flag: share
 ---
 
 # 无线建站制作环境简介
