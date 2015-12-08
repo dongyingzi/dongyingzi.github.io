@@ -177,4 +177,9 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;}
 .settingPn .settingTitle{ text-indent: 20px; float: left; width: 110px; padding-left:15px;}
 .settingPn { margin-top: 20px}
 
+.listStyle{ list-style-type: none; line-height: 1.75; color: #666;}
+.listAlignCenter{ width:200px; margin:20px auto;}
+.listAlignCenter li{ width:100px; text-align: center;}
+.listAlignCenter li:before{right:0;}
+
 
