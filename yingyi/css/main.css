@@ -1,6 +1,6 @@
 body{background-color: #f3f3f3}
 /*导航*/
-.yy-nav-bar{ background-color: #323232; border-color: #323232; min-height: 55px; border-radius: 0; margin-bottom: 0}
+.yy-nav-bar{ background-color: #323232; border-color: #323232; min-height: 55px; border-radius: 0; margin-bottom: 0; /*display: none;*/}
 .yy-nav-bar .logo{ width:180px; height: 55px; background: url(../img/logo.png) no-repeat center center; line-height: 1000px; overflow: hidden;}
 .yy-nav-bar .navbar-nav>li>a{color: #999; padding-top:20px;}
 .yy-nav-bar .more{ width:60px; height:55px;  overflow: hidden; background: url(../img/more.png) no-repeat center center; line-height: 100px}
@@ -19,6 +19,14 @@ body{background-color: #f3f3f3}
 .topBar .nav-pills a{ color: #999; font-size: 14px;}
 .topBar .nav-pills .dropdown-menu a{ color: #333;}
 
+
+.search .glyphicon{ top:0;}
+.search .form-control{ height: 24px}
+.search .btn{ padding:6px; line-height: 10px}
+.modal-header .search{ margin-top: 8px}
+
+.bs-editarticle-modal .table>tbody>tr>td{ border-top:0; padding:3px;}
+.bs-editarticle-modal .modal-header{ padding-bottom: 0}
 /*.topBar .nav-pills a:hover{ background: none}*/
 
 
@@ -67,7 +75,7 @@ body{background-color: #f3f3f3}
 .progressNomarl .progress-bar{ background-color: #00b19d}
 
 /*页尾*/
-.footer{ color: #999; background: #fff; padding-top: 15px; font-size: 12px;}
+.footer{ color: #999; background: #fff; padding-top: 15px; font-size: 12px; /*display: none;*/}
 .footer a{ color: #999; font-size: 12px; line-height: 21px;}
 .footer .about{ margin-top: 10px; text-overflow: ellipsis;
  white-space: nowrap;}
@@ -162,6 +170,8 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;}
 .yyFormListPn{ background: #fff; border:1px solid #ddd; border-top: none; padding: 0 20px; margin-bottom: 40px;}
+
+.titBottomLine{ border-bottom:2px solid #dedede; line-height: 2; font-weight: bold; padding-left: 10px;}
 
 
 
