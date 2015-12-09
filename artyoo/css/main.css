@@ -204,5 +204,7 @@ margin-top: -2px;
   background-position: 0 -119px;
 }
 .pannelWhite{ background: #fff; border:1px solid #e2e2e2; padding:15px; border-radius: 2px;}
+.alignCent{ right:-1px;}
+.pushPosAbsRig{ position: absolute; right:15px; top:20px}
 
 
