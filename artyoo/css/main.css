@@ -49,10 +49,10 @@ body{background-color: #f3f3f3}
 /*注册*/
 .registerPn{ padding-top: 30px;}
 .registerPn .form-horizontal{ width:60%}
-.registerPn .followCode .col-sm-10{ padding-right: 160px; position:relative;}
-.registerPn .followCode .posRight{ position:absolute;right:10px; top:0;}
-.registerPn .followCode .checkCodeBtn{ display: inline-block; padding:6px 12px; background: #999999; color:#fff; border:1px solid #dcdce0; right:25px}
-.registerPn .followCode .imgCode{  right:65px; top:10px;}
+.followCode .col-sm-10{ padding-right: 160px; position:relative;}
+.followCode .posRight{ position:absolute;right:10px; top:0;}
+.followCode .checkCodeBtn{ display: inline-block; padding:6px 12px; background: #999999; color:#fff; border:1px solid #dcdce0; right:25px}
+.followCode .imgCode{  right:65px; top:10px;}
 /*公用*/
 .btnLarPl{ padding-left:50px; padding-right: 50px;}
 .mb30{ margin-bottom: 30px;}
@@ -181,5 +181,28 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;}
 .listAlignCenter{ width:200px; margin:20px auto;}
 .listAlignCenter li{ width:100px; text-align: center;}
 .listAlignCenter li:before{right:0;}
+.yjIcn {
+background: url(http://dongyingzi.github.io/yijie/img/sprites.png);
+}
+.yjSsina, .yjStxwb, .yjSdb, .yjSqzone {
+width: 22px;
+height: 22px;
+display: inline-block;
+vertical-align: text-top;
+margin-top: -2px;
+}
+.yjSsina{
+  background-position: 0 -94px;
+}
+.yjStxwb{
+  background-position: 0 -169px;
+}
+.yjSdb{
+  background-position: 0 -144px;
+}
+.yjSqzone{
+  background-position: 0 -119px;
+}
+.pannelWhite{ background: #fff; border:1px solid #e2e2e2; padding:15px; border-radius: 2px;}
 
 
