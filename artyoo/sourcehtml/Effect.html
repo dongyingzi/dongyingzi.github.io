@@ -1,0 +1,453 @@
+<include src="../inc/_head.html" pageTitle="个人中心"></include>
+<include src="../inc/_topNav.html"></include>
+<div class="container mt30">
+    <include src="../inc/_userInfo.html">
+        <p class="fc6"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span><span class="mr20">北京</span> <span class="glyphicon glyphicon-user mr10" aria-hidden="true"></span>品牌推广；图形设计；美术指导<span class="vLine">|</span><span class="glyphicon glyphicon-bell mr10" aria-hidden="true"></span> <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></p>
+        <div class="clearfix">
+            <div class="pull-left">
+                <div class="progress progressNomarl mt5">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                    </div>
+                </div>
+            </div>
+            <div class="pull-left small fc6">10<span class="fc3">/2000</span></div>
+        </div>
+    </include>
+    <div class="row">
+        <div class="col-md-9">
+            <ul id="myTabs" class="myNav clearfix" role="tablist">
+                <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">影响力</a></li>
+                <li role="presentation" class=""><a href="#home2" role="tab" id="home-tab2" data-toggle="tab" aria-controls="home2" aria-expanded="false">徽章墙</a></li>
+                <li role="presentation" class=""><a href="#home3" role="tab" id="home-tab3" data-toggle="tab" aria-controls="home3" aria-expanded="false">排行榜</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content thumbnailList">
+                <div role="tabpanel" class="tab-pane fade in active bgWhite" id="home" aria-labelledby="home-tab">
+                    <div class="clearfix">
+                        <div class="col-md-12 mt20">
+                            <p class="text-center"><span class="fc9">当前影响力:</span>1949， <span class="fc9">距离Lv14升级需经验值：</span>61</p>
+                            <div class="clearfix w310">
+                                <div class="pull-left">
+                                    <div class="progress progressNomarl mt5">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pull-left small fc6">10<span class="fc3">/2000</span></div>
+                            </div>
+                            <div><img class="img-responsive center-block" src="../img/effectImg.png" alt=""></div>
+                            <div class="row">
+                                <ul class="userChart clearfix col-sm-4 col-sm-offset-4">
+                                    <li class="col-xs-4">
+                                        <h4>12</h4>
+                                        <p class="small fc9">努力</p>
+                                    </li>
+                                    <li class="col-xs-4">
+                                        <h4>256</h4>
+                                        <p class="small fc9">活力</p>
+                                    </li>
+                                    <li class="col-xs-4">
+                                        <h4>2341</h4>
+                                        <p class="small fc9">创造力</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    今日已增加2影响力
+                                </div>
+                                <div class="col-sm-4">
+                                    <p class="small fc9 text-right">共100个</p>
+                                </div>
+                            </div>
+                            <div class="progress progressNomarl mt5" style="width:100%">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="listBorderPn">
+                                    <div class="listP">
+                                        <h5>今日任务</h5></div>
+                                    <p class="listP">
+                                        <span class="glyphicon glyphicon-ok fcr mr10" aria-hidden="true"></span>连续登陆第2天，得2影响力指数 <span class="listPr">已完成</span>
+                                    </p>
+                                    <p class="listP">
+                                        <span class="glyphicon glyphicon-ok mr10" aria-hidden="true"></span>上传作品或活动，得10影响力指数 <span class="listPr">0/10</span>
+                                    </p>
+                                </div>
+                                <div class="listBorderPn mb30" style="height:52px;overflow:hidden">
+                                    <div class="listP"><strong>影响力说明</strong><span class="listPr opreatBtn"><span class="glyphicon glyphicon-menu-down mr5 small" aria-hidden="true"></span>展开</span>
+                                    </div>
+                                    <p class="listD mt20">
+                                        这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案
+                                    </p>
+                                </div>
+                                <script>
+                                $(function() {
+                                    var opreatBtn = $('.opreatBtn');
+
+                                    var btnParent = opreatBtn.parent();
+                                    var btnContent = btnParent.parent();
+                                    opreatBtn.click(function(event) {
+                                        var icon = opreatBtn.children('.glyphicon')
+
+
+                                        if (icon.hasClass('glyphicon-menu-down')) {
+                                            icon.removeClass('glyphicon-menu-down');
+                                            icon.addClass('glyphicon-menu-up')
+                                            var html = $(this).html()
+                                            $(this).html(html.replace('展开', '收起'))
+
+                                            btnContent.css({
+                                                height: 'auto'
+                                            });
+                                        } else {
+
+                                            var btnParentHeight = btnParent.height() + 16;
+                                            icon.removeClass(' glyphicon-menu-up');
+                                            icon.addClass('glyphicon-menu-down')
+                                            var html = $(this).html()
+                                            $(this).html(html.replace('收起', '展开'))
+
+                                            btnContent.css({
+                                                height: btnParentHeight
+                                            });
+                                        }
+                                    });
+                                })
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in bgWhite  mb30 clearfix" id="home2" aria-labelledby="home-tab">
+                    <div class="col-md-12 ">
+                        <h5>我的徽章</h5>
+                        <div class="row">
+                            <div class="col-sm-3 col-xs-6">
+                                <img src="../img/ex2.jpg" class="img-responsive">
+                                <p class="mt10 text-center">神的印记</p>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <img src="../img/ex2.jpg" class="img-responsive">
+                                <p class="mt10 text-center">神的印记</p>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <img src="../img/ex2.jpg" class="img-responsive">
+                                <p class="mt10 text-center">神的印记</p>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <img src="../img/ex2.jpg" class="img-responsive">
+                                <p class="mt10 text-center">神的印记</p>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <img src="../img/ex2.jpg" class="img-responsive">
+                                <p class="mt10 text-center">神的印记</p>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <img src="../img/ex2.jpg" class="img-responsive">
+                                <p class="mt10 text-center">神的印记</p>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <img src="../img/ex2.jpg" class="img-responsive">
+                                <p class="mt10 text-center">神的印记</p>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <img src="../img/ex2.jpg" class="img-responsive">
+                                <p class="mt10 text-center">神的印记</p>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <img src="../img/ex2.jpg" class="img-responsive">
+                                <p class="mt10 text-center">神的印记</p>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <img src="../img/ex2.jpg" class="img-responsive">
+                                <p class="mt10 text-center">神的印记</p>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <img src="../img/ex2.jpg" class="img-responsive">
+                                <p class="mt10 text-center">神的印记</p>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <img src="../img/ex2.jpg" class="img-responsive">
+                                <p class="mt10 text-center">神的印记</p>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <img src="../img/ex2.jpg" class="img-responsive">
+                                <p class="mt10 text-center">神的印记</p>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <img src="../img/ex2.jpg" class="img-responsive">
+                                <p class="mt10 text-center">神的印记</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in bgWhite" id="home3" aria-labelledby="home-tab">
+                    <table class="table chart">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p class="text-nowrap text-center larger fs24">2431</p>
+                                    <p class="text-nowrap fc9 small">我的排名</p>
+                                </td>
+                                <td>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img class="media-object img-circle" alt="64x64" src="../img/head.png" style="width: 85px; height: 85px;">
+                                        </div>
+                                        <div class="media-body">
+                                            <p class="mt10">aNutsa Avaliani</p>
+                                            <p class="fc9">
+                                                品牌推广；图形设计；美术指导
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="text-nowrap">1946影响力</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge bgCr">1</span></td>
+                                <td>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img class="media-object img-circle" alt="64x64" src="../img/head.png" style="width: 85px; height: 85px;">
+                                        </div>
+                                        <div class="media-body">
+                                            <p class="mt10">aNutsa Avaliani <span class="badge bgCr">LV 37</span></p>
+                                            <p class="fc9">
+                                                品牌推广；图形设计；美术指导
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="text-nowrap">1946影响力</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge bglightCr">2</span></td>
+                                <td>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img class="media-object img-circle" alt="64x64" src="../img/head.png" style="width: 85px; height: 85px;">
+                                        </div>
+                                        <div class="media-body">
+                                            <p class="mt10">aNutsa Avaliani <span class="badge bgCr">LV 35</span></p>
+                                            <p class="fc9">
+                                                品牌推广；图形设计；美术指导
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="text-nowrap">1946影响力</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge bglightCr">3</span></td>
+                                <td>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img class="media-object img-circle" alt="64x64" src="../img/head.png" style="width: 85px; height: 85px;">
+                                        </div>
+                                        <div class="media-body">
+                                            <p class="mt10">aNutsa Avaliani</p>
+                                            <p class="fc9">
+                                                品牌推广；图形设计；美术指导
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="text-nowrap">1946影响力</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge">4</span></td>
+                                <td>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img class="media-object img-circle" alt="64x64" src="../img/head.png" style="width: 85px; height: 85px;">
+                                        </div>
+                                        <div class="media-body">
+                                            <p class="mt10">aNutsa Avaliani</p>
+                                            <p class="fc9">
+                                                品牌推广；图形设计；美术指导
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="text-nowrap">1946影响力</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge">5</span></td>
+                                <td>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img class="media-object img-circle" alt="64x64" src="../img/head.png" style="width: 85px; height: 85px;">
+                                        </div>
+                                        <div class="media-body">
+                                            <p class="mt10">aNutsa Avaliani</p>
+                                            <p class="fc9">
+                                                品牌推广；图形设计；美术指导
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="text-nowrap">1946影响力</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge">6</span></td>
+                                <td>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img class="media-object img-circle" alt="64x64" src="../img/head.png" style="width: 85px; height: 85px;">
+                                        </div>
+                                        <div class="media-body">
+                                            <p class="mt10">aNutsa Avaliani</p>
+                                            <p class="fc9">
+                                                品牌推广；图形设计；美术指导
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="text-nowrap">1946影响力</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge">7</span></td>
+                                <td>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img class="media-object img-circle" alt="64x64" src="../img/head.png" style="width: 85px; height: 85px;">
+                                        </div>
+                                        <div class="media-body">
+                                            <p class="mt10">aNutsa Avaliani</p>
+                                            <p class="fc9">
+                                                品牌推广；图形设计；美术指导
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="text-nowrap">1946影响力</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <ul class="myNav clearfix">
+                <li class="active"><span class="glyphicon glyphicon-user mr10" aria-hidden="true"></span><span class="tit fc3">作品(12)</span></li>
+            </ul>
+            <ul class="pannelList">
+                <li><span class="tit">作品</span> 23 </li>
+                <li><span class="tit">活动</span> 100</li>
+                <li><span class="tit">关注</span> 253 </li>
+                <li><span class="tit">粉丝</span> 89</li>
+            </ul>
+            <ul class="myNav clearfix">
+                <li class="active"><span class="glyphicon glyphicon-tag mr5" aria-hidden="true"></span><span class="tit fc3">个人标签(12)</span></li>
+            </ul>
+            <ul class="pannelList">
+                <li class="tagList">
+                    <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                    <button type="button" class="btn btn-default btn-xs mr5">ui</button>
+                    <button type="button" class="btn btn-default btn-xs mr5">美术指导</button>
+                    <button type="button" class="btn btn-default btn-xs mr5">GUI</button>
+                    <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                    <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                    <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                </li>
+            </ul>
+            <ul class="myNav clearfix">
+                <li class="active"><span class="glyphicon glyphicon-heart mr5" aria-hidden="true"></span><span class="tit fc3">猜你喜欢</span></li>
+            </ul>
+            <ul class="pannelList">
+                <li>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object img-thumbnail" src="../img/ex3.jpg" style="width: 64px; height: 64px;">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="#">aNutsa Avaliani</a>
+                            <div class="mb5"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span><span>北京</span></div>
+                            <p>
+                                <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                                <button type="button" class="btn btn-default btn-xs mr5">UI</button>
+                                <button type="button " class="btn btn-default btn-xs">网页设计</button>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object img-thumbnail" src="../img/ex3.jpg" style="width: 64px; height: 64px;">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="#">aNutsa Avaliani</a>
+                            <div class="mb5"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span><span>北京</span></div>
+                            <p>
+                                <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                                <button type="button" class="btn btn-default btn-xs mr5">UI</button>
+                                <button type="button " class="btn btn-default btn-xs">网页设计</button>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object img-thumbnail" src="../img/ex3.jpg" style="width: 64px; height: 64px;">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="#">aNutsa Avaliani</a>
+                            <div class="mb5"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span><span>北京</span></div>
+                            <p>
+                                <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                                <button type="button" class="btn btn-default btn-xs mr5">UI</button>
+                                <button type="button " class="btn btn-default btn-xs">网页设计</button>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object img-thumbnail" src="../img/ex3.jpg" style="width: 64px; height: 64px;">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="#">aNutsa Avaliani</a>
+                            <div class="mb5"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span><span>北京</span></div>
+                            <p>
+                                <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                                <button type="button" class="btn btn-default btn-xs mr5">UI</button>
+                                <button type="button " class="btn btn-default btn-xs">网页设计</button>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<include src="../inc/_promptAlert.html"></include>
+<include src="../inc/_footer.html"></include>

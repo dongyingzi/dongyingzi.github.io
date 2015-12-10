@@ -46,18 +46,18 @@ gulp.task('browser-sync', ['html-include'], function() {
     if (event.type === "changed") {
         browserSync.reload(event.path);
     }}); // 样式修改
-    gulp.watch('./js/*.js').on('change', reload); // js修改
-    gulp.watch('./sourcehtml/*.html',['html-include']).on('change',browserSync.reload); // html有修改
-    gulp.watch('./inc/*.html',['html-include']).on('change',browserSync.reload); // html有修改
-  //   gulp.watch(['./sourcehtml/*.html','./inc/*.html','./inc/*/*.html'],
-		// // function (event){
-		// // 	if(event.type === "changed"){
-		// // 		return	gulp.src(event.path)
-		// // 				.pipe(include()) // html拼装
-		// // 				.pipe(gulp.dest('./html/'))
-		// // 				.pipe(reload({stream: true})); 
-		// // 	}
-		// }); // html有修改
+    // gulp.watch('./js/*.js').on('change', reload); // js修改
+    // gulp.watch('./sourcehtml/*.html',['html-include']).on('change',browserSync.reload); // html有修改
+    // gulp.watch('./inc/*.html',['html-include']).on('change',browserSync.reload); // html有修改
+    gulp.watch(['./sourcehtml/*.html','./inc/*.html','./inc/*/*.html'],
+		function (event){
+			if(event.type === "changed"){
+				return	gulp.src(event.path)
+						.pipe(include()) // html拼装
+						.pipe(gulp.dest('./html/'))
+						.pipe(reload({stream: true})); 
+			}
+		}); // html有修改
 });
 
 
