@@ -1,5 +1,5 @@
-<include src="../inc/_head.html" pageTitle="活动"></include>
-<include src="../inc/_topNav.html" active2="active"></include>
+<include src="../inc/_head.html" pageTitle="作品"></include>
+<include src="../inc/_topNav.html" active3="active"></include>
 <div class="container mt30 ">
     <div class="row mb30">
         <include src="../inc/_carousel.html" pageTitle=""></include>
@@ -7,16 +7,13 @@
     <div class="row">
         <div class="col-md-3">
             <div class="list-group">
-                <a href="#" class="list-group-item active">同城活动
-      </a>
-                <a href="#" class="list-group-item">
-展览活动</a>
-                <a href="#" class="list-group-item">旅游活动</a>
-                <a href="#" class="list-group-item">驻留活动</a>
+                <a href="#" class="list-group-item active">传统艺术</a>
+                <a href="#" class="list-group-item">设计艺术</a>
+                <a href="#" class="list-group-item">媒体艺术</a>
             </div>
         </div>
         <div class="col-md-9 thumbnailList ">
-            <include src="../inc/_myselfActivity2.html" layout="col-sm-6 col-md-6">
+            <include src="../inc/_myselfWorks.html" layout="col-sm-4 col-md-4">
                 <span class="glyphicon glyphicon-heart operate-heart leftPos" aria-hidden="true" data-toggle="modal" data-target=".bs-collect-modal"></span>
             </include>
         </div>
@@ -79,9 +76,9 @@
         var selectPut = $('.selectPut');
         selectPut.on('click', function(event) {
             event.preventDefault();
-            if($(this).hasClass('select')){
+            if ($(this).hasClass('select')) {
                 $(this).removeClass('select')
-            }else{
+            } else {
                 $(this).addClass('select')
             }
         })
