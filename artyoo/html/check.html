@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#333333">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="navbar navbar-inverse yy-nav-bar">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo" href="index.html">Bootstrap中文网</a>
+        </div>
+        <div class="navbar-collapse collapse" role="navigation" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+                <li class="">
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="">
+                    <a href="activity.html">活动</a>
+                </li>
+                <li class="">
+                    <a href="works.html">作品</a>
+                </li>
+                <li class="">
+                    <a href="artTrain.html">艺训</a>
+                </li>
+                <li>
+                    <a tabindex="0" class="more" role="button" data-toggle="popover" data-html="true" data-placement="bottom" data-trigger="focus" data-content="<a href='pushWorks.html' class='issue'><span class='glyphicon glyphicon-send' aria-hidden='true'></span>发布内容</a>">发布内容</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" id="userArea">
+                <li><a href="#myModal" data-toggle="modal" data-target="#myModal">登陆</a></li>
+                <li><a href="register.html">注册</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+$(function() {
+    //发布下拉
+    $('.more').popover();
+    // 用户名下拉
+    //登陆确认 显示头像
+    $('#myModal').on('show.bs.modal', function(event) {
+        var userAreaEle = $('#userArea');
+        var loginBtn = $('.loginFn');
+        var self = $(this);
+        var userinfoTipsHtml = "<ul class='userDownList'><li><a  href='singleCenter.html'>我的ARTYOO</a></li><li><a href='singleCenter.html'>我的收藏</a></li><li><a href='setting.html'>设置</a></li><li><a href='#' id='logOut'>退出</a></li></ul>";
+        var userInfoHtml = '<li><a href="siteLetter.html"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><span class="label label-danger">1</span></a> </li> <li><a href="#"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span></a></li><li><a tabindex="0" class="userName" role="button" data-toggle="popover" data-html="true" data-trigger="foucs" data-placement="bottom" data-content="' + userinfoTipsHtml + '"><img class="img-circle mr10 pull-left" alt="headPic" src="../img/headImg.jpg">Nutsa Avaliani</a></li>';
+        var loginInfoHtml = '<li><a href="#myModal" data-toggle="modal" data-target="#myModal">登陆</a></li><li><a href="register.html">注册</a></li>'
+
+        loginBtn.on('click', function(event) {
+            event.preventDefault();
+            self.modal('hide');
+            userAreaEle.html(userInfoHtml);
+            $('.userName').popover();
+            $('.userName').on('shown.bs.popover', function() {
+                    $('#logOut').click(function(event) {
+                        event.preventDefault();
+                        userAreaEle.html(loginInfoHtml);
+                    })
+                // $(document).one('click',function(){ $('.userName').popover('hide')})
+            })
+        });
+    })
+
+})
+</script>
+<div id="myModal" class="modal fade in loginAlert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <h2 class="alertLogo"></h2>
+                <h3 class="text-center">登录</h3>
+                <div class="row mt30">
+                    <div class="col-md-6 col-md-offset-1">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="mb10">
+                            <button type="button" class="btn btn-danger mr10 loginFn">登录</button><a href="#" class="mr10">忘记密码</a><span class="mr10">不是会员？</span><a href="#">现在注册</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <p>使用第三方快速登陆</p>
+                        <a href="#" class="shareBtn"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="progress" style="bottom:30px">
+                <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                    <span>loading-80%</span>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                    <span>输入错误</span>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<div class="container mt30">
+    <ul id="myTabs" class="myNav clearfix" role="tablist">
+        <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">作品(12)</a></li>
+        <li role="presentation" class=""><a href="#home2" role="tab" id="home-tab2" data-toggle="tab" aria-controls="home2" aria-expanded="false">活动(33)</a></li>
+        <li role="presentation" class=""><a href="#home3" role="tab" id="home-tab3" data-toggle="tab" aria-controls="home3" aria-expanded="false">艺讯</a></li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul id="mySubTabs" class="myNav navSubPill" role="tablist">
+                        <li class="dropdown">
+                            <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                           所有创意领域
+                           <span class="caret"></span>
+                         </a>
+                            <ul class="dropdown-menu" aria-labelledby="drop1">
+                                <li><a href="#">设计</a></li>
+                                <li><a href="#">艺术</a></li>
+                                <li><a href="#">设计</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt10">
+                <div class="col-md-9">
+                    <div class="media mb20">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object img-circle" alt="64x64" src="../img/head.png" style="width: 85px; height: 85px;">
+                            </a>
+                        </div>
+                        <div class="media-body ">
+                            
+                <h3>凯迪拉克 “不朽的梵高”感映艺术展—北京站</h3>
+                <p class="fc9">发布者：<span class="fcr">Ruiz </span> 类别：灵感 - 平面设计 - 书装/画册 发布时间：2015.09.07 </p>
+            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-danger mt10">跳过</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9 center-block" style="float:none">
+                    <div class="pannelWhite">
+                        <div>
+                            <div class="col-md-12 mb10">
+                                <img alt="pic" src="../img/ex3.jpg" data-holder-rendered="true" style="height: 300px; width: 100%; display: block;">
+                            </div>
+                            <div class="col-md-12 mb10">
+                                <img alt="pic" src="../img/ex3.jpg" data-holder-rendered="true" style="height: 300px; width: 100%; display: block;">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <ul class="userChart listAlignCenter">
+                                <li class="pull-left">
+                                    <h4 class="fc9"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></h4>
+                                    <p class="small fc9">喜欢</p>
+                                </li>
+                                <li class="pull-left">
+                                    <h4 class="fc9"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></h4>
+                                    <p class="small fc9">收藏</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            分享到：
+                            <a href="#" class="mr5"> <i class="yjIcn yjSsina"></i>
+                            </a>
+                            <a href="#" class="mr5"> <i class="yjIcn yjStxwb"></i>
+                            </a>
+                            <a href="#" class="mr5">
+                                <i class="yjIcn yjSdb"></i>
+                            </a>
+                            <a href="#" class="mr5">
+                                <i class="yjIcn yjSqzone"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pannelWhite mt5 mb30">
+                        <h5>添加标签：</h5>
+                        <div class=" row mb30">
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-3">
+                                    <button type="button" class="btn btn-default mr10">添加</button>
+                                </div>
+                            </div>
+                        </div>
+                        <h5>标签（8）</h5>
+                        <div class="tagList">
+                            <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">ui</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">美术指导</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">GUI</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade in" id="home2" aria-labelledby="home-tab2">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul id="mySubTabs" class="myNav navSubPill" role="tablist">
+                        <li class="dropdown">
+                            <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                           所有创意领域
+                           <span class="caret"></span>
+                         </a>
+                            <ul class="dropdown-menu" aria-labelledby="drop1">
+                                <li><a href="#">设计</a></li>
+                                <li><a href="#">艺术</a></li>
+                                <li><a href="#">设计</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt10">
+                <div class="col-md-9">
+                    <div class="media mb20">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object img-circle" alt="64x64" src="../img/head.png" style="width: 85px; height: 85px;">
+                            </a>
+                        </div>
+                        <div class="media-body ">
+                            
+                <h3>凯迪拉克 “不朽的梵高”感映艺术展—北京站</h3>
+                <p class="fc9">发布者：<span class="fcr">Ruiz </span> 类别：灵感 - 平面设计 - 书装/画册 发布时间：2015.09.07 </p>
+            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-danger mt10">跳过</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9 center-block" style="float:none">
+                    <div class="pannelWhite">
+                        <div class="media mb30">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img alt="pic" src="../img/ex1.jpg" data-holder-rendered="true" style="height:400px; width:340px; display: block;">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <ul class=" listStyle">
+                                    <li><span class="fc9">活动开始时间：</span>2015-09-08 10:00 </li>
+                                    <li><span class="fc9">活动结束时间：</span>2015-12-06 21:00 </li>
+                                    <li><span class="fc9">活   动  场  所：</span>朝阳大悦城 </li>
+                                    <li><span class="fc9">活   动  地  址：</span><a href="#">北京朝阳,朝阳北路101号</a></li>
+                                    <li><span class="fc9">主             办：</span> 中国国际文化艺术有限公司</li>
+                                    <li><span class="fc9">活动咨询电话：</span>400-063-0260</li>
+                                    <li class="mt30">
+                                        <button type="button" data-toggle="modal" data-target=".bs-bm-modal" class="btn btn-danger mr10 loginFn">我要参加</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h5>活动详情</h5>
+                        <div>
+                            <p> 本次展将不是一个静态的观展过程，参观者调动从内心到肢体的各种感知来与梵高进行跨时空的对话体验。或平视、或俯视，在维瓦尔第交响乐《四季·夏》的引导 下，继以同时代经典音乐配与梵高作品画面，动静交映。此刻的观众或站在一百年前梵高向日葵的花瓣上，或比邻于一个世纪的星空河岸畔，甚或是踏上那条咖啡馆 前的小路……技术与艺术高度完美融合，被特效抽离出的作品元素通过运动的方式再现了曾经梵高眼中鲜活的风景</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img alt="pic" src="../img/ex3.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                            </div>
+                            <div class="col-md-6">
+                                <img alt="pic" src="../img/ex3.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <ul class="userChart listAlignCenter">
+                                <li class="pull-left">
+                                    <h4 class="fc9"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></h4>
+                                    <p class="small fc9">喜欢</p>
+                                </li>
+                                <li class="pull-left">
+                                    <h4 class="fc9"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></h4>
+                                    <p class="small fc9">收藏</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            分享到：
+                            <a href="#" class="mr5"> <i class="yjIcn yjSsina"></i>
+                            </a>
+                            <a href="#" class="mr5"> <i class="yjIcn yjStxwb"></i>
+                            </a>
+                            <a href="#" class="mr5">
+                                <i class="yjIcn yjSdb"></i>
+                            </a>
+                            <a href="#" class="mr5">
+                                <i class="yjIcn yjSqzone"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pannelWhite mt5 mb30">
+                        <h5>添加标签：</h5>
+                        <div class=" row mb30">
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-3">
+                                    <button type="button" class="btn btn-default mr10">添加</button>
+                                </div>
+                            </div>
+                        </div>
+                        <h5>标签（8）</h5>
+                        <div class="tagList">
+                            <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">ui</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">美术指导</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">GUI</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade in" id="home3" aria-labelledby="home-tab3">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul id="mySubTabs" class="myNav navSubPill" role="tablist">
+                        <li class="dropdown">
+                            <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                           所有创意领域
+                           <span class="caret"></span>
+                         </a>
+                            <ul class="dropdown-menu" aria-labelledby="drop1">
+                                <li><a href="#">设计</a></li>
+                                <li><a href="#">艺术</a></li>
+                                <li><a href="#">设计</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt10">
+                <div class="col-md-9">
+                    <div class="media mb20">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object img-circle" alt="64x64" src="../img/head.png" style="width: 85px; height: 85px;">
+                            </a>
+                        </div>
+                        <div class="media-body ">
+                            
+                <h3>凯迪拉克 “不朽的梵高”感映艺术展—北京站</h3>
+                <p class="fc9">发布者：<span class="fcr">Ruiz </span> 类别：灵感 - 平面设计 - 书装/画册 发布时间：2015.09.07 </p>
+            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-danger mt10">跳过</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9 center-block" style="float:none">
+                    <div class="pannelWhite">
+                        <div>
+                            <div class="col-md-12 mb10">
+                                <img alt="pic" src="../img/ex3.jpg" data-holder-rendered="true" style="height: 300px; width: 100%; display: block;">
+                            </div>
+                            <div class="col-md-12 mb10">
+                                <img alt="pic" src="../img/ex3.jpg" data-holder-rendered="true" style="height: 300px; width: 100%; display: block;">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <ul class="userChart listAlignCenter">
+                                <li class="pull-left">
+                                    <h4 class="fc9"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></h4>
+                                    <p class="small fc9">喜欢</p>
+                                </li>
+                                <li class="pull-left">
+                                    <h4 class="fc9"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></h4>
+                                    <p class="small fc9">收藏</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            分享到：
+                            <a href="#" class="mr5"> <i class="yjIcn yjSsina"></i>
+                            </a>
+                            <a href="#" class="mr5"> <i class="yjIcn yjStxwb"></i>
+                            </a>
+                            <a href="#" class="mr5">
+                                <i class="yjIcn yjSdb"></i>
+                            </a>
+                            <a href="#" class="mr5">
+                                <i class="yjIcn yjSqzone"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pannelWhite mt5 mb30">
+                        <h5>添加标签：</h5>
+                        <div class=" row mb30">
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-3">
+                                    <button type="button" class="btn btn-default mr10">添加</button>
+                                </div>
+                            </div>
+                        </div>
+                        <h5>标签（8）</h5>
+                        <div class="tagList">
+                            <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">ui</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">美术指导</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">GUI</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                            <button type="button" class="btn btn-default btn-xs mr5">网页设计</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade in bs-bm-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h5 class="modal-title" id="mySmallModalLabel">报名</h5>
+            </div>
+            <div class="modal-body">
+                
+    <div class="form-horizontal">
+        <div class="form-group followCode">
+            <label for="letterCode" class="col-sm-3 control-label text-right"><span class="fcr">*</span>手机或邮箱: </label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="letterCode" placeholder="822211" style="width:70%">
+                <a href="#" class="posRight checkCodeBtn">发送验证码</a>
+            </div>
+        </div>
+        <div class="form-group followCode">
+            <label for="letterCode" class="col-sm-3 control-label text-right"><span class="fcr">*</span>验证码: </label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="letterCode" placeholder="822211" style="width:70%">
+            </div>
+        </div>
+        <div class="form-group followCode">
+            <label for="letterCode" class="col-sm-3 control-label text-right"><span class="fcr">*</span>姓名: </label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="letterCode" placeholder="822211" style="width:70%">
+                <form class="posRight">
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 先生
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 小姐
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-danger">确定</button>
+                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<div class="modal fade bs-example-modal-sm in" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" style="display: none;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <p class="modal-title" id="mySmallModalLabel">提示</p>
+            </div>
+            <div class="modal-body">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>确认取消收藏该作品吗？
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-danger">确定</button>
+                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<footer class="footer ">
+    <div class="container">
+        <div class="row footer-top">
+            <div class="col-sm-3 col-lg-3">
+                <h6> ARTYOO</h6> 这个网站做什么的？ ARTYOO是一个为设计师展示和讲述 设计师分享截图的工作过程和项目， 社区。
+            </div>
+            <div class="col-sm-3  col-lg-3">
+                <div class="row about">
+                    <div class="col-xs-3">
+                        <ul class="list-unstyled">
+                            <li><a href="#">首页  </a></li>
+                            <li><a href="#">摄影</a></li>
+                            <li><a href="#">收藏品</a></li>
+                            <li><a href="#">油画</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3">
+                        <ul class="list-unstyled">
+                            <li><a href="#" title="Bootstrap中文网官方微博" target="_blank">活动</a></li>
+                            <li><a href="#">室外</a></li>
+                            <li><a href="#">室外展</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3">
+                        <ul class="list-unstyled">
+                            <li><a href="#" target="_blank">作品</a></li>
+                            <li><a href="#" target="_blank">最新</a></li>
+                            <li><a href="#" target="_blank">最热</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3">
+                        <ul class="list-unstyled">
+                            <li><a href="#" target="_blank">艺讯</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 col-lg-3 cooperatePn">
+                <h6>合作企业</h6>
+                <div>
+                    <a href="#" class="fc3">中国艺术教育协会<br />
+                        <span>www.zhongguojianyu.com</span></a>
+                </div>
+                <div class="icn2">
+                    <a href="#" class="fc3">中国电视艺术家协会演员工作委员会 <br />
+                        <span>www.zhongguojianyu.com</span></a>
+                </div>
+                <div class="icn3">
+                    <a href="#" class="fc3">中国艺术家协会 <br />
+                        <span>www.zhongguojianyu.com</span></a>
+                </div>
+            </div>
+            <div class="col-sm-3 col-lg-3">
+                <p class=" fc3 phone"><span class="glyphicon glyphicon-earphone mr10" aria-hidden="true"></span>400-800-3966</p>
+                服务热线
+            </div>
+        </div>
+        <div class="row footer-bottom">
+            <ul class="list-inline">
+                <li><a href="#" target="_blank">Copyright © 2009–2015 ARTYOO LLC. All screenshots © their respe</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
