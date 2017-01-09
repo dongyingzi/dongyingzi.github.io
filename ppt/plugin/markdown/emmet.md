@@ -1,56 +1,88 @@
-#Emmet LiveStyle
-sublime text2 插件
+#2016 工作总结
+破冰开疆
 
 
 
-## 插件的优点
-
-1. 每次修改样式，查看修改结果的时候都需要刷新一下页面才能看到。
-
-2. 调试页面再chrome下修改的样式不能同步到原始文件中，要照着chrome中调试好的，再去原始文件再去敲一遍。
+## 回顾
 
 
-
-##Sublime安装扩展程序
-
-1. 首先确认你安装了Package Control。
-2. 打开Package Control 找到Package Control: Install Package，回车安装插件。
-3. 输入LiveStyle，既可找到插件回车并安装即可。
+<img src="qt1.jpg" />
 
 
+1. 破
 
-##Chrome 安装扩展程序
-
-可以通过谷歌网上应用商店安装[Emmet LiveStyle](http://www.nodejs.org/),
-安装完成后F12可以看到控制台多一个LiveStyle的选项
-
+	- 前后分离 减少沟通成本效率提升
+	- 新技术mvvm vue react 框架应用
 
 
-##使用方法
-
-1. 打开需要修改的页面，F12打开控制台，然后在LiveStyle下把Enable LiveStyle for current page勾上。
-2. 回到sublime text，打开要修改的样式文件。
-3. 再回到Chrome中的LiveStyle就可以看到变化，选择对应的样式即可。
+<img src="zhicheng.jpg" />
 
 
-<img src="http://dbpoo.qiniudn.com/wp-content/uploads/2013/08/emmet-livestyle2.jpg">
+2. 支
+	- 支撑各业务
+	- 站外、站内广告模板 联盟 adx 
+	- 中间页
+	- 精准通
+	- 外单
+	- 双十一 双十二 落地页
 
 
-##双向修改，无刷新预览
-
-1. 现在修改一下样式，不用刷新页面即可以看到效果。
-2. 同时你在chrome调试中修改的样式，也能同步会sublime text中的原始文件中去。
+###cps 首页
+<img src="zj11.jpg" />
 
 
-<img src="http://dbpoo.qiniudn.com/wp-content/uploads/2013/08/emmet-livestyle.jpg">
+###中间页
+<img src="zj12.jpg" />
+
+
+###无线中间页
+<img src="zj13.jpg" />
+
+
+###搜索中间页……
+<img src="zj16.jpg" />
+
+
+## 后台系统
+### 精准通、京东联盟、采销平台……
+<img src="zj17.jpg" />
+
+
+###轻微店
+<img src="zj15.jpg" />
+
+
+###品牌专区
+<img src="zj18.jpg" />
+
+
+###cps活动
+<img src="zj19.jpg" />
+
+
+<img src="tuandui.jpg" />
+
+
+3. 团
+
+	- 组件化
+	- 内部分享
+
+
+###前端组件化
+<img src="zj21.jpg" />
 
 
 
-##视频教程
+## 展望
 
-[youtobe视频](http://www.youtube.com/embed/iQLhGbkupS4)
+关键词: 效率 优化 规范
 
-[官网安装教程](http://livestyle.emmet.io/install/)
+
+- 组件化
+- 开源
+- 移动优先
+
 
 
 
