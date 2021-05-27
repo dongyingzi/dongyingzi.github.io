@@ -1,9 +1,10 @@
 ---
 layout: post
-title: javascript 事件
-description:事件学习
+title: 使用GitHub搭建自己的博客
+description: githubi,blog,bower
 category: blog
 ---
+
 
 [bower][]
 ##什么是bower
